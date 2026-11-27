@@ -1,0 +1,97 @@
+seeds:
+  - {name: "AbbVie", sector: pharma, urls: ["https://abbvie.wd1.myworkdayjobs.com/abbvie"]}
+  - {name: "Incyte", sector: pharma, urls: ["https://incyte.wd1.myworkdayjobs.com/Incyte"]}
+  - {name: "Vertex Pharmaceuticals", sector: pharma, urls: ["https://vrtx.wd501.myworkdayjobs.com/Vertex_Careers"]}
+  - {name: "BeOne Medicines", sector: pharma, urls: ["https://beigene.wd5.myworkdayjobs.com/BeiGene"]}
+  - {name: "Moderna", sector: pharma, urls: ["https://modernatx.wd1.myworkdayjobs.com/M_tx"]}
+  - {name: "Jazz Pharmaceuticals", sector: pharma, urls: ["https://jazzpharma.wd5.myworkdayjobs.com/JazzCareers"]}
+  - {name: "Daiichi Sankyo", sector: pharma, urls: ["https://daiichisankyo.wd3.myworkdayjobs.com/Daiichi_Sankyo"]}
+  - {name: "Octapharma", sector: pharma, urls: ["https://octapharma.wd3.myworkdayjobs.com/Octapharma"]}
+  - {name: "Helsinn", sector: pharma, urls: ["https://helsinn.wd3.myworkdayjobs.com/Helsinn"]}
+  - {name: "Medela", sector: pharma, urls: ["https://medela.wd3.myworkdayjobs.com/Medela"]}
+  - {name: "ams OSRAM", sector: tech, urls: ["https://amsosram.wd3.myworkdayjobs.com/ams_OSRAM"]}
+  - {name: "Capco", sector: consulting, urls: ["https://capco.wd3.myworkdayjobs.com/Capco"]}
+  - {name: "EPAM Systems", sector: consulting, urls: ["https://epam.wd1.myworkdayjobs.com/EPAM"]}
+  - {name: "Avanade", sector: consulting, urls: ["https://avanade.wd1.myworkdayjobs.com/Avanade"]}
+  - {name: "Four Seasons", sector: travel, urls: ["https://fourseasons.wd3.myworkdayjobs.com/Search"]}
+  - {name: "Hilton", sector: travel, urls: ["https://hilton.wd1.myworkdayjobs.com/Hilton"]}
+  - {name: "Amer Sports", sector: consumer, urls: ["https://amersports.wd3.myworkdayjobs.com/Amer_Sports"]}
+  - {name: "Under Armour", sector: consumer, urls: ["https://underarmour.wd5.myworkdayjobs.com/UA"]}
+  - {name: "LVMH", sector: luxury, urls: ["https://lvmh.wd3.myworkdayjobs.com/LVMH"]}
+  - {name: "Hermès", sector: luxury, urls: ["https://hermes.wd3.myworkdayjobs.com/Hermes"]}
+  - {name: "Burberry", sector: luxury, urls: ["https://burberry.wd3.myworkdayjobs.com/Burberry_Careers"]}
+  - {name: "Estée Lauder", sector: consumer, urls: ["https://elcompanies.wd1.myworkdayjobs.com/elcompanies"]}
+  - {name: "Kraft Heinz", sector: consumer, urls: ["https://heinz.wd1.myworkdayjobs.com/KraftHeinz_Careers"]}
+  - {name: "Dyson", sector: consumer, urls: ["https://dyson.wd3.myworkdayjobs.com/DysonCareers"]}
+  - {name: "Samsonite", sector: consumer, urls: ["https://samsonite.wd3.myworkdayjobs.com/Samsonite"]}
+  - {name: "Sonos", sector: consumer, urls: ["https://sonos.wd1.myworkdayjobs.com/Sonos"]}
+  - {name: "Bose", sector: consumer, urls: ["https://boseallaboutme.wd1.myworkdayjobs.com/Bose_Careers"]}
+  - {name: "Garmin", sector: consumer, urls: ["https://garmin.wd1.myworkdayjobs.com/Garmin"]}
+  - {name: "Fossil Group", sector: consumer, urls: ["https://fossil.wd1.myworkdayjobs.com/Fossil"]}
+  - {name: "Movado", sector: luxury, urls: ["https://movado.wd1.myworkdayjobs.com/Movado"]}
+  - {name: "Signet", sector: luxury, urls: ["https://signetjewelers.wd5.myworkdayjobs.com/Signet"]}
+  - {name: "Marriott", sector: travel, urls: ["https://marriott.wd5.myworkdayjobs.com/Marriott"]}
+  - {name: "IHG", sector: travel, urls: ["https://ihg.wd3.myworkdayjobs.com/IHG"]}
+  - {name: "Avis Budget", sector: travel, urls: ["https://avisbudget.wd1.myworkdayjobs.com/ABG_Careers"]}
+  - {name: "Hertz", sector: travel, urls: ["https://hertz.wd1.myworkdayjobs.com/Hertz"]}
+  - {name: "Sixt", sector: travel, urls: ["https://sixt.wd3.myworkdayjobs.com/Sixt"]}
+  - {name: "Lufthansa Group", sector: travel, urls: ["https://lufthansagroup.wd3.myworkdayjobs.com/LH_Careers"]}
+  - {name: "Emirates Group", sector: travel, urls: ["https://emirates.wd3.myworkdayjobs.com/Emirates"]}
+  - {name: "Qatar Airways", sector: travel, urls: ["https://qatarairways.wd3.myworkdayjobs.com/QR"]}
+  - {name: "Etihad", sector: travel, urls: ["https://etihad.wd3.myworkdayjobs.com/Etihad"]}
+  - {name: "Cathay", sector: travel, urls: ["https://cathaypacific.wd3.myworkdayjobs.com/Cathay"]}
+  - {name: "Singapore Airlines", sector: travel, urls: ["https://singaporeair.wd3.myworkdayjobs.com/SIA"]}
+  - {name: "Novocure", sector: pharma, tokens: [novocure]}
+  - {name: "Thoughtworks", sector: consulting, tokens: [thoughtworks]}
+  - {name: "Adesso", sector: consulting, tokens: [adesso]}
+  - {name: "Gnosis", sector: tech, tokens: [gnosis]}
+  - {name: "Status", sector: tech, tokens: [status,statusim]}
+  - {name: "Interchain Foundation", sector: tech, tokens: [interchain,interchainfoundation]}
+  - {name: "Celestia", sector: tech, tokens: [celestia]}
+  - {name: "Ocean Protocol", sector: tech, tokens: [oceanprotocol]}
+  - {name: "Tether", sector: tech, tokens: [tether]}
+  - {name: "Bitfinex", sector: tech, tokens: [bitfinex]}
+  - {name: "OKX", sector: tech, tokens: [okx]}
+  - {name: "Crypto.com", sector: tech, tokens: [cryptocom]}
+  - {name: "Binance", sector: tech, tokens: [binance]}
+  - {name: "Bybit", sector: tech, tokens: [bybit]}
+  - {name: "Animoca Brands", sector: tech, tokens: [animocabrands]}
+  - {name: "Consensys", sector: tech, tokens: [consensys]}
+  - {name: "Lido", sector: tech, tokens: [lido,lidofinance]}
+  - {name: "Uniswap Labs", sector: tech, tokens: [uniswaplabs,uniswap]}
+  - {name: "Aave", sector: tech, tokens: [aave]}
+  - {name: "MakerDAO", sector: tech, tokens: [makerdao]}
+  - {name: "Hedera", sector: tech, tokens: [hedera,swirldslabs]}
+  - {name: "Algorand Foundation", sector: tech, tokens: [algorand,algorandfoundation]}
+  - {name: "Stellar Development Foundation", sector: tech, tokens: [stellar]}
+  - {name: "Zama", sector: tech, tokens: [zama]}
+  - {name: "Starkware", sector: tech, tokens: [starkware]}
+  - {name: "Matter Labs", sector: tech, tokens: [matterlabs]}
+  - {name: "Offchain Labs", sector: tech, tokens: [offchainlabs]}
+  - {name: "LayerZero", sector: tech, tokens: [layerzerolabs]}
+  - {name: "Wormhole", sector: tech, tokens: [wormholefoundation]}
+  - {name: "Pyth", sector: tech, tokens: [pythnetwork]}
+  - {name: "Ondo Finance", sector: banking, tokens: [ondofinance]}
+  - {name: "Figure", sector: banking, tokens: [figure]}
+  - {name: "Securitize", sector: banking, tokens: [securitize]}
+  - {name: "Anchorage Digital", sector: banking, tokens: [anchorage]}
+  - {name: "BitGo", sector: banking, tokens: [bitgo]}
+  - {name: "Copper", sector: banking, tokens: [copperco]}
+  - {name: "Coinshares", sector: banking, tokens: [coinshares]}
+  - {name: "Valour", sector: banking, tokens: [valour]}
+  - {name: "Swissquote", sector: banking, tokens: [swissquote]}
+  - {name: "Yokoy", sector: tech, tokens: [yokoy]}
+  - {name: "Pliant", sector: banking, tokens: [pliant]}
+  - {name: "Moss", sector: banking, tokens: [getmoss]}
+  - {name: "Agicap", sector: banking, tokens: [agicap]}
+  - {name: "Payhawk", sector: banking, tokens: [payhawk]}
+  - {name: "Mollie", sector: banking, tokens: [mollie]}
+  - {name: "Primer", sector: banking, tokens: [primer]}
+  - {name: "Rapyd", sector: banking, tokens: [rapyd]}
+  - {name: "Nuvei", sector: banking, tokens: [nuvei]}
+  - {name: "Paysafe", sector: banking, tokens: [paysafe]}
+  - {name: "dLocal", sector: banking, tokens: [dlocal]}
+  - {name: "Marqeta", sector: banking, tokens: [marqeta]}
+  - {name: "Airwallex", sector: banking, tokens: [airwallex]}
+  - {name: "Payoneer", sector: banking, tokens: [payoneer]}
+  - {name: "Remitly", sector: banking, tokens: [remitly]}

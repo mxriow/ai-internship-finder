@@ -1,0 +1,103 @@
+# Candidate employers to run through `python -m finder discover --from-file`.
+# Careers URLs are starting points; discover verifies everything against live feeds.
+seeds:
+  - {name: Anthropic, careers_url: "https://www.anthropic.com/careers", sector: tech}
+  - {name: OpenAI, careers_url: "https://openai.com/careers", sector: tech}
+  - {name: Google DeepMind, careers_url: "https://deepmind.google/about/careers/", sector: tech}
+  - {name: Databricks, careers_url: "https://www.databricks.com/company/careers", sector: tech}
+  - {name: Snowflake, careers_url: "https://careers.snowflake.com/", sector: tech}
+  - {name: Datadog, careers_url: "https://careers.datadoghq.com/", sector: tech}
+  - {name: MongoDB, careers_url: "https://www.mongodb.com/company/careers", sector: tech}
+  - {name: Palantir, careers_url: "https://www.palantir.com/careers/", sector: tech}
+  - {name: Stripe, careers_url: "https://stripe.com/jobs", sector: tech}
+  - {name: Cloudflare, careers_url: "https://www.cloudflare.com/careers/", sector: tech}
+  - {name: Scandit, careers_url: "https://www.scandit.com/company/careers/", sector: tech}
+  - {name: Nexthink, careers_url: "https://nexthink.com/careers", sector: tech}
+  - {name: Proton, careers_url: "https://proton.me/careers", sector: tech}
+  - {name: Frontify, careers_url: "https://www.frontify.com/en/careers", sector: tech}
+  - {name: Beekeeper, careers_url: "https://www.beekeeper.io/careers/", sector: tech}
+  - {name: Smallpdf, careers_url: "https://smallpdf.com/jobs", sector: tech}
+  - {name: GetYourGuide, careers_url: "https://www.getyourguide.careers/", sector: travel}
+  - {name: Sherpany, careers_url: "https://www.sherpany.com/en/careers/", sector: tech}
+  - {name: Ledgy, careers_url: "https://ledgy.com/careers", sector: tech}
+  - {name: Climeworks, careers_url: "https://climeworks.com/careers", sector: industrial}
+  - {name: ANYbotics, careers_url: "https://www.anybotics.com/company/careers/", sector: industrial}
+  - {name: Wingtra, careers_url: "https://wingtra.com/careers/", sector: industrial}
+  - {name: Starmind, careers_url: "https://www.starmind.ai/careers", sector: tech}
+  - {name: Squirro, careers_url: "https://squirro.com/careers", sector: tech}
+  - {name: Sonar, careers_url: "https://www.sonarsource.com/company/careers/", sector: tech}
+  - {name: DFINITY, careers_url: "https://dfinity.org/careers", sector: tech}
+  - {name: Web3 Foundation, careers_url: "https://web3.foundation/careers/", sector: tech}
+  - {name: Bitcoin Suisse, careers_url: "https://www.bitcoinsuisse.com/careers", sector: banking}
+  - {name: Sygnum, careers_url: "https://www.sygnum.com/careers/", sector: banking}
+  - {name: AMINA Bank, careers_url: "https://aminagroup.com/careers/", sector: banking}
+  - {name: Taurus, careers_url: "https://www.taurushq.com/careers/", sector: banking}
+  - {name: 21Shares, careers_url: "https://www.21shares.com/en-us/careers", sector: banking}
+  - {name: SwissBorg, careers_url: "https://swissborg.com/careers", sector: banking}
+  - {name: Crypto Finance, careers_url: "https://www.crypto-finance.com/careers/", sector: banking}
+  - {name: Relai, careers_url: "https://relai.app/careers/", sector: banking}
+  - {name: Yokoy, careers_url: "https://www.yokoy.io/careers", sector: tech}
+  - {name: Neon, careers_url: "https://www.neon-free.ch/en/jobs/", sector: banking}
+  - {name: Yuh, careers_url: "https://www.yuh.com/en/jobs/", sector: banking}
+  - {name: Selma Finance, careers_url: "https://www.selma.com/en/jobs", sector: banking}
+  - {name: Exoscale, careers_url: "https://www.exoscale.com/careers/", sector: tech}
+  - {name: Infomaniak, careers_url: "https://www.infomaniak.com/en/jobs", sector: tech}
+  - {name: Swiss Marketplace Group, careers_url: "https://swissmarketplace.group/careers/", sector: tech}
+  - {name: Digitec Galaxus, careers_url: "https://www.digitecgalaxus.ch/en/jobs", sector: consumer}
+  - {name: Zattoo, careers_url: "https://zattoo.com/company/en/jobs", sector: tech}
+  - {name: Teads, careers_url: "https://www.teads.com/careers/", sector: tech}
+  - {name: Planted, careers_url: "https://eatplanted.com/jobs", sector: consumer}
+  - {name: Too Good To Go, careers_url: "https://www.toogoodtogo.com/en/careers", sector: consumer}
+  - {name: On Running, careers_url: "https://www.on.com/en-ch/careers", sector: consumer}
+  - {name: Mammut, careers_url: "https://www.mammut.com/ch/en/careers", sector: consumer}
+  - {name: Nothing, careers_url: "https://nothing.tech/pages/careers", sector: tech}
+  - {name: Wise, careers_url: "https://wise.jobs/", sector: banking}
+  - {name: Revolut, careers_url: "https://www.revolut.com/careers/", sector: banking}
+  - {name: Coinbase, careers_url: "https://www.coinbase.com/careers", sector: tech}
+  - {name: Kraken, careers_url: "https://www.kraken.com/careers", sector: tech}
+  - {name: Ripple, careers_url: "https://ripple.com/careers/", sector: tech}
+  - {name: Chainlink Labs, careers_url: "https://chainlinklabs.com/careers", sector: tech}
+  - {name: Spotify, careers_url: "https://www.lifeatspotify.com/jobs", sector: tech}
+  - {name: Unity, careers_url: "https://careers.unity.com/", sector: tech}
+  - {name: Bending Spoons, careers_url: "https://jobs.bendingspoons.com/", sector: tech}
+  - {name: Simon-Kucher, careers_url: "https://www.simon-kucher.com/en/careers", sector: consulting}
+  - {name: Roland Berger, careers_url: "https://www.rolandberger.com/en/Join/", sector: consulting}
+  - {name: Kearney, careers_url: "https://www.kearney.com/careers", sector: consulting}
+  - {name: OC&C Strategy Consultants, careers_url: "https://www.occstrategy.com/en/careers", sector: consulting}
+  - {name: L.E.K. Consulting, careers_url: "https://www.lek.com/careers", sector: consulting}
+  - {name: Implement Consulting Group, careers_url: "https://implementconsultinggroup.com/careers", sector: consulting}
+  - {name: Zühlke, careers_url: "https://www.zuehlke.com/en/careers", sector: consulting}
+  - {name: Synpulse, careers_url: "https://www.synpulse.com/en/careers", sector: consulting}
+  - {name: Ginkgo Management Consulting, careers_url: "https://ginkgo.ch/karriere/", sector: consulting}
+  - {name: Solon, careers_url: "https://www.solon.com/careers", sector: consulting}
+  - {name: Alvarez & Marsal, careers_url: "https://www.alvarezandmarsal.com/careers", sector: consulting}
+  - {name: Horváth, careers_url: "https://www.horvath-partners.com/en/careers", sector: consulting}
+  - {name: Wavestone, careers_url: "https://www.wavestone.com/en/careers/", sector: consulting}
+  - {name: Red Bull, careers_url: "https://jobs.redbull.com/", sector: consumer}
+  - {name: Nespresso, careers_url: "https://www.nestle-nespresso.com/careers", sector: consumer}
+  - {name: Lindt & Sprüngli, careers_url: "https://www.lindt-spruengli.com/careers", sector: consumer}
+  - {name: Victorinox, careers_url: "https://www.victorinox.com/ch/en/careers", sector: consumer}
+  - {name: Logitech, careers_url: "https://www.logitech.com/en-ch/about/careers.html", sector: tech}
+  - {name: Breitling, careers_url: "https://www.breitling.com/ch-en/careers/", sector: luxury}
+  - {name: Mercuria, careers_url: "https://mercuria.com/careers/", sector: commodities}
+  - {name: Gunvor, careers_url: "https://gunvorgroup.com/careers/", sector: commodities}
+  - {name: Trafigura, careers_url: "https://www.trafigura.com/careers/", sector: commodities}
+  - {name: Vitol, careers_url: "https://www.vitol.com/careers/", sector: commodities}
+  - {name: Axpo, careers_url: "https://www.axpo.com/ch/en/about-us/careers.html", sector: commodities}
+  - {name: MET Group, careers_url: "https://group.met.com/careers", sector: commodities}
+  - {name: Kuehne+Nagel, careers_url: "https://jobs.kuehne-nagel.com/", sector: logistics}
+  - {name: Avolta, careers_url: "https://www.avoltaworld.com/en/careers", sector: travel}
+  - {name: Swiss International Air Lines, careers_url: "https://www.swiss.com/ch/en/discover/careers", sector: travel}
+  - {name: World Economic Forum, careers_url: "https://www.weforum.org/about/careers/", sector: international}
+  - {name: Gavi, careers_url: "https://www.gavi.org/our-alliance/work-us", sector: international}
+  - {name: The Global Fund, careers_url: "https://www.theglobalfund.org/en/careers/", sector: international}
+  - {name: FIND, careers_url: "https://www.finddx.org/careers/", sector: international}
+  - {name: Sophia Genetics, careers_url: "https://www.sophiagenetics.com/careers/", sector: pharma}
+  - {name: ADC Therapeutics, careers_url: "https://www.adctherapeutics.com/careers/", sector: pharma}
+  - {name: Ava Women, careers_url: "https://www.avawomen.com/careers/", sector: pharma}
+  - {name: Pexapark, careers_url: "https://pexapark.com/careers/", sector: commodities}
+  - {name: Bexio, careers_url: "https://www.bexio.com/en-CH/jobs", sector: tech}
+  - {name: Teamviewer, careers_url: "https://www.teamviewer.com/en/company/careers/", sector: tech}
+  - {name: Doodle, careers_url: "https://doodle.com/en/careers/", sector: tech}
+  - {name: Swissquote, careers_url: "https://www.swissquote.com/en/group/careers", sector: banking}
+  - {name: Leonteq, careers_url: "https://www.leonteq.com/careers", sector: banking}

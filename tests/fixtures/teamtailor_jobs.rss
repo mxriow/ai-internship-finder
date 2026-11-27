@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:tt="https://teamtailor.com/locations">
+  <channel>
+    <title>Teamtailor</title>
+    <description>Current job openings</description>
+    <link>https://career.teamtailor.com/jobs</link>
+    <item>
+      <title>Integration Success Specialist</title>
+      <description>&lt;figure&gt;&lt;lite-youtube videoid="sc-TJB8qo00" title="Play: Video" posterquality="sddefault"&gt;&lt;/lite-youtube&gt;&lt;/figure&gt;&lt;h3&gt;Let's build the future together!&lt;/h3&gt;&lt;p&gt;Teamtailor is a global Employer Branding and ATS SaaS platform used by over 13,000 companies, 250,000 users, and available in 90 countries worldwide. 🌍&lt;/p&gt;&lt;p&gt;Working at &lt;a target="_blank" href="https://www.teamtailor.com/en/"&gt;Teamtailor&lt;/a&gt; means being part of a dynamic, fast-paced tech company that values impact and responsibility. Our workplace fosters an environment where everyone can contribute meaningfully to the growth of the company. 🎉🥳&lt;/p&gt;&lt;p&gt;Building a diverse team with a wide range of experiences, skills, and backgrounds has always been central to Teamtailor’s mission, and it remains a strength today. We welcome all individuals who share our vision and are committed to contributing to our collective success. Join us in helping companies and people communicate in more meaningful ways to make life-changing decisions together.👫&lt;/p&gt;&lt;p&gt;As Teamtailor continues to grow, so does our integration ecosystem. Connecting Teamtailor with other platforms, from HR systems to assessment tools and other recruitment solutions, is a key part of helping our customers get the most out of our product.&lt;/p&gt;&lt;p&gt;That's why we're looking for our next &lt;strong&gt;Integration Success Specialist!&lt;/strong&gt;&lt;/p&gt;</description>
+      <pubDate>Tue, 24 Nov 2026 10:33:49 +0100</pubDate>
+      <link>https://career.teamtailor.com/jobs/8786914-integration-success-specialist</link>
+      <remoteStatus>none</remoteStatus>
+      <guid>d3af95f8-ff4e-4b02-8671-0a7564ce307b</guid>
+      <tt:locations>
+        <tt:location>
+          <tt:name>Stockholm</tt:name>
+          <tt:address>Östgötagatan 16</tt:address>
+          <tt:zip>116 21</tt:zip>
+          <tt:city>Stockholm</tt:city>
+          <tt:country>Sweden</tt:country>
+        </tt:location>
+      </tt:locations>
+      <tt:department>Integration Operations</tt:department>
+      <tt:role/>
+      <tt:division/>
+    </item>
+<item>
+      <title>Customer Success Manager - Dutch Speaking</title>
+      <description>&lt;figure&gt;&lt;lite-youtube videoid="sc-TJB8qo00" title="Play: Video" posterquality="sddefault"&gt;&lt;/lite-youtube&gt;&lt;/figure&gt;&lt;h4&gt;Let's build the future together!&lt;/h4&gt;&lt;p&gt;&lt;a target="_blank" href="https://career.teamtailor.com/"&gt;Teamtailor&lt;/a&gt; is an Employer Branding and ATS SaaS platform used by over 13,000 companies, and 250,000 users in 90 countries around the world 🌏.&lt;/p&gt;&lt;p&gt;Working at Teamtailor means working at a young, international, and fast-paced tech company that offers an ideal workplace for those who want to have a real impact on the growth of an organization and are craving responsibilities. It also means having lots of fun 🥳.&lt;/p&gt;&lt;p&gt;Building a diverse team with various backgrounds and expertise is at the core of Teamtailor since its very beginning and is truly part of its strength today! There are no typical profiles, each and every team member shares our vision and wants to be part of its success.&lt;/p&gt;&lt;p&gt;That's why we're expanding our Customer Success department and looking for our next &lt;strong&gt;Customer Success Manager&lt;/strong&gt;. Our mission is to have the most satisfied customers, and we are looking for a strong relationship-builder to join our team and take care of our clients 🙌🏼&lt;/p&gt;&lt;h4&gt;Your key responsibilities will be to:&lt;/h4&gt;&lt;ul&gt;&lt;li&gt;</description>
+      <pubDate>Mon, 16 Nov 2026 10:25:07 +0100</pubDate>
+      <link>https://career.teamtailor.com/jobs/8746132-customer-success-manager-dutch-speaking</link>
+      <remoteStatus>hybrid</remoteStatus>
+      <guid>fb8cc63f-b262-44e6-94c2-ae6d551d3cce</guid>
+      <tt:locations>
+        <tt:location>
+          <tt:name>Stockholm</tt:name>
+          <tt:address>Östgötagatan 16</tt:address>
+          <tt:zip>116 21</tt:zip>
+          <tt:city>Stockholm</tt:city>
+          <tt:country>Sweden</tt:country>
+        </tt:location>
+      </tt:locations>
+      <tt:department>Customer Success</tt:department>
+      <tt:role/>
+      <tt:division/>
+    </item>
+  </channel>
+</rss>

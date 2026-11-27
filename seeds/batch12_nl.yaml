@@ -1,0 +1,48 @@
+# Netherlands: consumer/FMCG, e-commerce & consumer tech, consumer retail. No Workday URLs from memory.
+seeds:
+  - {name: Henkel, careers_url: "https://www.henkel.com/careers", sector: consumer, country: null}
+  - {name: Heineken (NL), careers_url: "https://www.theheinekencompany.com/careers", sector: consumer, country: NL, tokens: [heineken]}
+  - {name: FrieslandCampina, careers_url: "https://www.frieslandcampina.com/careers/", sector: consumer, country: NL}
+  - {name: Ahold Delhaize, careers_url: "https://www.aholddelhaize.com/careers/", sector: retail, country: NL, tokens: [aholddelhaize]}
+  - {name: Albert Heijn, careers_url: "https://werk.ah.nl/", sector: retail, country: NL, tokens: [albertheijn]}
+  - {name: JDE Peet's, careers_url: "https://www.jdepeets.com/careers/", sector: consumer, country: NL, tokens: [jdepeets]}
+  - {name: L'Oréal (NL), careers_url: "https://careers.loreal.com/", sector: consumer, country: NL, tokens: [loreal]}
+  - {name: Nestlé (NL), careers_url: "https://www.nestle.nl/werken-bij", sector: consumer, country: NL}
+  - {name: Danone (NL), careers_url: "https://www.danone.nl/werken-bij/", sector: consumer, country: NL, tokens: [danone]}
+  - {name: Reckitt (NL), careers_url: "https://careers.reckitt.com/", sector: consumer, country: NL, tokens: [reckitt]}
+  - {name: Kraft Heinz (NL), careers_url: "https://careers.kraftheinz.com/", sector: consumer, country: NL, tokens: [kraftheinz]}
+  - {name: Mars (NL), careers_url: "https://careers.mars.com/", sector: consumer, country: NL, tokens: [mars]}
+  - {name: PepsiCo (NL), careers_url: "https://www.pepsicojobs.com/", sector: consumer, country: NL, tokens: [pepsico]}
+  - {name: Coca-Cola Europacific Partners (NL), careers_url: "https://www.cocacolaep.com/careers/", sector: consumer, country: NL, tokens: [ccep, cocacolaep]}
+  - {name: Booking.com, careers_url: "https://jobs.booking.com/", sector: travel, country: NL, tokens: [bookingcom, booking]}
+  - {name: bol.com, careers_url: "https://careers.bol.com/", sector: retail, country: NL, tokens: [bolcom, bol]}
+  - {name: Coolblue, careers_url: "https://www.careersatcoolblue.com/", sector: retail, country: NL}
+  - {name: Zalando (NL), careers_url: "https://jobs.zalando.com/", sector: retail, country: NL, tokens: [zalando]}
+  - {name: Adyen, careers_url: "https://careers.adyen.com/", sector: banking, country: NL}
+  - {name: Picnic, careers_url: "https://jobs.picnic.app/", sector: retail, country: NL, tokens: [picnic, picnictechnologies]}
+  - {name: Just Eat Takeaway.com, careers_url: "https://careers.justeattakeaway.com/", sector: tech, country: NL, tokens: [justeattakeaway, takeaway]}
+  - {name: Uber (NL), careers_url: "https://www.uber.com/careers/", sector: tech, country: NL, tokens: [uber]}
+  - {name: Tesla (NL), careers_url: "https://www.tesla.com/careers", sector: consumer, country: NL, tokens: [tesla]}
+  - {name: Netflix (NL), careers_url: "https://jobs.netflix.com/", sector: tech, country: NL, tokens: [netflix]}
+  - {name: Miro (NL), careers_url: "https://miro.com/careers/", sector: tech, country: NL, tokens: [miro, realtimeboard]}
+  - {name: Mollie, careers_url: "https://www.mollie.com/careers", sector: banking, country: NL}
+  - {name: bunq, careers_url: "https://www.bunq.com/careers", sector: banking, country: NL}
+  - {name: Catawiki, careers_url: "https://www.catawiki.com/en/careers", sector: retail, country: NL}
+  - {name: Sendcloud, careers_url: "https://www.sendcloud.com/careers/", sector: tech, country: NL}
+  - {name: Bynder, careers_url: "https://www.bynder.com/en/careers/", sector: tech, country: NL}
+  - {name: Bird (MessageBird), careers_url: "https://bird.com/careers", sector: tech, country: NL, tokens: [messagebird, bird]}
+  - {name: Otrium, careers_url: "https://careers.otrium.com/", sector: retail, country: NL}
+  - {name: Swapfiets, careers_url: "https://swapfiets.com/careers", sector: consumer, country: NL}
+  - {name: Tony's Chocolonely, careers_url: "https://tonyschocolonely.com/nl/en/jobs", sector: consumer, country: NL, tokens: [tonyschocolonely, tonys]}
+  - {name: Ace & Tate, careers_url: "https://careers.aceandtate.com/", sector: retail, country: NL, tokens: [aceandtate]}
+  - {name: Rituals, careers_url: "https://careers.rituals.com/", sector: retail, country: NL}
+  - {name: HEMA, careers_url: "https://werkenbijhema.nl/", sector: retail, country: NL}
+  - {name: Action, careers_url: "https://careers.action.com/", sector: retail, country: NL}
+  - {name: Jumbo, careers_url: "https://www.werkenbijjumbo.nl/", sector: retail, country: NL}
+  - {name: De Bijenkorf, careers_url: "https://werkenbij.debijenkorf.nl/", sector: retail, country: NL, tokens: [debijenkorf]}
+  - {name: A.S. Watson (Kruidvat), careers_url: "https://www.aswatson.com/careers/", sector: retail, country: NL, tokens: [aswatson]}
+  - {name: Hunkemöller, careers_url: "https://careers.hunkemoller.com/", sector: retail, country: NL, tokens: [hunkemoller]}
+  - {name: Scotch & Soda, careers_url: "https://www.scotch-soda.com/careers", sector: retail, country: NL, tokens: [scotchsoda, scotchandsoda]}
+  - {name: G-Star RAW, careers_url: "https://www.g-star.com/en_nl/careers", sector: retail, country: NL, tokens: [gstar, gstarraw]}
+  - {name: Vandebron, careers_url: "https://werkenbij.vandebron.nl/", sector: consumer, country: NL}
+  - {name: Backbase, careers_url: "https://www.backbase.com/careers", sector: tech, country: NL}

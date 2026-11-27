@@ -1,0 +1,70 @@
+seeds:
+  - {name: "Edelman", sector: communications, tokens: [edelman]}
+  - {name: "Brunswick Group", sector: communications, tokens: [brunswickgroup,brunswick]}
+  - {name: "FGS Global", sector: communications, tokens: [fgsglobal]}
+  - {name: "Teneo", sector: communications, tokens: [teneo]}
+  - {name: "Kekst CNC", sector: communications, tokens: [kekstcnc]}
+  - {name: "Weber Shandwick", sector: communications, tokens: [webershandwick]}
+  - {name: "FleishmanHillard", sector: communications, tokens: [fleishmanhillard]}
+  - {name: "Hill & Knowlton", sector: communications, tokens: [hillknowlton,hkstrategies]}
+  - {name: "APCO Worldwide", sector: communications, tokens: [apcoworldwide]}
+  - {name: "Burson", sector: communications, tokens: [burson]}
+  - {name: "Havas", sector: communications, tokens: [havas]}
+  - {name: "Monks", sector: communications, tokens: [monks,mediamonks]}
+  - {name: "Jellyfish", sector: communications, tokens: [jellyfish]}
+  - {name: "Artefact", sector: consulting, tokens: [artefact]}
+  - {name: "Eight Advisory", sector: consulting, tokens: [eightadvisory]}
+  - {name: "Kepler", sector: consulting, tokens: [kepler]}
+  - {name: "Statista", sector: consulting, tokens: [statista]}
+  - {name: "Euromonitor", sector: consulting, tokens: [euromonitor]}
+  - {name: "YouGov", sector: consulting, tokens: [yougov]}
+  - {name: "Engelhart", sector: commodities, tokens: [engelhartctp,engelhart]}
+  - {name: "Freepoint Commodities", sector: commodities, tokens: [freepoint,freepointcommodities]}
+  - {name: "Castleton Commodities", sector: commodities, tokens: [castletoncommodities,cci]}
+  - {name: "Sucafina", sector: commodities, tokens: [sucafina]}
+  - {name: "Ameropa", sector: commodities, tokens: [ameropa]}
+  - {name: "Lakera AI", sector: tech, tokens: [lakera.ai,lakera]}
+  - {name: "Unique AG", sector: tech, tokens: [unique.ai,uniqueag]}
+  - {name: "LatticeFlow", sector: tech, tokens: [latticeflow.ai]}
+  - {name: "South Pole", sector: industrial, tokens: [southpole]}
+  - {name: "myclimate", sector: industrial, tokens: [myclimate]}
+  - {name: "WBCSD", sector: international, tokens: [wbcsd]}
+  - {name: "IUCN", sector: international, tokens: [iucn]}
+  - {name: "DNDi", sector: international, tokens: [dndi]}
+  - {name: "Medicines for Malaria Venture", sector: international, tokens: [mmv]}
+  - {name: "Unitaid", sector: international, tokens: [unitaid]}
+  - {name: "CEPI", sector: international, tokens: [cepi]}
+  - {name: "Wikimedia Foundation", sector: international, tokens: [wikimedia]}
+  - {name: "EHL Hospitality Business School", sector: international, tokens: [ehl]}
+  - {name: "Akenza", sector: tech, tokens: [akenza]}
+  - {name: "Nezasa", sector: travel, tokens: [nezasa]}
+  - {name: "Viac", sector: banking, tokens: [viac,viacapp]}
+  - {name: "Kaspar&", sector: banking, tokens: [kasparund]}
+  - {name: "Nomoko", sector: tech, tokens: [nomoko]}
+  - {name: "Kantar", sector: consulting, urls: ["https://kantar.wd3.myworkdayjobs.com/Kantar"]}
+  - {name: "Ipsos", sector: consulting, urls: ["https://ipsos.wd3.myworkdayjobs.com/Ipsos"]}
+  - {name: "NielsenIQ", sector: consulting, urls: ["https://nielseniq.wd5.myworkdayjobs.com/NIQ"]}
+  - {name: "Olam / ofi", sector: commodities, urls: ["https://olam.wd3.myworkdayjobs.com/ofi"]}
+  - {name: "Viterra", sector: commodities, urls: ["https://viterra.wd3.myworkdayjobs.com/Viterra"]}
+  - {name: "COFCO International", sector: commodities, urls: ["https://cofcointernational.wd3.myworkdayjobs.com/COFCO"]}
+  - {name: "Electronic Arts", sector: tech, urls: ["https://ea.wd1.myworkdayjobs.com/EA"]}
+  - {name: "Gates Foundation", sector: international, urls: ["https://gatesfoundation.wd1.myworkdayjobs.com/Gates"]}
+  - {name: "IMD Business School", sector: international, urls: ["https://imd.wd3.myworkdayjobs.com/IMD"]}
+  - {name: "Activision Blizzard", sector: tech, urls: ["https://activision.wd1.myworkdayjobs.com/External"]}
+  - {name: "Analog Devices", sector: tech, urls: ["https://analogdevices.wd1.myworkdayjobs.com/External"]}
+  - {name: "AMD", sector: tech, urls: ["https://amd.wd1.myworkdayjobs.com/External"]}
+  - {name: "Macquarie", sector: banking, urls: ["https://macquarie.wd3.myworkdayjobs.com/Macquarie"]}
+  - {name: "Allianz Global Investors", sector: banking, urls: ["https://allianzgi.wd3.myworkdayjobs.com/AllianzGI"]}
+  - {name: "Nuveen", sector: banking, urls: ["https://tiaa.wd1.myworkdayjobs.com/Search"]}
+  - {name: "Invesco", sector: banking, urls: ["https://invesco.wd1.myworkdayjobs.com/IVZ"]}
+  - {name: "Fidelity International", sector: banking, urls: ["https://fil.wd3.myworkdayjobs.com/FidelityInternational"]}
+  - {name: "Janus Henderson", sector: banking, urls: ["https://janushenderson.wd1.myworkdayjobs.com/JanusHenderson"]}
+  - {name: "abrdn", sector: banking, urls: ["https://abrdn.wd3.myworkdayjobs.com/abrdn"]}
+  - {name: "M&G", sector: banking, urls: ["https://mandg.wd3.myworkdayjobs.com/MandG"]}
+  - {name: "Legal & General", sector: banking, urls: ["https://landg.wd3.myworkdayjobs.com/LG"]}
+  - {name: "Aviva", sector: insurance, urls: ["https://aviva.wd1.myworkdayjobs.com/External"]}
+  - {name: "Zurich North America", sector: insurance, urls: ["https://zurich.wd3.myworkdayjobs.com/Zurich"]}
+  - {name: "Swiss Re Corporate Solutions", sector: insurance, urls: ["https://swissre.wd3.myworkdayjobs.com/SwissRe"]}
+  - {name: "Allianz", sector: insurance, urls: ["https://allianz.wd3.myworkdayjobs.com/Allianz"]}
+  - {name: "Generali", sector: insurance, urls: ["https://generali.wd3.myworkdayjobs.com/Generali"]}
+  - {name: "Mapfre", sector: insurance, urls: ["https://mapfre.wd3.myworkdayjobs.com/Mapfre"]}

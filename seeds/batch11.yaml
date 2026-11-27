@@ -1,0 +1,59 @@
+seeds:
+  - {name: "Saxo Bank", sector: banking, urls: ["https://saxobank.wd3.myworkdayjobs.com/SaxoBank"]}
+  - {name: "IG Group", sector: banking, urls: ["https://ig.wd3.myworkdayjobs.com/IG"]}
+  - {name: "NTT DATA", sector: consulting, urls: ["https://nttdata.wd3.myworkdayjobs.com/NTTDATA"]}
+  - {name: "Liberty Global (Sunrise)", sector: tech, urls: ["https://libertyglobal.wd3.myworkdayjobs.com/LibertyGlobal"]}
+  - {name: "Kellogg Brown & Root", sector: industrial, urls: ["https://kbr.wd5.myworkdayjobs.com/KBR_Careers"]}
+  - {name: "Jacobs", sector: industrial, urls: ["https://jacobs.wd1.myworkdayjobs.com/External"]}
+  - {name: "AECOM", sector: industrial, urls: ["https://aecom.wd1.myworkdayjobs.com/AECOMCareers"]}
+  - {name: "WSP", sector: industrial, urls: ["https://wsp.wd3.myworkdayjobs.com/WSP"]}
+  - {name: "Arcadis", sector: industrial, urls: ["https://arcadis.wd3.myworkdayjobs.com/Arcadis"]}
+  - {name: "Hilti", sector: industrial, urls: ["https://hilti.wd3.myworkdayjobs.com/Hilti"]}
+  - {name: "Mettler-Toledo", sector: industrial, urls: ["https://mt.wd3.myworkdayjobs.com/MettlerToledo"]}
+  - {name: "Sensata", sector: industrial, urls: ["https://sensata.wd1.myworkdayjobs.com/Sensata"]}
+  - {name: "Amcor", sector: industrial, urls: ["https://amcor.wd1.myworkdayjobs.com/Amcor"]}
+  - {name: "Tetra Pak", sector: industrial, urls: ["https://tetrapak.wd3.myworkdayjobs.com/TetraPak"]}
+  - {name: "SIG Group", sector: industrial, urls: ["https://sig.wd3.myworkdayjobs.com/SIG"]}
+  - {name: "Constellium", sector: industrial, urls: ["https://constellium.wd3.myworkdayjobs.com/Constellium"]}
+  - {name: "Novelis", sector: industrial, urls: ["https://novelis.wd1.myworkdayjobs.com/Novelis"]}
+  - {name: "ADNOC", sector: commodities, urls: ["https://adnoc.wd3.myworkdayjobs.com/ADNOC"]}
+  - {name: "Equinor", sector: commodities, urls: ["https://equinor.wd3.myworkdayjobs.com/Equinor"]}
+  - {name: "TotalEnergies", sector: commodities, urls: ["https://totalenergies.wd3.myworkdayjobs.com/TotalEnergies"]}
+  - {name: "Vitol", sector: commodities, urls: ["https://vitol.wd3.myworkdayjobs.com/Vitol"]}
+  - {name: "Mercuria", sector: commodities, urls: ["https://mercuria.wd3.myworkdayjobs.com/Mercuria"]}
+  - {name: "Syngenta Group", sector: industrial, urls: ["https://syngentagroup.wd3.myworkdayjobs.com/Syngenta"]}
+  - {name: "Firmenich", sector: consumer, urls: ["https://firmenich.wd3.myworkdayjobs.com/Firmenich"]}
+  - {name: "Nestlé Health Science", sector: consumer, urls: ["https://nestle.wd3.myworkdayjobs.com/Nestle"]}
+  - {name: "Haleon", sector: consumer, urls: ["https://haleon.wd3.myworkdayjobs.com/HaleonCareers"]}
+  - {name: "Opella", sector: consumer, urls: ["https://opella.wd3.myworkdayjobs.com/Opella"]}
+  - {name: "Galderma", sector: pharma, urls: ["https://galderma.wd3.myworkdayjobs.com/Galderma_Careers"]}
+  - {name: "Interactive Brokers", sector: banking, tokens: [interactivebrokers,ibkr]}
+  - {name: "eToro", sector: banking, tokens: [etoro]}
+  - {name: "Voi", sector: tech, tokens: [voiscooters,voi]}
+  - {name: "Flix", sector: travel, tokens: [flix,flixbus]}
+  - {name: "Valtech", sector: consulting, tokens: [valtech]}
+  - {name: "Dataiku", sector: tech, tokens: [dataiku]}
+  - {name: "Contentsquare", sector: tech, tokens: [contentsquare]}
+  - {name: "Back Market", sector: consumer, tokens: [backmarket]}
+  - {name: "Vinted", sector: consumer, tokens: [vinted]}
+  - {name: "Zalando Lounge", sector: consumer, tokens: [zalandolounge]}
+  - {name: "Blacksocks", sector: consumer, tokens: [blacksocks]}
+  - {name: "Sportradar", sector: tech, tokens: [sportradar]}
+  - {name: "Teamviewer", sector: tech, tokens: [teamviewer]}
+  - {name: "Getir", sector: consumer, tokens: [getir]}
+  - {name: "Babbel", sector: tech, tokens: [babbel]}
+  - {name: "Busuu", sector: tech, tokens: [busuu]}
+  - {name: "Go1", sector: tech, tokens: [go1]}
+  - {name: "Coursera", sector: tech, tokens: [coursera]}
+  - {name: "Squarespace", sector: tech, tokens: [squarespace]}
+  - {name: "Wolt", sector: consumer, tokens: [wolt]}
+  - {name: "Delivery Hero", sector: consumer, tokens: [deliveryhero]}
+  - {name: "Foodpanda", sector: consumer, tokens: [foodpanda]}
+  - {name: "Lieferando", sector: consumer, tokens: [lieferando]}
+  - {name: "Swiss Re", sector: insurance, tokens: [swissre]}
+  - {name: "UBS", sector: banking, tokens: [ubs]}
+  - {name: "Credit Suisse", sector: banking, tokens: [creditsuisse]}
+  - {name: "Partners Group", sector: banking, tokens: [partnersgroup]}
+  - {name: "Givaudan", sector: consumer, tokens: [givaudan]}
+  - {name: "Swatch", sector: luxury, tokens: [swatch]}
+  - {name: "Kuehne+Nagel", sector: logistics, tokens: [kuehnenagel]}

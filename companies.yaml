@@ -1,0 +1,5045 @@
+# Verified companies. Each entry was confirmed by a live response from its feed.
+# Add with: python -m finder discover "<Company>" <careers_url> --add
+companies:
+- name: ABB
+  provider: phenom
+  token: careers-abb-ph
+  country: CH
+  host: careers.abb
+  careers_url: https://careers.abb/global/en
+  sector: industrial
+  verified_at: '2026-10-28T10:46:58+00:00'
+  jobs: 2130
+  jobs_by_country:
+    DE: 1
+  evidence: linked from careers page
+- name: Abbott
+  provider: workday
+  token: abbott
+  host: abbott.wd5.myworkdayjobs.com
+  site: abbottcareers
+  careers_url: https://www.jobs.abbott/
+  sector: pharma
+  verified_at: '2026-10-23T14:10:00+00:00'
+  jobs: 2000
+  swiss_jobs: 25
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: Abbott
+  provider: jsonld
+  token: abbott-site
+  host: www.jobs.abbott
+  sitemaps:
+  - https://www.jobs.abbott/us/en/sitemap_index.xml
+  careers_url: https://www.jobs.abbott/
+  sector: pharma
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 1808
+  jobs_by_country:
+    NL: 2
+    BE: 1
+    DE: 4
+    UK: 1
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:abbott
+- name: ABOUT YOU
+  provider: jsonld
+  token: corporate-aboutyou-de-ld
+  country: DE
+  host: corporate.aboutyou.de
+  sitemaps:
+  - https://corporate.aboutyou.de/sitemap_index.xml
+  careers_url: https://corporate.aboutyou.de/en/career
+  sector: retail
+  verified_at: '2026-11-04T11:05:56+00:00'
+  jobs: 206
+  jobs_by_country:
+    DE: 7
+  evidence: careers-site sitemap + JSON-LD
+- name: Accenture
+  provider: workday
+  token: accenture
+  host: accenture.wd103.myworkdayjobs.com
+  site: AccentureCareers
+  careers_url: https://www.accenture.com/ch-en/careers
+  sector: consulting
+  verified_at: '2026-10-23T14:10:21+00:00'
+  jobs: 687
+  swiss_jobs: 4
+  evidence: linked from careers page; site corrected 2026-10-23 (was AvanadeCareers, a sibling brand) using the tenant robots.txt site list
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Accenture
+  provider: workday_sitemap
+  token: accenture-wds
+  country: CH
+  host: wd103.myworkdaysite.com
+  tenant: accenture
+  sites:
+  - AccentureCareers
+  careers_url: https://www.accenture.com/ch-en/careers
+  sector: consulting
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 100
+  jobs_by_country:
+    UK: 12
+    IE: 4
+    NL: 5
+    DE: 11
+    BE: 1
+    AT: 2
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:accenture
+- name: adidas
+  provider: successfactors
+  token: adidas-site
+  country: DE
+  host: jobs.adidas-group.com
+  sitemaps:
+  - https://jobs.adidas-group.com/sitemap.xml
+  careers_url: https://jobs.adidas-group.com/
+  sector: consumer
+  verified_at: '2026-11-20T15:56:04+00:00'
+  jobs: 996
+  jobs_by_country:
+    NL: 2
+    DE: 5
+    CH: 1
+    UK: 1
+  evidence: sitemap + schema.org JobPosting (successfactors), verified live on 12 sampled pages
+- name: Adobe
+  provider: workday
+  token: adobe
+  host: adobe.wd5.myworkdayjobs.com
+  site: external_experienced
+  careers_url: https://careers.adobe.com/
+  sector: tech
+  verified_at: '2026-10-23T14:10:21+00:00'
+  jobs: 303
+  swiss_jobs: 2
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: Adobe
+  provider: jsonld
+  token: adobe-site
+  host: careers.adobe.com
+  sitemaps:
+  - https://careers.adobe.com/us/en/sitemap.xml
+  careers_url: https://careers.adobe.com/
+  sector: tech
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 249
+  jobs_by_country:
+    NL: 1
+    UK: 2
+    CH: 1
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:adobe
+- name: Adyen
+  provider: greenhouse
+  token: adyen
+  country: NL
+  careers_url: https://careers.adyen.com/
+  sector: banking
+  verified_at: '2026-10-23T19:53:36+00:00'
+  jobs: 249
+  jobs_by_country:
+    NL: 84
+  evidence: 'slug probe: board name ''Adyen'', 84 postings in NL'
+- name: Agilent Technologies
+  provider: workday
+  token: agilent
+  host: agilent.wd5.myworkdayjobs.com
+  site: Agilent_Careers
+  careers_url: null
+  sector: pharma
+  verified_at: '2026-10-23T14:10:21+00:00'
+  jobs: 391
+  swiss_jobs: 1
+  evidence: known URL, verified live; extra sites from tenant robots.txt, verified live 2026-10-24
+  extra_sites:
+  - Agilent_Student_Careers
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Agilent Technologies
+  provider: workday_sitemap
+  token: agilent-wds
+  country: CH
+  host: wd5.myworkdaysite.com
+  tenant: agilent
+  sites:
+  - Agilent_Careers
+  - Agilent_Student_Careers
+  careers_url: null
+  sector: pharma
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 134
+  jobs_by_country:
+    DE: 10
+    NL: 1
+    UK: 3
+    IE: 1
+    CH: 3
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:agilent
+- name: AIG
+  provider: workday
+  token: aig
+  host: aig.wd1.myworkdayjobs.com
+  site: aig
+  careers_url: null
+  sector: insurance
+  verified_at: '2026-10-23T14:10:21+00:00'
+  jobs: 431
+  swiss_jobs: 3
+  evidence: known URL, verified live; extra sites from tenant robots.txt, verified live 2026-10-24
+  extra_sites:
+  - early_careers
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: AIG
+  provider: workday_sitemap
+  token: aig-wds
+  country: CH
+  host: wd1.myworkdaysite.com
+  tenant: aig
+  sites:
+  - aig
+  - early_careers
+  careers_url: null
+  sector: insurance
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 107
+  jobs_by_country:
+    UK: 10
+    NL: 1
+    IE: 2
+    DE: 4
+    AE: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:aig
+- name: Airbnb
+  provider: greenhouse
+  token: airbnb
+  country: IE
+  careers_url: https://careers.airbnb.com/positions/
+  sector: tech
+  verified_at: '2026-11-24T12:08:53+00:00'
+  jobs: 199
+  jobs_by_country:
+    DE: 9
+    UK: 22
+    IE: 13
+    BE: 3
+    NL: 3
+  evidence: 'slug probe: board name ''Airbnb'', 13 postings in IE'
+- name: Albert Heijn
+  provider: jsonld
+  token: werk-ah-nl-ld
+  country: NL
+  host: werk.ah.nl
+  sitemaps:
+  - https://werk.ah.nl/sitemap.xml
+  careers_url: https://werk.ah.nl/
+  sector: retail
+  verified_at: '2026-11-04T11:02:50+00:00'
+  jobs: 3941
+  jobs_by_country:
+    NL: 10
+  evidence: careers-site sitemap + JSON-LD
+  disabled: true
+  disabled_reason: werk.ah.nl refuses automated requests (HTTP 403) since Nov 2026; roles were Dutch-language only
+- name: Alcon
+  provider: workday
+  token: alcon
+  host: alcon.wd5.myworkdayjobs.com
+  site: careers_alcon
+  careers_url: https://www.alcon.com/careers
+  sector: pharma
+  verified_at: '2026-10-23T14:10:21+00:00'
+  jobs: 371
+  swiss_jobs: 8
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Alcon
+  provider: workday_sitemap
+  token: alcon-wds
+  country: CH
+  host: wd5.myworkdaysite.com
+  tenant: alcon
+  sites:
+  - careers_alcon
+  careers_url: https://www.alcon.com/careers
+  sector: pharma
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 98
+  jobs_by_country:
+    UK: 2
+    DE: 3
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:alcon
+- name: Allianz
+  provider: phenom
+  token: careers-allianz-com-ph
+  country: DE
+  host: careers.allianz.com
+  careers_url: https://careers.allianz.com/
+  sector: insurance
+  verified_at: '2026-10-28T11:05:04+00:00'
+  jobs: 1805
+  jobs_by_country:
+    DE: 9
+    UK: 2
+    CH: 1
+  evidence: linked from careers page
+- name: Amgen
+  provider: workday
+  token: amgen
+  host: amgen.wd1.myworkdayjobs.com
+  site: Careers
+  careers_url: https://careers.amgen.com/
+  sector: pharma
+  verified_at: '2026-10-23T14:10:21+00:00'
+  jobs: 1605
+  swiss_jobs: 6
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: Amgen
+  provider: jsonld
+  token: amgen-site
+  host: careers.amgen.com
+  sitemaps:
+  - https://careers.amgen.com/sitemap.xml
+  id_pattern: /(\d{8,})/?$
+  careers_url: https://careers.amgen.com/
+  sector: pharma
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 1668
+  jobs_by_country:
+    DE: 2
+    NL: 3
+    UK: 2
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:amgen
+- name: Anthropic
+  provider: greenhouse
+  token: anthropic
+  careers_url: https://www.anthropic.com/careers
+  sector: tech
+  verified_at: '2026-10-23T14:10:21+00:00'
+  jobs: 684
+  swiss_jobs: 5
+  evidence: linked from careers page
+- name: ANYbotics
+  provider: lever
+  token: anybotics
+  careers_url: https://www.anybotics.com/company/careers/
+  sector: industrial
+  verified_at: '2026-10-23T14:10:21+00:00'
+  jobs: 21
+  swiss_jobs: 15
+  evidence: 'slug probe: 15 Swiss postings'
+- name: Aon
+  provider: jsonld
+  token: jobs-aon-com-ld
+  country: CH
+  host: jobs.aon.com
+  sitemaps:
+  - http://jobs.aon.com/sitemap.xml
+  careers_url: https://jobs.aon.com/
+  sector: insurance
+  verified_at: '2026-11-27T00:12:59+00:00'
+  jobs: 1087
+  jobs_by_country:
+    IE: 1
+    UK: 2
+    BE: 1
+  evidence: careers-site sitemap + JSON-LD
+- name: Artefact
+  provider: greenhouse
+  token: artefact
+  careers_url: null
+  sector: consulting
+  verified_at: '2026-10-23T14:10:21+00:00'
+  jobs: 141
+  swiss_jobs: 7
+  evidence: 'slug probe: board name ''Artefact'', 7 Swiss postings'
+- name: AstraZeneca
+  provider: jsonld
+  token: astrazeneca-site
+  country: UK
+  host: careers.astrazeneca.com
+  sitemaps:
+  - https://careers.astrazeneca.com/sitemap.xml
+  id_pattern: /(\d{8,})/?$
+  careers_url: https://careers.astrazeneca.com/
+  sector: pharma
+  verified_at: '2026-11-20T15:54:09+00:00'
+  jobs: 500
+  jobs_by_country:
+    UK: 4
+    AE: 2
+    DE: 1
+  evidence: sitemap + schema.org JobPosting (jsonld), verified live on 12 sampled pages
+- name: Auterion
+  provider: greenhouse
+  token: auterion
+  careers_url: null
+  sector: industrial
+  verified_at: '2026-10-23T14:10:21+00:00'
+  jobs: 20
+  swiss_jobs: 5
+  evidence: 'slug probe: board name ''Auterion'', 5 Swiss postings'
+- name: AUTO1 Group
+  provider: greenhouse
+  token: auto1group
+  country: DE
+  careers_url: https://www.auto1-group.com/jobs/
+  sector: tech
+  verified_at: '2026-11-04T11:05:47+00:00'
+  jobs: 17
+  jobs_by_country:
+    NL: 1
+    DE: 10
+  evidence: 'slug probe: board name ''AUTO1 Group'', 10 postings in DE'
+- name: Avis Budget
+  provider: workday
+  token: avisbudget
+  host: avisbudget.wd1.myworkdayjobs.com
+  site: ABG_Careers
+  careers_url: null
+  sector: travel
+  verified_at: '2026-10-23T14:10:21+00:00'
+  jobs: 625
+  swiss_jobs: 2
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Avis Budget
+  provider: workday_sitemap
+  token: avisbudget-wds
+  country: CH
+  host: wd1.myworkdaysite.com
+  tenant: avisbudget
+  sites:
+  - ABG_Careers
+  careers_url: null
+  sector: travel
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 100
+  jobs_by_country:
+    UK: 8
+    DE: 4
+    BE: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:avisbudget
+- name: AXA
+  provider: jsonld
+  token: axa
+  host: careers.axa.com
+  sitemaps:
+  - https://careers.axa.com/sitemap.xml
+  url_filter: /jobs/\d+
+  id_pattern: /jobs/(\d+)
+  prefer: lang=en
+  max_new: 500
+  careers_url: https://careers.axa.com/
+  sector: insurance
+  verified_at: '2026-10-24T08:37:48+00:00'
+  jobs: 1643
+  jobs_by_country:
+    CH: 1
+  evidence: sitemap + JSON-LD JobPosting, verified live on 12 sampled pages
+- name: Axpo
+  provider: teamtailor
+  token: axpo
+  country: CH
+  host: careers.axpo.com
+  careers_url: https://careers.axpo.com/jobs
+  sector: commodities
+  verified_at: '2026-11-27T00:15:56+00:00'
+  jobs: 431
+  jobs_by_country:
+    CH: 310
+    DE: 6
+    BE: 1
+  evidence: Teamtailor career site on careers.axpo.com (page marker), RSS verified live
+- name: Babbel
+  provider: ashby
+  token: babbel
+  country: DE
+  careers_url: https://jobs.babbel.com/
+  sector: tech
+  verified_at: '2026-11-04T11:05:48+00:00'
+  jobs: 9
+  jobs_by_country:
+    DE: 8
+  evidence: 'slug probe: 8 postings in DE'
+- name: Bacardi
+  provider: workday
+  token: bacardi
+  host: bacardi.wd3.myworkdayjobs.com
+  site: Jobs_Bacardi
+  careers_url: null
+  sector: consumer
+  verified_at: '2026-10-23T14:10:21+00:00'
+  jobs: 147
+  swiss_jobs: 3
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Bacardi
+  provider: workday_sitemap
+  token: bacardi-wds
+  country: CH
+  host: wd3.myworkdaysite.com
+  tenant: bacardi
+  sites:
+  - Jobs_Bacardi
+  careers_url: null
+  sector: consumer
+  verified_at: '2026-11-24T16:58:58+00:00'
+  jobs: 100
+  jobs_by_country:
+    UK: 15
+    DE: 2
+    NL: 2
+    AT: 1
+    CH: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:bacardi
+- name: Barclays
+  provider: workday
+  token: barclays
+  host: barclays.wd3.myworkdayjobs.com
+  site: External_Career_Site_Barclays
+  careers_url: https://search.jobs.barclays/
+  sector: banking
+  verified_at: '2026-10-23T14:10:51+00:00'
+  jobs: 731
+  swiss_jobs: 1
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: Barclays
+  provider: jsonld
+  token: barclays-site
+  host: search.jobs.barclays
+  sitemaps:
+  - https://search.jobs.barclays/sitemap.xml
+  id_pattern: /(\d{8,})/?$
+  careers_url: https://search.jobs.barclays/
+  sector: banking
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 679
+  jobs_by_country:
+    UK: 7
+    AE: 1
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:barclays
+- name: BASF
+  provider: successfactors
+  token: basf-jobs-su
+  country: DE
+  host: basf.jobs
+  sitemaps:
+  - https://basf.jobs/sitemap.xml
+  careers_url: https://basf.jobs/search?locale=en_US
+  sector: industrial
+  verified_at: '2026-10-28T11:05:56+00:00'
+  jobs: 799
+  jobs_by_country:
+    DE: 10
+  evidence: sitemap + schema.org JobPosting (successfactors), verified live on 12 sampled pages
+- name: Basilea
+  provider: personio
+  token: basilea
+  careers_url: null
+  sector: pharma
+  verified_at: '2026-10-23T14:10:51+00:00'
+  jobs: 1
+  swiss_jobs: 1
+  evidence: 'slug probe: 1 Swiss postings'
+- name: BAT
+  provider: jsonld
+  token: bat-site
+  country: UK
+  host: careers.bat.com
+  sitemaps:
+  - https://careers.bat.com/sitemap.xml
+  id_pattern: /(\d{8,})/?$
+  careers_url: https://careers.bat.com/
+  sector: consumer
+  verified_at: '2026-11-20T15:54:21+00:00'
+  jobs: 342
+  jobs_by_country:
+    UK: 9
+  evidence: sitemap + schema.org JobPosting (jsonld), verified live on 12 sampled pages
+- name: Baxter
+  provider: workday
+  token: baxter
+  host: baxter.wd1.myworkdayjobs.com
+  site: baxter
+  careers_url: null
+  sector: pharma
+  verified_at: '2026-10-23T14:10:51+00:00'
+  jobs: 508
+  swiss_jobs: 2
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: Baxter
+  provider: jsonld
+  token: baxter-site
+  host: jobs.baxter.com
+  sitemaps:
+  - https://jobs.baxter.com/sitemap.xml
+  id_pattern: /(\d{8,})/?$
+  careers_url: https://jobs.baxter.com/
+  sector: pharma
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 516
+  jobs_by_country:
+    UK: 4
+    CH: 1
+    DE: 2
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:baxter
+- name: Bayer
+  provider: jsonld
+  token: bayer-site
+  country: DE
+  host: jobs.bayer.com
+  sitemaps:
+  - https://jobs.bayer.com/sitemap.xml
+  id_pattern: /(\d{8,})/?$
+  careers_url: https://jobs.bayer.com/
+  sector: pharma
+  verified_at: '2026-11-20T15:55:27+00:00'
+  jobs: 1980
+  jobs_by_country:
+    DE: 4
+    CH: 2
+  evidence: sitemap + schema.org JobPosting (jsonld), verified live on 12 sampled pages
+- name: Beiersdorf
+  provider: jsonld
+  token: www-beiersdorf-com-ld
+  country: DE
+  host: www.beiersdorf.com
+  sitemaps:
+  - https://www.beiersdorf.com/xml-sitemap
+  careers_url: https://www.beiersdorf.com/career/your-application/job-search
+  sector: consumer
+  verified_at: '2026-10-28T11:03:43+00:00'
+  jobs: 152
+  jobs_by_country:
+    DE: 1
+  evidence: careers-site sitemap + JSON-LD
+- name: BeOne Medicines
+  provider: workday
+  token: beigene
+  host: beigene.wd5.myworkdayjobs.com
+  site: BeiGene
+  careers_url: null
+  sector: pharma
+  verified_at: '2026-10-23T14:10:51+00:00'
+  jobs: 270
+  swiss_jobs: 19
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: BeOne Medicines
+  provider: workday_sitemap
+  token: beigene-wds
+  country: CH
+  host: wd5.myworkdaysite.com
+  tenant: beigene
+  sites:
+  - BeiGene
+  careers_url: null
+  sector: pharma
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 100
+  jobs_by_country:
+    CH: 5
+    DE: 1
+    UK: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:beigene
+- name: Biogen
+  provider: workday
+  token: biibhr
+  host: biibhr.wd3.myworkdayjobs.com
+  site: external
+  careers_url: https://www.biogen.com/careers.html
+  sector: pharma
+  verified_at: '2026-10-23T14:10:51+00:00'
+  jobs: 266
+  swiss_jobs: 26
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Biogen
+  provider: workday_sitemap
+  token: biibhr-wds
+  country: CH
+  host: wd3.myworkdaysite.com
+  tenant: biibhr
+  sites:
+  - external
+  careers_url: https://www.biogen.com/careers.html
+  sector: pharma
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 100
+  jobs_by_country:
+    CH: 8
+    IE: 3
+    UK: 1
+    NL: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:biibhr
+- name: Bitpanda
+  provider: greenhouse
+  token: bitpanda
+  country: AT
+  careers_url: https://www.bitpanda.com/en/career
+  sector: tech
+  verified_at: '2026-11-04T14:42:18+00:00'
+  jobs: 36
+  jobs_by_country:
+    AT: 35
+    DE: 8
+  evidence: 'slug probe: board name ''Bitpanda'', 35 postings in AT'
+- name: Black Forest Labs
+  provider: ashby
+  token: black-forest-labs
+  careers_url: null
+  sector: tech
+  verified_at: '2026-10-23T14:10:51+00:00'
+  jobs: 13
+  swiss_jobs: 1
+  evidence: 'slug probe: 1 Swiss postings'
+- name: Boehringer Ingelheim
+  provider: successfactors
+  token: boehringer-ingelheim-site
+  country: DE
+  host: jobs.boehringer-ingelheim.com
+  sitemaps:
+  - https://jobs.boehringer-ingelheim.com/sitemap.xml
+  careers_url: https://jobs.boehringer-ingelheim.com/
+  sector: pharma
+  verified_at: '2026-11-20T15:54:39+00:00'
+  jobs: 899
+  jobs_by_country:
+    DE: 11
+  evidence: sitemap + schema.org JobPosting (successfactors), verified live on 12 sampled pages
+- name: bol.com
+  provider: greenhouse
+  token: bolcom
+  country: NL
+  careers_url: https://careers.bol.com/
+  sector: retail
+  verified_at: '2026-10-23T19:53:36+00:00'
+  jobs: 41
+  jobs_by_country:
+    NL: 41
+  evidence: 'slug probe: 41 postings in NL'
+- name: Bosch
+  provider: jsonld
+  token: jobs-bosch-de-ld
+  country: DE
+  host: jobs.bosch.de
+  sitemaps:
+  - https://jobs.bosch.de/sitemap.xml
+  careers_url: https://jobs.bosch.de/
+  sector: industrial
+  verified_at: '2026-10-28T11:03:43+00:00'
+  jobs: 1065
+  jobs_by_country:
+    DE: 12
+  evidence: careers-site sitemap + JSON-LD
+- name: Boston Consulting Group
+  provider: jsonld
+  token: bcg
+  host: careers.bcg.com
+  sitemaps:
+  - https://careers.bcg.com/global/en/sitemap_index.xml
+  url_filter: /job/
+  id_pattern: /job/([^/]+)/
+  careers_url: https://careers.bcg.com/
+  sector: consulting
+  verified_at: '2026-10-24T08:38:00+00:00'
+  jobs: 870
+  jobs_by_country:
+    CH: 1
+    UK: 1
+  evidence: sitemap + JSON-LD JobPosting, verified live on 12 sampled pages
+- name: Bring! Labs
+  provider: personio
+  token: bring-labs
+  careers_url: null
+  sector: tech
+  verified_at: '2026-10-23T14:10:51+00:00'
+  jobs: 3
+  swiss_jobs: 2
+  evidence: 'slug probe: 2 Swiss postings'
+- name: Bristol Myers Squibb
+  provider: workday
+  token: bristolmyerssquibb
+  host: bristolmyerssquibb.wd5.myworkdayjobs.com
+  site: BMS
+  careers_url: https://careers.bms.com/
+  sector: pharma
+  verified_at: '2026-10-23T14:10:51+00:00'
+  jobs: 666
+  swiss_jobs: 9
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Bristol Myers Squibb
+  provider: workday_sitemap
+  token: bristolmyerssquibb-wds
+  country: CH
+  host: wd5.myworkdaysite.com
+  tenant: bristolmyerssquibb
+  sites:
+  - BMS
+  careers_url: https://careers.bms.com/
+  sector: pharma
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 100
+  jobs_by_country:
+    NL: 7
+    UK: 11
+    AE: 1
+    CH: 3
+    DE: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:bristolmyerssquibb
+- name: bunq
+  provider: recruitee
+  token: bunq
+  country: NL
+  careers_url: https://www.bunq.com/careers
+  sector: banking
+  verified_at: '2026-10-23T19:54:12+00:00'
+  jobs: 21
+  jobs_by_country:
+    NL: 17
+  evidence: linked from careers page
+- name: Burberry
+  provider: successfactors
+  token: burberry-site
+  country: UK
+  host: burberrycareers.com
+  sitemaps:
+  - https://burberrycareers.com/sitemap.xml
+  careers_url: https://burberrycareers.com/
+  sector: consumer
+  verified_at: '2026-11-20T15:55:56+00:00'
+  jobs: 130
+  jobs_by_country:
+    UK: 8
+    CH: 2
+    AE: 1
+  evidence: sitemap + schema.org JobPosting (successfactors), verified live on 12 sampled pages
+- name: Bynder
+  provider: ashby
+  token: bynder
+  country: NL
+  careers_url: https://www.bynder.com/en/careers/
+  sector: tech
+  verified_at: '2026-10-23T19:54:12+00:00'
+  jobs: 22
+  jobs_by_country:
+    NL: 12
+  evidence: 'slug probe: 12 postings in NL'
+- name: Capco
+  provider: greenhouse
+  token: capco
+  careers_url: null
+  sector: consulting
+  verified_at: '2026-10-23T14:10:51+00:00'
+  jobs: 723
+  swiss_jobs: 11
+  evidence: 'slug probe: board name ''Capco'', 11 Swiss postings'
+- name: Cardano Foundation
+  provider: personio
+  token: cardano-foundation
+  country: CH
+  careers_url: https://cardanofoundation.org/careers
+  sector: tech
+  verified_at: '2026-11-27T00:00:01+00:00'
+  jobs: 1
+  jobs_by_country:
+    CH: 1
+  evidence: 'slug probe: 1 postings in CH'
+- name: Carlsberg Group (incl. Feldschlösschen)
+  provider: successfactors
+  token: careers-carlsberg-com-su
+  country: CH
+  host: careers.carlsberg.com
+  sitemaps:
+  - https://careers.carlsberg.com/sitemap.xml
+  careers_url: https://careers.carlsberg.com/Feldschlosschen?locale=de_DE
+  sector: consumer
+  verified_at: '2026-11-04T11:02:50+00:00'
+  jobs: 102
+  jobs_by_country:
+    UK: 12
+  evidence: linked from careers page
+- name: Catawiki
+  provider: greenhouse
+  token: catawiki
+  country: NL
+  careers_url: https://www.catawiki.com/en/careers
+  sector: retail
+  verified_at: '2026-10-23T19:54:12+00:00'
+  jobs: 41
+  jobs_by_country:
+    NL: 28
+  evidence: 'slug probe: board name ''Catawiki'', 28 postings in NL'
+- name: Caterpillar
+  provider: workday
+  token: cat
+  host: cat.wd5.myworkdayjobs.com
+  site: CaterpillarCareers
+  careers_url: null
+  sector: industrial
+  verified_at: '2026-10-23T14:10:51+00:00'
+  jobs: 1027
+  swiss_jobs: 5
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Caterpillar
+  provider: workday_sitemap
+  token: cat-wds
+  country: CH
+  host: wd5.myworkdaysite.com
+  tenant: cat
+  sites:
+  - CaterpillarCareers
+  careers_url: null
+  sector: industrial
+  verified_at: '2026-11-24T16:58:58+00:00'
+  jobs: 99
+  jobs_by_country:
+    UK: 2
+    CH: 1
+    DE: 3
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:cat
+- name: Celonis
+  provider: greenhouse
+  token: celonis
+  careers_url: null
+  sector: tech
+  verified_at: '2026-10-23T14:10:51+00:00'
+  jobs: 217
+  swiss_jobs: 3
+  evidence: 'slug probe: board name ''Celonis'', 3 Swiss postings'
+- name: Cembra Money Bank
+  provider: jsonld
+  token: cembra-so
+  country: CH
+  host: cembra.softgarden.io
+  sitemaps:
+  - https://cembra.softgarden.io/sitemap.xml
+  url_filter: /job/\d+
+  id_pattern: /job/(\d+)
+  careers_url: https://careers.cembra.ch/de/
+  sector: banking
+  verified_at: '2026-11-27T00:00:01+00:00'
+  jobs: 6
+  jobs_by_country:
+    CH: 6
+  evidence: linked from careers page
+- name: Chubb
+  provider: oracle
+  token: fa-ewgu-saasfaprod1
+  country: CH
+  host: fa-ewgu-saasfaprod1.fa.ocs.oraclecloud.com
+  site: CX_2001
+  careers_url: https://fa-ewgu-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001
+  sector: insurance
+  verified_at: '2026-10-28T10:47:20+00:00'
+  jobs: 741
+  jobs_by_country:
+    UK: 28
+    NL: 5
+    BE: 1
+    DE: 3
+  evidence: linked from careers page
+- name: ClearSpace
+  provider: bamboohr
+  token: clearspace
+  country: CH
+  careers_url: https://clearspace.today/joinclearspace
+  sector: industrial
+  verified_at: '2026-11-27T00:00:02+00:00'
+  jobs: 25
+  jobs_by_country:
+    UK: 11
+    LU: 7
+    CH: 3
+  evidence: linked from careers page
+- name: Climeworks
+  provider: recruitee
+  token: climeworks
+  careers_url: https://climeworks.com/careers
+  sector: industrial
+  verified_at: '2026-10-23T14:10:51+00:00'
+  jobs: 2
+  swiss_jobs: 2
+  evidence: 'slug probe: 2 Swiss postings'
+- name: Cloudflare
+  provider: greenhouse
+  token: cloudflare
+  careers_url: https://www.cloudflare.com/careers/
+  sector: tech
+  verified_at: '2026-10-23T14:10:51+00:00'
+  jobs: 447
+  swiss_jobs: 5
+  evidence: 'slug probe: board name ''Cloudflare'', 5 Swiss postings'
+- name: Coinbase
+  provider: greenhouse
+  token: coinbase
+  country: IE
+  careers_url: https://www.coinbase.com/careers/positions
+  sector: tech
+  verified_at: '2026-11-24T12:10:16+00:00'
+  jobs: 249
+  jobs_by_country:
+    LU: 5
+    UK: 18
+    IE: 3
+    AE: 3
+  evidence: 'slug probe: board name ''Coinbase'', 3 postings in IE'
+- name: Contentful
+  provider: greenhouse
+  token: contentful
+  country: DE
+  careers_url: https://www.contentful.com/careers/
+  sector: tech
+  verified_at: '2026-11-04T11:05:32+00:00'
+  jobs: 29
+  jobs_by_country:
+    DE: 5
+    UK: 15
+  evidence: 'slug probe: board name ''Contentful'', 5 postings in DE'
+- name: Copper
+  provider: greenhouse
+  token: copperco
+  careers_url: null
+  sector: banking
+  verified_at: '2026-10-23T14:10:51+00:00'
+  jobs: 2
+  swiss_jobs: 1
+  evidence: 'slug probe: board name ''Copper.co'', 1 Swiss postings'
+- name: Coty
+  provider: successfactors
+  token: coty-site
+  country: NL
+  host: careers.coty.com
+  sitemaps:
+  - https://careers.coty.com/sitemap.xml
+  id_pattern: /(\d{8,})/?$
+  careers_url: https://careers.coty.com/
+  sector: consumer
+  verified_at: '2026-11-20T15:54:30+00:00'
+  jobs: 155
+  jobs_by_country:
+    UK: 3
+    NL: 9
+  evidence: sitemap + schema.org JobPosting (successfactors), verified live on 12 sampled pages
+- name: CrowdStrike
+  provider: workday
+  token: crowdstrike
+  host: crowdstrike.wd5.myworkdayjobs.com
+  site: crowdstrikecareers
+  careers_url: null
+  sector: tech
+  verified_at: '2026-10-23T14:10:51+00:00'
+  jobs: 390
+  swiss_jobs: 1
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: CrowdStrike
+  provider: workday_sitemap
+  token: crowdstrike-wds
+  country: CH
+  host: wd5.myworkdaysite.com
+  tenant: crowdstrike
+  sites:
+  - crowdstrikecareers
+  careers_url: null
+  sector: tech
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 100
+  jobs_by_country:
+    IE: 3
+    UK: 12
+    DE: 6
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:crowdstrike
+- name: CSL Vifor
+  provider: workday
+  token: csl
+  host: csl.wd1.myworkdayjobs.com
+  site: CSL_External
+  careers_url: https://www.csl.com/careers
+  sector: pharma
+  verified_at: '2026-10-23T14:10:51+00:00'
+  jobs: 188
+  swiss_jobs: 27
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: CSL Vifor
+  provider: jsonld
+  token: csl-vifor-site
+  host: jobs.csl.com
+  sitemaps:
+  - https://jobs.csl.com/sitemap
+  id_pattern: /(\d{8,})/?$
+  careers_url: https://jobs.csl.com/
+  sector: pharma
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 1424
+  jobs_by_country:
+    DE: 6
+    UK: 2
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:csl
+- name: Danaher
+  provider: workday
+  token: danaher
+  host: danaher.wd1.myworkdayjobs.com
+  site: DanaherJobs
+  careers_url: null
+  sector: pharma
+  verified_at: '2026-10-23T14:10:51+00:00'
+  jobs: 1440
+  swiss_jobs: 14
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: Danaher
+  provider: jsonld
+  token: danaher-site
+  host: jobs.danaher.com
+  sitemaps:
+  - https://jobs.danaher.com/global/en/sitemap_index.xml
+  id_pattern: /(\d{8,})/?$
+  careers_url: https://jobs.danaher.com/
+  sector: pharma
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 1469
+  jobs_by_country:
+    UK: 3
+    DE: 3
+    AT: 1
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:danaher
+- name: Databricks
+  provider: greenhouse
+  token: databricks
+  careers_url: https://www.databricks.com/company/careers
+  sector: tech
+  verified_at: '2026-10-23T14:10:51+00:00'
+  jobs: 896
+  swiss_jobs: 12
+  evidence: 'slug probe: board name ''Databricks'', 12 Swiss postings'
+- name: Datadog
+  provider: greenhouse
+  token: datadog
+  careers_url: https://careers.datadoghq.com/
+  sector: tech
+  verified_at: '2026-10-23T14:10:51+00:00'
+  jobs: 437
+  swiss_jobs: 9
+  evidence: 'slug probe: board name ''Datadog'', 9 Swiss postings'
+- name: Datasite (Sherpany)
+  provider: workday
+  token: datasite
+  host: datasite.wd1.myworkdayjobs.com
+  site: datasite
+  careers_url: https://www.sherpany.com/en/careers/
+  sector: tech
+  verified_at: '2026-10-23T14:10:51+00:00'
+  jobs: 36
+  swiss_jobs: 1
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Datasite (Sherpany)
+  provider: workday_sitemap
+  token: datasite-wds
+  country: CH
+  host: wd1.myworkdaysite.com
+  tenant: datasite
+  sites:
+  - datasite
+  careers_url: https://www.sherpany.com/en/careers/
+  sector: tech
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 52
+  jobs_by_country:
+    DE: 2
+    UK: 11
+    CH: 2
+    NL: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:datasite
+- name: DeepJudge
+  provider: ashby
+  token: deepjudge
+  careers_url: null
+  sector: tech
+  verified_at: '2026-10-23T14:10:51+00:00'
+  jobs: 20
+  swiss_jobs: 13
+  evidence: 'slug probe: 13 Swiss postings'
+- name: Delivery Hero
+  provider: jsonld
+  token: careers-deliveryhero-com-ld
+  country: DE
+  host: careers.deliveryhero.com
+  sitemaps:
+  - https://careers.deliveryhero.com/sitemap.xml
+  careers_url: https://careers.deliveryhero.com/jobs
+  sector: tech
+  verified_at: '2026-10-28T11:05:19+00:00'
+  jobs: 697
+  jobs_by_country:
+    DE: 1
+    AE: 11
+  evidence: careers-site sitemap + JSON-LD
+- name: Deutsche Bank
+  provider: workday
+  token: db
+  host: db.wd3.myworkdayjobs.com
+  site: DBWebsite
+  careers_url: https://careers.db.com/
+  sector: banking
+  verified_at: '2026-10-23T14:10:51+00:00'
+  jobs: 1148
+  swiss_jobs: 13
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Deutsche Bank
+  provider: workday_sitemap
+  token: db-wds
+  country: CH
+  host: wd3.myworkdaysite.com
+  tenant: db
+  sites:
+  - DBWebsite
+  careers_url: https://careers.db.com/
+  sector: banking
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 100
+  jobs_by_country:
+    UK: 12
+    DE: 17
+    CH: 2
+    BE: 2
+    AE: 4
+    LU: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:db
+- name: DHL Group
+  provider: phenom
+  token: careers-dhl-com-ph
+  country: CH
+  host: careers.dhl.com
+  careers_url: https://careers.dhl.com/amer/en
+  sector: logistics
+  verified_at: '2026-10-28T10:47:05+00:00'
+  jobs: 9341
+  jobs_by_country:
+    DE: 4
+  evidence: linked from careers page
+- name: Disney
+  provider: workday
+  token: disney
+  host: disney.wd5.myworkdayjobs.com
+  site: disneycareer
+  careers_url: https://jobs.disneycareers.com/
+  sector: tech
+  verified_at: '2026-10-23T14:10:51+00:00'
+  jobs: 385
+  swiss_jobs: 2
+  evidence: linked from careers page
+- name: DocuSign
+  provider: jsonld
+  token: careers-docusign-com-ld
+  country: IE
+  host: careers.docusign.com
+  sitemaps:
+  - http://careers.docusign.com/sitemap.xml
+  careers_url: https://careers.docusign.com/
+  sector: tech
+  verified_at: '2026-11-24T12:10:16+00:00'
+  jobs: 238
+  jobs_by_country:
+    IE: 3
+  evidence: careers-site sitemap + JSON-LD
+- name: Doodle
+  provider: jsonld
+  token: careers-doodle-com-ld
+  country: CH
+  host: careers.doodle.com
+  sitemaps:
+  - https://careers.doodle.com/sitemap.xml
+  careers_url: https://careers.doodle.com/
+  sector: tech
+  verified_at: '2026-11-04T11:02:50+00:00'
+  jobs: 8
+  jobs_by_country:
+    DE: 5
+    UK: 2
+  evidence: careers-site sitemap + JSON-LD
+- name: Dropbox
+  provider: greenhouse
+  token: dropbox
+  country: IE
+  careers_url: https://jobs.dropbox.com/all-jobs
+  sector: tech
+  verified_at: '2026-11-24T12:08:53+00:00'
+  jobs: 54
+  jobs_by_country:
+    IE: 6
+  evidence: 'slug probe: board name ''Dropbox'', 6 postings in IE'
+- name: Dynatrace
+  provider: jsonld
+  token: careers-dynatrace-com-ld
+  country: AT
+  host: careers.dynatrace.com
+  sitemaps:
+  - https://www.dynatrace.com/sitemap.xml
+  careers_url: https://careers.dynatrace.com/
+  sector: tech
+  verified_at: '2026-11-04T14:43:11+00:00'
+  jobs: 110
+  jobs_by_country:
+    AT: 1
+    DE: 1
+  evidence: careers-site sitemap + JSON-LD
+- name: easyJet
+  provider: taleo
+  token: easyjet
+  country: CH
+  host: easyjet.taleo.net
+  section: '2'
+  careers_url: https://careers.easyjet.com/fr
+  sector: travel
+  verified_at: '2026-10-28T10:47:21+00:00'
+  jobs: 73
+  jobs_by_country:
+    UK: 49
+    NL: 1
+  evidence: linked from careers page
+- name: Ebury
+  provider: greenhouse
+  token: ebury
+  careers_url: null
+  sector: banking
+  verified_at: '2026-10-23T14:10:51+00:00'
+  jobs: 144
+  swiss_jobs: 4
+  evidence: 'slug probe: board name ''Ebury'', 4 Swiss postings'
+- name: Ecolab
+  provider: workday
+  token: ecolab
+  host: ecolab.wd1.myworkdayjobs.com
+  site: Ecolab_External
+  careers_url: null
+  sector: industrial
+  verified_at: '2026-10-23T14:11:06+00:00'
+  jobs: 1038
+  swiss_jobs: 10
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: Ecolab
+  provider: jsonld
+  token: ecolab-site
+  host: jobs.ecolab.com
+  sitemaps:
+  - https://jobs.ecolab.com/global/en/sitemap_index.xml
+  careers_url: https://jobs.ecolab.com/
+  sector: industrial
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 1027
+  jobs_by_country:
+    DE: 3
+    UK: 3
+    CH: 1
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:ecolab
+- name: Edwards Lifesciences
+  provider: workday
+  token: edwards
+  host: edwards.wd5.myworkdayjobs.com
+  site: edwardscareers
+  careers_url: https://www.edwards.com/careers
+  sector: pharma
+  verified_at: '2026-10-23T14:11:06+00:00'
+  jobs: 391
+  swiss_jobs: 1
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Edwards Lifesciences
+  provider: workday_sitemap
+  token: edwards-wds
+  country: CH
+  host: wd5.myworkdaysite.com
+  tenant: edwards
+  sites:
+  - edwardscareers
+  careers_url: https://www.edwards.com/careers
+  sector: pharma
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 100
+  jobs_by_country:
+    UK: 3
+    DE: 6
+    CH: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:edwards
+- name: Elastic
+  provider: greenhouse
+  token: elastic
+  careers_url: https://www.elastic.co/careers
+  sector: tech
+  verified_at: '2026-10-23T14:11:06+00:00'
+  jobs: 395
+  swiss_jobs: 8
+  evidence: 'slug probe: board name ''Elastic'', 8 Swiss postings'
+- name: Elca
+  provider: oracle
+  token: iaaras
+  country: CH
+  host: iaaras.fa.ocs.oraclecloud.com
+  site: CX_1
+  careers_url: https://www.elca.ch/news/geneva-roadshow-digital-sovereignty-vision-action
+  sector: consulting
+  verified_at: '2026-10-28T10:47:20+00:00'
+  jobs: 55
+  jobs_by_country:
+    CH: 50
+  evidence: known URL, verified live
+- name: Electrolux
+  provider: workday
+  token: electrolux
+  host: electrolux.wd3.myworkdayjobs.com
+  site: ElectroluxCareerSite
+  careers_url: null
+  sector: consumer
+  verified_at: '2026-10-23T14:11:06+00:00'
+  jobs: 279
+  swiss_jobs: 4
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Electrolux
+  provider: workday_sitemap
+  token: electrolux-wds
+  country: CH
+  host: wd3.myworkdaysite.com
+  tenant: electrolux
+  sites:
+  - ElectroluxCareerSite
+  careers_url: null
+  sector: consumer
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 100
+  jobs_by_country:
+    DE: 4
+    UK: 1
+    BE: 1
+    AT: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:electrolux
+- name: ElevenLabs
+  provider: ashby
+  token: elevenlabs
+  careers_url: null
+  sector: tech
+  verified_at: '2026-10-23T14:11:06+00:00'
+  jobs: 157
+  swiss_jobs: 5
+  evidence: 'slug probe: 5 Swiss postings'
+- name: Energy Vault
+  provider: lever
+  token: EnergyVault
+  careers_url: https://www.energyvault.com/careers
+  sector: industrial
+  verified_at: '2026-10-23T14:11:06+00:00'
+  jobs: 15
+  swiss_jobs: 0
+  evidence: linked from careers page
+- name: Enpal
+  provider: ashby
+  token: enpal
+  country: DE
+  careers_url: https://www.enpal.de/karriere
+  sector: tech
+  verified_at: '2026-11-04T11:05:57+00:00'
+  jobs: 170
+  jobs_by_country:
+    DE: 126
+  evidence: 'slug probe: 126 postings in DE'
+- name: Equinix
+  provider: workday
+  token: equinix
+  host: equinix.wd1.myworkdayjobs.com
+  site: External
+  careers_url: https://careers.equinix.com/
+  sector: tech
+  verified_at: '2026-10-23T14:11:06+00:00'
+  jobs: 288
+  swiss_jobs: 1
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Equinix
+  provider: workday_sitemap
+  token: equinix-wds
+  country: CH
+  host: wd1.myworkdaysite.com
+  tenant: equinix
+  sites:
+  - External
+  careers_url: https://careers.equinix.com/
+  sector: tech
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 100
+  jobs_by_country:
+    DE: 3
+    UK: 14
+    NL: 2
+    IE: 2
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:equinix
+- name: Etsy
+  provider: jsonld
+  token: careers-etsy-com-ld
+  country: IE
+  host: careers.etsy.com
+  sitemaps:
+  - https://careers.etsy.com/sitemap.xml
+  careers_url: https://careers.etsy.com/
+  sector: tech
+  verified_at: '2026-11-24T12:10:20+00:00'
+  jobs: 67
+  jobs_by_country:
+    IE: 3
+    UK: 1
+  evidence: careers-site sitemap + JSON-LD
+- name: Exeon
+  provider: recruitee
+  token: exeon
+  careers_url: null
+  sector: tech
+  verified_at: '2026-10-23T14:11:06+00:00'
+  jobs: 4
+  swiss_jobs: 4
+  evidence: 'slug probe: 4 Swiss postings'
+- name: Expedia Group
+  provider: workday
+  token: expedia
+  host: expedia.wd108.myworkdayjobs.com
+  site: search
+  careers_url: https://careers.expediagroup.com/
+  sector: travel
+  verified_at: '2026-10-23T14:11:06+00:00'
+  jobs: 164
+  swiss_jobs: 1
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: Expedia Group
+  provider: jsonld
+  token: expedia-group-site
+  host: careers.expediagroup.com
+  sitemaps:
+  - https://careers.expediagroup.com/jobs-sitemap.xml
+  careers_url: https://careers.expediagroup.com/
+  sector: travel
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 163
+  jobs_by_country:
+    UK: 8
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:expedia
+- name: EY
+  provider: successfactors
+  token: ey-sf
+  host: careers.ey.com
+  sitemaps:
+  - https://careers.ey.com/sitemap.xml
+  careers_url: https://careers.ey.com/
+  sector: consulting
+  verified_at: '2026-10-24T16:44:30+00:00'
+  jobs: 9176
+  jobs_by_country:
+    CH: 5
+    DE: 6
+  evidence: sitemap + schema.org JobPosting (successfactors), verified live on 12 sampled pages
+- name: Ferring Pharmaceuticals
+  provider: workday
+  token: ferring
+  host: ferring.wd3.myworkdayjobs.com
+  site: Ferring
+  careers_url: https://www.ferring.com/careers/
+  sector: pharma
+  verified_at: '2026-10-23T14:11:06+00:00'
+  jobs: 68
+  swiss_jobs: 0
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Ferring Pharmaceuticals
+  provider: workday_sitemap
+  token: ferring-wds
+  country: CH
+  host: wd3.myworkdaysite.com
+  tenant: ferring
+  sites:
+  - Ferring
+  careers_url: https://www.ferring.com/careers/
+  sector: pharma
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 81
+  jobs_by_country:
+    UK: 3
+    DE: 6
+    CH: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:ferring
+- name: Fidelity International
+  provider: workday
+  token: fil
+  host: fil.wd3.myworkdayjobs.com
+  site: '001'
+  careers_url: null
+  sector: banking
+  verified_at: '2026-10-23T14:11:06+00:00'
+  jobs: 89
+  swiss_jobs: 1
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Fidelity International
+  provider: workday_sitemap
+  token: fil-wds
+  country: CH
+  host: wd3.myworkdaysite.com
+  tenant: fil
+  sites:
+  - '001'
+  careers_url: null
+  sector: banking
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 79
+  jobs_by_country:
+    IE: 3
+    DE: 11
+    LU: 3
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:fil
+- name: Flaconi
+  provider: greenhouse
+  token: flaconi
+  country: DE
+  careers_url: https://www.flaconi.de/karriere/
+  sector: retail
+  verified_at: '2026-11-04T11:05:57+00:00'
+  jobs: 13
+  jobs_by_country:
+    DE: 13
+  evidence: 'slug probe: board name ''flaconi'', 13 postings in DE'
+- name: Flix
+  provider: greenhouse
+  token: flix
+  country: DE
+  careers_url: https://www.flix.careers/
+  sector: travel
+  verified_at: '2026-11-04T11:05:31+00:00'
+  jobs: 147
+  jobs_by_country:
+    UK: 2
+    DE: 56
+  evidence: 'slug probe: board name ''Flix'', 56 postings in DE'
+- name: Forto
+  provider: ashby
+  token: forto
+  country: DE
+  careers_url: https://forto.com/en/careers/
+  sector: tech
+  verified_at: '2026-11-04T11:05:56+00:00'
+  jobs: 9
+  jobs_by_country:
+    DE: 7
+  evidence: 'slug probe: 7 postings in DE'
+- name: Four Seasons
+  provider: workday
+  token: fourseasons
+  host: fourseasons.wd3.myworkdayjobs.com
+  site: Search
+  careers_url: null
+  sector: travel
+  verified_at: '2026-10-23T14:11:06+00:00'
+  jobs: 1890
+  swiss_jobs: 17
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: Four Seasons
+  provider: jsonld
+  token: four-seasons-site
+  host: careers.fourseasons.com
+  sitemaps:
+  - https://careers.fourseasons.com/us/en/sitemap_index.xml
+  careers_url: https://careers.fourseasons.com/
+  sector: travel
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 1620
+  jobs_by_country: {}
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:fourseasons
+- name: Frontify
+  provider: ashby
+  token: frontify
+  careers_url: https://www.frontify.com/en/careers
+  sector: tech
+  verified_at: '2026-10-23T14:11:06+00:00'
+  jobs: 18
+  swiss_jobs: 7
+  evidence: linked from careers page
+- name: Galderma
+  provider: workday
+  token: galderma
+  host: galderma.wd3.myworkdayjobs.com
+  site: External
+  careers_url: null
+  sector: pharma
+  verified_at: '2026-10-23T14:11:06+00:00'
+  jobs: 350
+  swiss_jobs: 2
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Galderma
+  provider: workday_sitemap
+  token: galderma-wds
+  country: CH
+  host: wd3.myworkdaysite.com
+  tenant: galderma
+  sites:
+  - External
+  careers_url: null
+  sector: pharma
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 100
+  jobs_by_country:
+    UK: 8
+    CH: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:galderma
+- name: Gartner
+  provider: workday
+  token: gartner
+  host: gartner.wd5.myworkdayjobs.com
+  site: EXT
+  careers_url: https://jobs.gartner.com/
+  sector: consulting
+  verified_at: '2026-10-23T14:11:06+00:00'
+  jobs: 782
+  swiss_jobs: 5
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: Gartner
+  provider: jsonld
+  token: gartner-site
+  host: jobs.gartner.com
+  sitemaps:
+  - https://jobs.gartner.com/sitemap.xml
+  careers_url: https://jobs.gartner.com/
+  sector: consulting
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 800
+  jobs_by_country:
+    UK: 3
+    CH: 2
+    DE: 1
+    AT: 1
+    BE: 1
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:gartner
+- name: gategroup
+  provider: workday
+  token: gategroup
+  host: gategroup.wd3.myworkdayjobs.com
+  site: GateGroup_External_Careers
+  careers_url: null
+  sector: travel
+  verified_at: '2026-10-23T14:11:06+00:00'
+  jobs: 197
+  swiss_jobs: 1
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: gategroup
+  provider: jsonld
+  token: gategroup-site
+  host: jobs.gategroup.com
+  sitemaps:
+  - https://jobs.gategroup.com/sitemap.xml
+  id_pattern: /(\d{8,})/?$
+  careers_url: https://jobs.gategroup.com/
+  sector: travel
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 101
+  jobs_by_country: {}
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:gategroup
+- name: GE HealthCare
+  provider: workday
+  token: gehc
+  host: gehc.wd5.myworkdayjobs.com
+  site: GEHC_ExternalSite
+  careers_url: null
+  sector: pharma
+  verified_at: '2026-10-23T14:11:50+00:00'
+  jobs: 1048
+  swiss_jobs: 1
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: GE HealthCare
+  provider: jsonld
+  token: ge-healthcare-site
+  host: careers.gehealthcare.com
+  sitemaps:
+  - https://careers.gehealthcare.com/global/en/sitemap_index.xml
+  careers_url: https://careers.gehealthcare.com/
+  sector: pharma
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 964
+  jobs_by_country:
+    DE: 4
+    UK: 3
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:gehc
+- name: GE Vernova
+  provider: workday
+  token: gevernova
+  host: gevernova.wd5.myworkdayjobs.com
+  site: Vernova_ExternalSite
+  careers_url: null
+  sector: industrial
+  verified_at: '2026-10-23T14:11:55+00:00'
+  jobs: 2244
+  swiss_jobs: 17
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: GE Vernova
+  provider: jsonld
+  token: ge-vernova-site
+  host: careers.gevernova.com
+  sitemaps:
+  - https://careers.gevernova.com/sitemap.xml
+  id_pattern: /(\d{8,})/?$
+  careers_url: https://careers.gevernova.com/
+  sector: industrial
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 6256
+  jobs_by_country:
+    DE: 3
+    UK: 2
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:gevernova
+- name: GetYourGuide
+  provider: greenhouse
+  token: getyourguide
+  careers_url: https://www.getyourguide.careers/
+  sector: travel
+  verified_at: '2026-10-23T14:11:55+00:00'
+  jobs: 73
+  swiss_jobs: 7
+  evidence: 'slug probe: board name ''GetYourGuide'', 7 Swiss postings'
+- name: Gilead
+  provider: workday
+  token: gilead
+  host: gilead.wd1.myworkdayjobs.com
+  site: gileadcareers
+  careers_url: https://www.gilead.com/careers
+  sector: pharma
+  verified_at: '2026-10-23T14:11:55+00:00'
+  jobs: 410
+  swiss_jobs: 1
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Gilead
+  provider: workday_sitemap
+  token: gilead-wds
+  country: CH
+  host: wd1.myworkdaysite.com
+  tenant: gilead
+  sites:
+  - gileadcareers
+  careers_url: https://www.gilead.com/careers
+  sector: pharma
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 100
+  jobs_by_country:
+    AE: 1
+    UK: 7
+    NL: 2
+    DE: 1
+    IE: 5
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:gilead
+- name: GitLab
+  provider: greenhouse
+  token: gitlab
+  careers_url: https://about.gitlab.com/jobs/
+  sector: tech
+  verified_at: '2026-10-23T14:11:55+00:00'
+  jobs: 230
+  swiss_jobs: 1
+  evidence: 'slug probe: board name ''GitLab'', 1 Swiss postings'
+- name: Givaudan
+  provider: jsonld
+  token: givaudan
+  host: careers.givaudan.com
+  sitemaps:
+  - https://careers.givaudan.com/global/en/sitemap.xml
+  url_filter: /job/
+  id_pattern: /job/([^/]+)/
+  careers_url: https://careers.givaudan.com/
+  sector: consumer
+  verified_at: '2026-10-24T08:38:46+00:00'
+  jobs: 354
+  jobs_by_country:
+    DE: 1
+    CH: 1
+  evidence: sitemap + JSON-LD JobPosting, verified live on 12 sampled pages
+- name: Glanbia
+  provider: successfactors
+  token: careers-glanbia-com-su
+  country: IE
+  host: careers.glanbia.com
+  sitemaps:
+  - https://careers.glanbia.com/sitemap.xml
+  careers_url: https://www.glanbia.com/careers
+  sector: consumer
+  verified_at: '2026-11-24T12:10:22+00:00'
+  jobs: 217
+  jobs_by_country:
+    DE: 1
+    UK: 3
+    IE: 8
+  evidence: linked from careers page
+- name: GoStudent
+  provider: greenhouse
+  token: gostudent
+  country: AT
+  careers_url: https://www.gostudent.org/en/careers
+  sector: tech
+  verified_at: '2026-11-04T14:42:18+00:00'
+  jobs: 21
+  jobs_by_country:
+    DE: 3
+    AT: 11
+  evidence: 'slug probe: board name ''GoStudent'', 11 postings in AT'
+- name: Grafana Labs
+  provider: greenhouse
+  token: grafanalabs
+  careers_url: null
+  sector: tech
+  verified_at: '2026-10-23T14:11:55+00:00'
+  jobs: 133
+  swiss_jobs: 2
+  evidence: 'slug probe: board name ''Grafana Labs'', 2 Swiss postings'
+- name: Grover
+  provider: greenhouse
+  token: grover
+  country: DE
+  careers_url: https://www.grover.com/careers
+  sector: tech
+  verified_at: '2026-11-04T11:06:10+00:00'
+  jobs: 10
+  jobs_by_country:
+    DE: 10
+  evidence: 'slug probe: board name ''Grover'', 10 postings in DE'
+- name: GSK
+  provider: workday
+  token: gsk
+  host: gsk.wd5.myworkdayjobs.com
+  site: GSKCareers
+  careers_url: https://www.gsk.com/en-gb/careers/
+  sector: pharma
+  verified_at: '2026-10-23T14:11:55+00:00'
+  jobs: 857
+  swiss_jobs: 19
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: GSK
+  provider: jsonld
+  token: gsk-site
+  host: jobs.gsk.com
+  sitemaps:
+  - https://jobs.gsk.com/us/en/sitemap_index.xml
+  careers_url: https://jobs.gsk.com/
+  sector: pharma
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 1003
+  jobs_by_country:
+    BE: 7
+    UK: 1
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:gsk
+- name: Gunvor
+  provider: workday
+  token: gunvor
+  host: gunvor.wd3.myworkdayjobs.com
+  site: Gunvor_Careers
+  careers_url: https://gunvorgroup.com/careers/
+  sector: commodities
+  verified_at: '2026-10-23T14:11:55+00:00'
+  jobs: 36
+  swiss_jobs: 3
+  evidence: linked from careers page
+- name: HelloFresh
+  provider: phenom
+  token: careers-hellofresh-com-ph
+  country: DE
+  host: careers.hellofresh.com
+  careers_url: https://careers.hellofresh.com/
+  sector: tech
+  verified_at: '2026-10-28T11:05:19+00:00'
+  jobs: 377
+  jobs_by_country:
+    DE: 5
+    NL: 1
+    UK: 2
+  evidence: linked from careers page
+- name: HEMA
+  provider: jsonld
+  token: jobs-hema-com-443-ld
+  country: NL
+  host: jobs.hema.com:443
+  sitemaps:
+  - https://jobs.hema.com/sitemap.xml
+  careers_url: https://jobs.hema.com:443/nl
+  sector: retail
+  verified_at: '2026-11-04T11:02:51+00:00'
+  jobs: 854
+  jobs_by_country:
+    NL: 12
+  evidence: careers-site sitemap + JSON-LD
+- name: Hirslanden
+  provider: successfactors
+  token: careers-mediclinic-com-su
+  country: CH
+  host: careers.mediclinic.com
+  sitemaps:
+  - https://careers.mediclinic.com/sitemap.xml
+  careers_url: https://www.hirslanden.ch/de/corporate/jobs-und-karriere.html
+  sector: pharma
+  verified_at: '2026-11-27T00:04:17+00:00'
+  jobs: 543
+  jobs_by_country:
+    CH: 12
+  evidence: linked from careers page
+- name: Hitachi (incl. Hitachi Energy)
+  provider: workday
+  token: hitachi
+  host: hitachi.wd1.myworkdayjobs.com
+  site: hitachi
+  careers_url: https://www.hitachienergy.com/careers
+  sector: industrial
+  verified_at: '2026-10-23T14:11:55+00:00'
+  jobs: 2000
+  swiss_jobs: 98
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: Hitachi (incl. Hitachi Energy)
+  provider: jsonld
+  token: hitachi-site
+  host: careers.hitachi.com
+  sitemaps:
+  - https://careers.hitachi.com/sitemap.xml
+  id_pattern: /(\d{8,})/?$
+  careers_url: https://careers.hitachi.com/
+  sector: industrial
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 3657
+  jobs_by_country:
+    AE: 2
+    DE: 3
+    UK: 1
+    CH: 1
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:hitachi
+- name: Honeywell
+  provider: oracle
+  token: ibqbjb
+  country: CH
+  host: ibqbjb.fa.ocs.oraclecloud.com
+  site: CX_1
+  careers_url: https://careers.honeywell.com/en/sites/Honeywell
+  sector: industrial
+  verified_at: '2026-10-28T10:47:20+00:00'
+  jobs: 1332
+  jobs_by_country:
+    UK: 45
+    DE: 42
+    CH: 2
+    AE: 8
+    BE: 10
+    NL: 27
+  evidence: known URL, verified live
+- name: HP
+  provider: workday
+  token: hp
+  host: hp.wd5.myworkdayjobs.com
+  site: ExternalCareerSite
+  careers_url: https://jobs.hp.com/
+  sector: tech
+  verified_at: '2026-10-23T14:11:55+00:00'
+  jobs: 858
+  swiss_jobs: 4
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: HP
+  provider: workday_sitemap
+  token: hp-wds
+  country: CH
+  host: wd5.myworkdaysite.com
+  tenant: hp
+  sites:
+  - ExternalCareerSite
+  careers_url: https://jobs.hp.com/
+  sector: tech
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 100
+  jobs_by_country:
+    UK: 2
+    DE: 6
+    CH: 7
+    NL: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:hp
+- name: Hugo Boss
+  provider: jsonld
+  token: hugo-boss-site
+  country: DE
+  host: careers.hugoboss.com
+  sitemaps:
+  - https://careers.hugoboss.com/global/en/sitemap_index.xml
+  careers_url: https://careers.hugoboss.com/
+  sector: consumer
+  verified_at: '2026-11-20T15:55:39+00:00'
+  jobs: 764
+  jobs_by_country:
+    DE: 1
+    BE: 1
+    NL: 2
+    UK: 2
+  evidence: sitemap + schema.org JobPosting (jsonld), verified live on 12 sampled pages
+- name: Huntsman
+  provider: workday
+  token: huntsman
+  host: huntsman.wd1.myworkdayjobs.com
+  site: Huntsman
+  careers_url: null
+  sector: industrial
+  verified_at: '2026-10-23T14:11:55+00:00'
+  jobs: 157
+  swiss_jobs: 5
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Huntsman
+  provider: workday_sitemap
+  token: huntsman-wds
+  country: CH
+  host: wd1.myworkdaysite.com
+  tenant: huntsman
+  sites:
+  - Huntsman
+  careers_url: null
+  sector: industrial
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 100
+  jobs_by_country:
+    UK: 11
+    NL: 1
+    DE: 10
+    CH: 5
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:huntsman
+- name: ICRC
+  provider: successfactors
+  token: careers-icrc-org-su
+  country: CH
+  host: careers.icrc.org
+  sitemaps:
+  - https://careers.icrc.org/sitemap.xml
+  careers_url: https://careers.icrc.org/
+  sector: international
+  verified_at: '2026-11-27T00:12:09+00:00'
+  jobs: 81
+  jobs_by_country:
+    CH: 12
+  evidence: linked from careers page
+- name: IKEA
+  provider: jsonld
+  token: ikea-site
+  country: NL
+  host: jobs.ikea.com
+  sitemaps:
+  - https://jobs.ikea.com/sitemap.xml
+  id_pattern: /(\d{8,})/?$
+  careers_url: https://jobs.ikea.com/
+  sector: retail
+  verified_at: '2026-11-20T15:55:48+00:00'
+  jobs: 1469
+  jobs_by_country:
+    BE: 2
+    NL: 9
+    DE: 1
+  evidence: sitemap + schema.org JobPosting (jsonld), verified live on 12 sampled pages
+- name: IMC Trading
+  provider: greenhouse
+  token: imc
+  careers_url: null
+  sector: banking
+  verified_at: '2026-10-23T14:11:55+00:00'
+  jobs: 168
+  swiss_jobs: 5
+  evidence: 'slug probe: 5 Swiss postings'
+- name: Implement Consulting Group
+  provider: jsonld
+  token: implementconsultinggroup-com-ld
+  country: CH
+  host: implementconsultinggroup.com
+  sitemaps:
+  - https://implementconsultinggroup.com/sitemap.xml
+  careers_url: https://implementconsultinggroup.com/join-us
+  sector: consulting
+  verified_at: '2026-11-27T00:04:19+00:00'
+  jobs: 56
+  jobs_by_country:
+    DE: 9
+    CH: 2
+  evidence: careers-site sitemap + JSON-LD
+- name: Implenia
+  provider: jsonld
+  token: implenia-com-ld
+  country: CH
+  host: implenia.com
+  sitemaps:
+  - https://implenia.com/sitemap.xml
+  - https://implenia.com/en/sitemap.xml
+  - https://implenia.com/fr/sitemap.xml
+  careers_url: https://implenia.com/karriere/jobs/
+  sector: industrial
+  verified_at: '2026-11-27T00:04:19+00:00'
+  jobs: 378
+  jobs_by_country:
+    DE: 4
+    CH: 1
+  evidence: careers-site sitemap + JSON-LD
+- name: Intercom
+  provider: greenhouse
+  token: intercom
+  country: IE
+  careers_url: https://www.intercom.com/careers
+  sector: tech
+  verified_at: '2026-11-24T12:08:52+00:00'
+  jobs: 122
+  jobs_by_country:
+    IE: 59
+    UK: 40
+    DE: 6
+  evidence: linked from careers page
+- name: Inyova
+  provider: personio
+  token: inyova
+  careers_url: null
+  sector: banking
+  verified_at: '2026-10-23T14:11:55+00:00'
+  jobs: 1
+  swiss_jobs: 1
+  evidence: 'slug probe: 1 Swiss postings'
+- name: IQVIA
+  provider: workday
+  token: iqvia
+  host: iqvia.wd1.myworkdayjobs.com
+  site: IQVIA
+  careers_url: https://jobs.iqvia.com/
+  sector: pharma
+  verified_at: '2026-10-23T14:11:55+00:00'
+  jobs: 1895
+  swiss_jobs: 10
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: IQVIA
+  provider: workday_sitemap
+  token: iqvia-wds
+  country: CH
+  host: wd1.myworkdaysite.com
+  tenant: iqvia
+  sites:
+  - IQVIA
+  careers_url: https://jobs.iqvia.com/
+  sector: pharma
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 100
+  jobs_by_country:
+    UK: 9
+    CH: 1
+    DE: 1
+    BE: 1
+    NL: 1
+    AT: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:iqvia
+- name: Isomorphic Labs
+  provider: greenhouse
+  token: isomorphiclabs
+  careers_url: null
+  sector: tech
+  verified_at: '2026-10-23T14:11:55+00:00'
+  jobs: 28
+  swiss_jobs: 3
+  evidence: 'slug probe: board name ''Isomorphic Labs'', 3 Swiss postings'
+- name: Johnson & Johnson
+  provider: workday
+  token: jj
+  host: jj.wd5.myworkdayjobs.com
+  site: JJ
+  careers_url: https://www.careers.jnj.com/
+  sector: pharma
+  verified_at: '2026-10-23T14:12:06+00:00'
+  jobs: 1930
+  swiss_jobs: 24
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Johnson & Johnson
+  provider: workday_sitemap
+  token: jj-wds
+  country: CH
+  host: wd5.myworkdaysite.com
+  tenant: jj
+  sites:
+  - JJ
+  careers_url: https://www.careers.jnj.com/
+  sector: pharma
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 1825
+  jobs_by_country:
+    NL: 50
+    IE: 41
+    BE: 67
+    AE: 7
+    CH: 74
+    DE: 39
+    UK: 40
+    AT: 7
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:jj
+- name: Johnson Controls
+  provider: workday
+  token: jci
+  host: jci.wd5.myworkdayjobs.com
+  site: JCI
+  careers_url: null
+  sector: industrial
+  verified_at: '2026-10-23T14:12:06+00:00'
+  jobs: 2762
+  swiss_jobs: 5
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Johnson Controls
+  provider: workday_sitemap
+  token: jci-wds
+  country: CH
+  host: wd5.myworkdaysite.com
+  tenant: jci
+  sites:
+  - JCI
+  careers_url: null
+  sector: industrial
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 2843
+  jobs_by_country:
+    UK: 99
+    CH: 66
+    DE: 192
+    IE: 51
+    BE: 10
+    NL: 38
+    AE: 16
+    AT: 11
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:jci
+- name: JTI
+  provider: successfactors
+  token: jti-site
+  country: CH
+  host: jobs.jti.com
+  sitemaps:
+  - https://jobs.jti.com/sitemap.xml
+  id_pattern: /(\d{8,})/?$
+  careers_url: https://jobs.jti.com/
+  sector: consumer
+  verified_at: '2026-11-20T15:54:48+00:00'
+  jobs: 360
+  jobs_by_country:
+    AT: 4
+    DE: 5
+    UK: 1
+    AE: 1
+    CH: 1
+  evidence: sitemap + schema.org JobPosting (successfactors), verified live on 12 sampled pages
+- name: Jua
+  provider: ashby
+  token: jua
+  careers_url: https://www.jua.ai/careers
+  sector: tech
+  verified_at: '2026-10-23T14:12:06+00:00'
+  jobs: 7
+  swiss_jobs: 6
+  evidence: 'slug probe: 6 Swiss postings'
+- name: Julius Baer
+  provider: workday
+  token: juliusbaer
+  host: juliusbaer.wd3.myworkdayjobs.com
+  site: External
+  careers_url: https://www.juliusbaer.com/en/careers/
+  sector: banking
+  verified_at: '2026-10-23T14:12:06+00:00'
+  jobs: 177
+  swiss_jobs: 60
+  evidence: known URL, verified live; extra sites from tenant robots.txt, verified live 2026-10-24
+  extra_sites:
+  - Internships
+  - JB_Career_Site_Graduates
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Julius Baer
+  provider: workday_sitemap
+  token: juliusbaer-wds
+  country: CH
+  host: wd3.myworkdaysite.com
+  tenant: juliusbaer
+  sites:
+  - External
+  - Internships
+  - JB_Career_Site_Graduates
+  careers_url: https://www.juliusbaer.com/en/careers/
+  sector: banking
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 116
+  jobs_by_country:
+    CH: 38
+    DE: 2
+    UK: 1
+    LU: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:juliusbaer
+- name: Just Eat Takeaway.com
+  provider: phenom
+  token: careers-justeattakeaway-com-ph
+  country: NL
+  host: careers.justeattakeaway.com
+  careers_url: https://careers.justeattakeaway.com/global/en
+  sector: tech
+  verified_at: '2026-10-28T10:47:42+00:00'
+  jobs: 126
+  jobs_by_country:
+    BE: 1
+    DE: 1
+    NL: 4
+    UK: 3
+  evidence: linked from careers page
+- name: Kering
+  provider: jsonld
+  token: www-kering-com-ld
+  country: CH
+  host: www.kering.com
+  sitemaps:
+  - https://www.kering.com/sitemap.xml
+  - https://www.kering.com/en/sitemap.xml
+  - https://www.kering.com/fr/sitemap.xml
+  careers_url: https://www.kering.com/en/talent/
+  sector: luxury
+  verified_at: '2026-11-04T11:02:58+00:00'
+  jobs: 4902
+  jobs_by_country:
+    NL: 6
+    BE: 1
+    UK: 2
+    AE: 2
+    DE: 1
+  evidence: careers-site sitemap + JSON-LD
+- name: Kerry Group
+  provider: phenom
+  token: jobs-kerry-com-ph
+  country: IE
+  host: jobs.kerry.com
+  careers_url: https://www.kerry.com/careers
+  sector: consumer
+  verified_at: '2026-11-24T12:10:22+00:00'
+  jobs: 258
+  jobs_by_country:
+    NL: 2
+    DE: 1
+  evidence: linked from careers page
+- name: Kpler
+  provider: lever
+  token: kpler
+  careers_url: https://www.kpler.com/careers
+  sector: commodities
+  verified_at: '2026-10-23T14:12:06+00:00'
+  jobs: 102
+  swiss_jobs: 1
+  evidence: linked from careers page
+- name: KPMG Switzerland
+  provider: umantis
+  token: recruitingapp-2791
+  country: CH
+  host: recruitingapp-2791.umantis.com
+  careers_url: https://kpmg.com/ch/en/careers.html
+  sector: consulting
+  verified_at: '2026-11-27T00:14:25+00:00'
+  jobs: 73
+  jobs_by_country:
+    CH: 73
+  evidence: linked from careers page
+- name: Kraken
+  provider: ashby
+  token: kraken.com
+  careers_url: https://www.kraken.com/careers
+  sector: tech
+  verified_at: '2026-10-23T14:12:06+00:00'
+  jobs: 88
+  swiss_jobs: 18
+  evidence: linked from careers page
+- name: Kuehne+Nagel
+  provider: jsonld
+  token: kuehnenagel
+  host: jobs.kuehne-nagel.com
+  sitemaps:
+  - https://jobs.kuehne-nagel.com/global/en/sitemap_index.xml
+  url_filter: /job/
+  id_pattern: /job/([^/]+)/
+  careers_url: https://jobs.kuehne-nagel.com/
+  sector: logistics
+  verified_at: '2026-10-24T08:38:29+00:00'
+  jobs: 1002
+  jobs_by_country:
+    BE: 1
+    DE: 10
+  evidence: sitemap + JSON-LD JobPosting, verified live on 12 sampled pages
+- name: L'Oréal
+  provider: jsonld
+  token: careers-loreal-com-ld
+  country: NL
+  host: careers.loreal.com
+  sitemaps:
+  - https://careers.loreal.com/sitemap.xml
+  careers_url: https://careers.loreal.com/en
+  sector: consumer
+  verified_at: '2026-11-04T11:02:58+00:00'
+  jobs: 33
+  jobs_by_country:
+    DE: 1
+  evidence: careers-site sitemap + JSON-LD
+- name: Lakestar
+  provider: personio
+  token: lakestar
+  careers_url: https://www.lakestar.com/careers
+  sector: banking
+  verified_at: '2026-10-23T14:12:06+00:00'
+  jobs: 1
+  swiss_jobs: 1
+  evidence: 'slug probe: 1 Swiss postings'
+- name: Ledger
+  provider: ashby
+  token: ledger
+  careers_url: null
+  sector: tech
+  verified_at: '2026-10-23T14:12:06+00:00'
+  jobs: 13
+  swiss_jobs: 1
+  evidence: 'slug probe: 1 Swiss postings'
+- name: Ledgy
+  provider: greenhouse
+  token: ledgy
+  careers_url: https://ledgy.com/careers
+  sector: tech
+  verified_at: '2026-10-23T14:12:06+00:00'
+  jobs: 2
+  swiss_jobs: 0
+  evidence: 'slug probe: board name ''Ledgy'''
+- name: Lindt & Sprüngli
+  provider: workday
+  token: lindtspruengli
+  host: lindtspruengli.wd103.myworkdayjobs.com
+  site: LindtSpruengliGroupCareers
+  careers_url: https://www.lindt-spruengli.com/careers
+  sector: consumer
+  verified_at: '2026-10-23T14:12:06+00:00'
+  jobs: 338
+  swiss_jobs: 18
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Lindt & Sprüngli
+  provider: workday_sitemap
+  token: lindtspruengli-wds
+  country: CH
+  host: wd103.myworkdaysite.com
+  tenant: lindtspruengli
+  sites:
+  - LindtSpruengliGroupCareers
+  careers_url: https://www.lindt-spruengli.com/careers
+  sector: consumer
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 100
+  jobs_by_country:
+    AT: 8
+    DE: 17
+    CH: 11
+    NL: 2
+    UK: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:lindtspruengli
+- name: Logitech
+  provider: workday
+  token: logitech
+  host: logitech.wd5.myworkdayjobs.com
+  site: Logitech
+  careers_url: https://www.logitech.com/en-ch/about/careers.html
+  sector: tech
+  verified_at: '2026-10-23T14:12:06+00:00'
+  jobs: 218
+  swiss_jobs: 13
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Logitech
+  provider: workday_sitemap
+  token: logitech-wds
+  country: CH
+  host: wd5.myworkdaysite.com
+  tenant: logitech
+  sites:
+  - Logitech
+  careers_url: https://www.logitech.com/en-ch/about/careers.html
+  sector: tech
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 100
+  jobs_by_country:
+    IE: 12
+    NL: 1
+    CH: 4
+    UK: 1
+    DE: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:logitech
+- name: Lombard Odier
+  provider: workday
+  token: lombardodier
+  country: CH
+  host: lombardodier.wd3.myworkdayjobs.com
+  site: Lombard_Odier_Careers
+  careers_url: https://www.lombardodier.com/home/careers.html
+  sector: banking
+  verified_at: '2026-10-24T08:33:18+00:00'
+  jobs: 64
+  jobs_by_country:
+    CH: 49
+    LU: 11
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Lombard Odier
+  provider: workday_sitemap
+  token: lombardodier-wds
+  country: CH
+  host: wd3.myworkdaysite.com
+  tenant: lombardodier
+  sites:
+  - Lombard_Odier_Careers
+  careers_url: https://www.lombardodier.com/home/careers.html
+  sector: banking
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 69
+  jobs_by_country:
+    CH: 52
+    LU: 11
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:lombardodier
+- name: Lonza
+  provider: workday
+  token: lonza
+  host: lonza.wd3.myworkdayjobs.com
+  site: Lonza_Careers
+  careers_url: https://www.lonza.com/careers
+  sector: pharma
+  verified_at: '2026-10-23T14:12:06+00:00'
+  jobs: 584
+  swiss_jobs: 187
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Lonza
+  provider: workday_sitemap
+  token: lonza-wds
+  country: CH
+  host: wd3.myworkdaysite.com
+  tenant: lonza
+  sites:
+  - Lonza_Careers
+  careers_url: https://www.lonza.com/careers
+  sector: pharma
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 100
+  jobs_by_country:
+    CH: 37
+    UK: 6
+    NL: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:lonza
+- name: LSEG
+  provider: workday
+  token: lseg
+  host: lseg.wd3.myworkdayjobs.com
+  site: Careers
+  careers_url: https://www.lseg.com/en/careers
+  sector: banking
+  verified_at: '2026-10-23T14:12:06+00:00'
+  jobs: 670
+  swiss_jobs: 2
+  evidence: linked from careers page; extra sites from tenant robots.txt, verified live 2026-10-24
+  extra_sites:
+  - Graduate_Careers
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: LSEG
+  provider: workday_sitemap
+  token: lseg-wds
+  country: CH
+  host: wd3.myworkdaysite.com
+  tenant: lseg
+  sites:
+  - Careers
+  - Graduate_Careers
+  careers_url: https://www.lseg.com/en/careers
+  sector: banking
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 131
+  jobs_by_country:
+    UK: 27
+    CH: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:lseg
+- name: Maersk
+  provider: workday
+  token: maersk
+  host: maersk.wd3.myworkdayjobs.com
+  site: Maersk_Careers
+  careers_url: https://www.maersk.com/careers
+  sector: logistics
+  verified_at: '2026-10-23T14:12:06+00:00'
+  jobs: 1247
+  swiss_jobs: 3
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Maersk
+  provider: workday_sitemap
+  token: maersk-wds
+  country: CH
+  host: wd3.myworkdaysite.com
+  tenant: maersk
+  sites:
+  - Maersk_Careers
+  careers_url: https://www.maersk.com/careers
+  sector: logistics
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 1245
+  jobs_by_country:
+    NL: 15
+    AE: 1
+    DE: 32
+    UK: 17
+    BE: 5
+    CH: 3
+    IE: 2
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:maersk
+- name: Man Group
+  provider: greenhouse
+  token: mangroup
+  careers_url: null
+  sector: banking
+  verified_at: '2026-10-23T14:12:06+00:00'
+  jobs: 62
+  swiss_jobs: 1
+  evidence: 'slug probe: board name ''Man Group'', 1 Swiss postings'
+- name: Mars
+  provider: phenom
+  token: careers-mars-com-ph
+  country: CH
+  host: careers.mars.com
+  careers_url: https://careers.mars.com/us/en
+  sector: consumer
+  verified_at: '2026-10-28T10:47:05+00:00'
+  jobs: 921
+  jobs_by_country:
+    DE: 2
+  evidence: linked from careers page
+- name: Marsh McLennan
+  provider: workday
+  token: mmc
+  host: mmc.wd1.myworkdayjobs.com
+  site: MMC
+  careers_url: https://careers.marshmclennan.com/
+  sector: consulting
+  verified_at: '2026-10-23T14:12:06+00:00'
+  jobs: 1988
+  swiss_jobs: 4
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: Marsh McLennan
+  provider: jsonld
+  token: marsh-mclennan-site
+  host: careers.marsh.com
+  sitemaps:
+  - https://careers.marsh.com/eu/en/sitemap_index.xml
+  careers_url: https://careers.marsh.com/
+  sector: consulting
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 1801
+  jobs_by_country:
+    DE: 2
+    NL: 1
+    UK: 2
+    AE: 2
+    BE: 1
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:mmc
+- name: Mastercard
+  provider: workday
+  token: mastercard
+  host: mastercard.wd1.myworkdayjobs.com
+  site: CorporateCareers
+  careers_url: https://careers.mastercard.com/
+  sector: banking
+  verified_at: '2026-10-23T14:12:47+00:00'
+  jobs: 1154
+  swiss_jobs: 1
+  evidence: linked from careers page; extra sites from tenant robots.txt, verified live 2026-10-24
+  extra_sites:
+  - Campus
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: Mastercard
+  provider: jsonld
+  token: mastercard-site
+  host: careers.mastercard.com
+  sitemaps:
+  - https://careers.mastercard.com/us/en/sitemap_index.xml
+  careers_url: https://careers.mastercard.com/
+  sector: banking
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 750
+  jobs_by_country:
+    AE: 6
+    DE: 1
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:mastercard
+- name: Medtronic
+  provider: workday
+  token: medtronic
+  host: medtronic.wd1.myworkdayjobs.com
+  site: MedtronicCareers
+  careers_url: https://jobs.medtronic.com/
+  sector: pharma
+  verified_at: '2026-10-23T14:12:47+00:00'
+  jobs: 1039
+  swiss_jobs: 10
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Medtronic
+  provider: workday_sitemap
+  token: medtronic-wds
+  country: CH
+  host: wd1.myworkdaysite.com
+  tenant: medtronic
+  sites:
+  - MedtronicCareers
+  careers_url: https://jobs.medtronic.com/
+  sector: pharma
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 100
+  jobs_by_country:
+    NL: 4
+    CH: 2
+    UK: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:medtronic
+- name: Mercedes-Benz Group
+  provider: taleo
+  token: tas-daimler
+  country: DE
+  host: tas-daimler.taleo.net
+  section: ex
+  careers_url: https://group.mercedes-benz.com/careers/
+  sector: automotive
+  verified_at: '2026-11-27T00:05:14+00:00'
+  jobs: 432
+  jobs_by_country:
+    AE: 2
+    CH: 7
+    DE: 10
+    UK: 5
+  evidence: linked from careers page
+- name: Merck KGaA
+  provider: jsonld
+  token: merck-kgaa-site
+  country: DE
+  host: careers.emdgroup.com
+  sitemaps:
+  - https://careers.emdgroup.com/us/en/sitemap_index.xml
+  careers_url: https://careers.emdgroup.com/
+  sector: pharma
+  verified_at: '2026-11-20T15:54:59+00:00'
+  jobs: 936
+  jobs_by_country:
+    UK: 3
+    BE: 1
+    CH: 1
+    DE: 2
+  evidence: sitemap + schema.org JobPosting (jsonld), verified live on 12 sampled pages
+- name: Mettler-Toledo
+  provider: jsonld
+  token: jobs-mt-com-ld
+  country: CH
+  host: jobs.mt.com
+  sitemaps:
+  - https://jobs.mt.com/sitemap.xml
+  careers_url: https://jobs.mt.com/en
+  sector: industrial
+  verified_at: '2026-11-27T00:05:15+00:00'
+  jobs: 2
+  jobs_by_country:
+    DE: 1
+  evidence: careers-site sitemap + JSON-LD
+- name: Migros
+  provider: jsonld
+  token: migros
+  host: jobs.migros.ch
+  sitemaps:
+  - https://jobs.migros.ch/de/sitemap.xml
+  url_filter: /job/
+  id_pattern: ([0-9a-f]{8}-[0-9a-f-]{27})
+  careers_url: https://jobs.migros.ch/
+  sector: consumer
+  verified_at: '2026-10-24T08:38:37+00:00'
+  jobs: 219
+  jobs_by_country:
+    CH: 12
+    LU: 1
+  evidence: sitemap + JSON-LD JobPosting, verified live on 12 sampled pages
+- name: Millennium Management
+  provider: eightfold
+  token: mlp
+  country: CH
+  host: career.mlp.com
+  domain: mlp.com
+  careers_url: https://www.mlp.com/careers/
+  sector: banking
+  verified_at: '2026-10-28T10:47:21+00:00'
+  jobs: 51
+  jobs_by_country:
+    CH: 1
+    AE: 6
+    UK: 10
+  evidence: linked from careers page
+- name: Mirabaud
+  provider: jsonld
+  token: www-mirabaud-com-ld
+  country: CH
+  host: www.mirabaud.com
+  sitemaps:
+  - https://www.mirabaud.com/en/?type=1533906435
+  - https://www.mirabaud.com/ch/sitemap.xml
+  careers_url: https://www.mirabaud.com/en/careers/careers
+  sector: banking
+  verified_at: '2026-11-27T00:07:58+00:00'
+  jobs: 11
+  jobs_by_country:
+    LU: 2
+    CH: 3
+    AE: 1
+    UK: 1
+  evidence: careers-site sitemap + JSON-LD
+- name: Miro (NL)
+  provider: ashby
+  token: miro
+  country: NL
+  careers_url: https://miro.com/careers/
+  sector: tech
+  verified_at: '2026-10-23T19:54:12+00:00'
+  jobs: 21
+  jobs_by_country:
+    NL: 1
+  evidence: 'slug probe: 1 postings in NL'
+- name: Mollie
+  provider: ashby
+  token: mollie
+  country: NL
+  careers_url: https://www.mollie.com/careers
+  sector: banking
+  verified_at: '2026-10-23T19:54:12+00:00'
+  jobs: 51
+  jobs_by_country:
+    NL: 19
+  evidence: 'slug probe: 19 postings in NL'
+- name: Mondelez International
+  provider: workday
+  token: mdlz
+  host: mdlz.wd3.myworkdayjobs.com
+  site: External
+  careers_url: https://www.mondelezinternational.com/careers/
+  sector: consumer
+  verified_at: '2026-10-23T14:12:47+00:00'
+  jobs: 1381
+  swiss_jobs: 10
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Mondelez International
+  provider: workday_sitemap
+  token: mdlz-wds
+  country: CH
+  host: wd3.myworkdaysite.com
+  tenant: mdlz
+  sites:
+  - External
+  careers_url: https://www.mondelezinternational.com/careers/
+  sector: consumer
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 99
+  jobs_by_country:
+    DE: 3
+    BE: 6
+    NL: 2
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:mdlz
+- name: MongoDB
+  provider: greenhouse
+  token: mongodb
+  careers_url: https://www.mongodb.com/company/careers
+  sector: tech
+  verified_at: '2026-10-23T14:12:47+00:00'
+  jobs: 387
+  swiss_jobs: 3
+  evidence: 'slug probe: board name ''MongoDB'', 3 Swiss postings'
+- name: Moonfare
+  provider: greenhouse
+  token: moonfare
+  country: DE
+  careers_url: https://www.moonfare.com/careers
+  sector: tech
+  verified_at: '2026-11-04T11:06:10+00:00'
+  jobs: 21
+  jobs_by_country:
+    DE: 12
+    UK: 4
+    LU: 3
+  evidence: 'slug probe: board name ''Moonfare'', 12 postings in DE'
+- name: MSCI
+  provider: jsonld
+  token: careers-msci-com-ld
+  country: CH
+  host: careers.msci.com
+  sitemaps:
+  - https://careers.msci.com/sitemap.xml
+  careers_url: https://careers.msci.com/
+  sector: banking
+  verified_at: '2026-11-27T00:12:59+00:00'
+  jobs: 159
+  jobs_by_country:
+    NL: 2
+    UK: 8
+    AE: 1
+    DE: 1
+  evidence: careers-site sitemap + JSON-LD
+- name: MSD
+  provider: workday
+  token: msd
+  host: msd.wd5.myworkdayjobs.com
+  site: SearchJobs
+  careers_url: https://jobs.msd.com/
+  sector: pharma
+  verified_at: '2026-10-23T14:13:07+00:00'
+  jobs: 986
+  swiss_jobs: 4
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: MSD
+  provider: jsonld
+  token: msd-site
+  host: jobs.msd.com
+  sitemaps:
+  - https://jobs.msd.com/gb/en/sitemap_index.xml
+  careers_url: https://jobs.msd.com/
+  sector: pharma
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 589
+  jobs_by_country:
+    DE: 6
+    UK: 2
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:msd
+- name: Munich Re
+  provider: jsonld
+  token: careers-munichre-com-ld
+  country: DE
+  host: careers.munichre.com
+  sitemaps:
+  - https://careers.munichre.com/sitemap.xml
+  careers_url: https://careers.munichre.com/en/search-jobs
+  sector: insurance
+  verified_at: '2026-10-28T11:05:04+00:00'
+  jobs: 9
+  jobs_by_country:
+    DE: 6
+  evidence: careers-site sitemap + JSON-LD
+- name: N26
+  provider: greenhouse
+  token: n26
+  country: DE
+  careers_url: https://n26.com/en/careers
+  sector: banking
+  verified_at: '2026-10-28T11:05:19+00:00'
+  jobs: 32
+  jobs_by_country:
+    DE: 19
+  evidence: linked from careers page
+- name: Nestlé
+  provider: successfactors
+  token: nestle-sf
+  host: jobdetails.nestle.com
+  sitemaps:
+  - https://jobdetails.nestle.com/sitemap.xml
+  careers_url: https://www.nestle.com/jobs
+  sector: consumer
+  verified_at: '2026-10-24T16:43:44+00:00'
+  jobs: 2123
+  jobs_by_country:
+    DE: 9
+    BE: 2
+    CH: 1
+  evidence: sitemap + schema.org JobPosting (successfactors), verified live on 12 sampled pages
+- name: Neural Concept
+  provider: ashby
+  token: neuralconcept
+  careers_url: https://www.neuralconcept.com/careers
+  sector: tech
+  verified_at: '2026-10-23T14:13:07+00:00'
+  jobs: 38
+  swiss_jobs: 11
+  evidence: linked from careers page
+- name: Nike
+  provider: workday
+  token: nike
+  host: nike.wd1.myworkdayjobs.com
+  site: nke
+  careers_url: https://careers.nike.com/
+  sector: consumer
+  verified_at: '2026-10-23T14:13:07+00:00'
+  jobs: 785
+  swiss_jobs: 1
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: Nike
+  provider: jsonld
+  token: nike-site
+  host: careers.nike.com
+  sitemaps:
+  - https://careers.nike.com/sitemap.xml
+  id_pattern: /(\d{8,})/?$
+  careers_url: https://careers.nike.com/
+  sector: consumer
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 16680
+  jobs_by_country:
+    UK: 2
+    NL: 2
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:nike
+- name: Nikin
+  provider: recruitee
+  token: nikin
+  careers_url: https://www.nikin.ch/pages/jobs
+  sector: consumer
+  verified_at: '2026-10-23T14:13:07+00:00'
+  jobs: 2
+  swiss_jobs: 2
+  evidence: 'slug probe: 2 Swiss postings'
+- name: Novartis
+  provider: workday
+  token: novartis
+  host: novartis.wd3.myworkdayjobs.com
+  site: Novartis_Careers
+  careers_url: https://www.novartis.com/careers
+  sector: pharma
+  verified_at: '2026-10-23T14:13:07+00:00'
+  jobs: 838
+  swiss_jobs: 32
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: Novartis
+  provider: jsonld
+  token: novartis-site
+  host: www.novartis.com
+  sitemaps:
+  - https://www.novartis.com/sitemap.xml
+  careers_url: https://www.novartis.com/
+  sector: pharma
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 1498
+  jobs_by_country:
+    AE: 1
+    DE: 2
+    AT: 1
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:novartis
+- name: NVIDIA
+  provider: workday
+  token: nvidia
+  host: nvidia.wd5.myworkdayjobs.com
+  site: NVIDIAExternalCareerSite
+  careers_url: https://www.nvidia.com/en-us/about-nvidia/careers/
+  sector: tech
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 2000
+  swiss_jobs: 10
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: NVIDIA
+  provider: workday_sitemap
+  token: nvidia-wds
+  country: CH
+  host: wd5.myworkdaysite.com
+  tenant: nvidia
+  sites:
+  - NVIDIAExternalCareerSite
+  careers_url: https://www.nvidia.com/en-us/about-nvidia/careers/
+  sector: tech
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 100
+  jobs_by_country:
+    CH: 2
+    DE: 3
+    UK: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:nvidia
+- name: Oerlikon
+  provider: successfactors
+  token: careers-oerlikon-com-su
+  country: CH
+  host: careers.oerlikon.com
+  sitemaps:
+  - https://careers.oerlikon.com/sitemap.xml
+  careers_url: https://www.oerlikon.com/en/careers/
+  sector: industrial
+  verified_at: '2026-11-27T00:09:09+00:00'
+  jobs: 164
+  jobs_by_country:
+    DE: 4
+  evidence: linked from careers page
+- name: Okta
+  provider: greenhouse
+  token: okta
+  country: IE
+  careers_url: https://www.okta.com/company/careers/
+  sector: tech
+  verified_at: '2026-11-24T12:10:16+00:00'
+  jobs: 372
+  jobs_by_country:
+    UK: 4
+    IE: 21
+    DE: 2
+  evidence: 'slug probe: board name ''Okta'', 21 postings in IE'
+- name: On Running
+  provider: greenhouse
+  token: onrunning
+  careers_url: https://www.on.com/en-ch/careers
+  sector: consumer
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 198
+  swiss_jobs: 25
+  evidence: 'slug probe: board name ''On'', 25 Swiss postings'
+- name: Ontex
+  provider: successfactors
+  token: careers-ontex-com-su
+  country: BE
+  host: careers.ontex.com
+  sitemaps:
+  - https://careers.ontex.com/sitemap.xml
+  careers_url: https://ontex.com/careers/
+  sector: consumer
+  verified_at: '2026-11-04T11:09:31+00:00'
+  jobs: 25
+  jobs_by_country:
+    BE: 1
+  evidence: linked from careers page
+- name: OpenAI
+  provider: ashby
+  token: openai
+  careers_url: https://openai.com/careers
+  sector: tech
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 800
+  swiss_jobs: 2
+  evidence: 'slug probe: 2 Swiss postings'
+- name: Organon
+  provider: workday
+  token: organon
+  host: organon.wd5.myworkdayjobs.com
+  site: SearchJobs
+  careers_url: null
+  sector: pharma
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 111
+  swiss_jobs: 1
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: Organon
+  provider: jsonld
+  token: organon-site
+  host: jobs.organon.com
+  sitemaps:
+  - https://jobs.organon.com/us/en/sitemap.xml
+  careers_url: https://jobs.organon.com/
+  sector: pharma
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 115
+  jobs_by_country:
+    NL: 3
+    UK: 1
+    DE: 1
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:organon
+- name: Partners Group
+  provider: successfactors
+  token: partnersgroup-sf
+  host: jobs.partnersgroup.com
+  sitemaps:
+  - https://jobs.partnersgroup.com/sitemap.xml
+  careers_url: https://jobs.partnersgroup.com/
+  sector: banking
+  verified_at: '2026-10-24T16:44:09+00:00'
+  jobs: 77
+  jobs_by_country:
+    CH: 7
+    DE: 3
+    LU: 1
+    UK: 1
+  evidence: sitemap + schema.org JobPosting (successfactors), verified live on 12 sampled pages
+- name: PepsiCo
+  provider: jsonld
+  token: pepsico-site
+  country: NL
+  host: www.pepsicojobs.com
+  sitemaps:
+  - http://www.pepsicojobs.com/sitemap.xml
+  id_pattern: /(\d{8,})/?$
+  careers_url: https://www.pepsicojobs.com/
+  sector: consumer
+  verified_at: '2026-11-20T15:57:21+00:00'
+  jobs: 2879
+  jobs_by_country:
+    DE: 1
+    NL: 1
+  evidence: sitemap + schema.org JobPosting (jsonld), verified live on 12 sampled pages
+- name: Philip Morris International
+  provider: jsonld
+  token: pmi
+  host: join.pmicareers.com
+  sitemaps:
+  - https://join.pmicareers.com/earlycareers/gb/en/sitemap.xml
+  - https://join.pmicareers.com/gb/en/sitemap_index.xml
+  - https://join.pmicareers.com/de/de/sitemap_index.xml
+  - https://join.pmicareers.com/nl/nl/sitemap_index.xml
+  url_filter: /job/
+  id_pattern: /job/([^/]+)/
+  prefer: /en/
+  careers_url: https://www.pmi.com/careers
+  sector: consumer
+  verified_at: '2026-10-24T08:38:18+00:00'
+  jobs: 750
+  jobs_by_country:
+    CH: 2
+    UK: 1
+  evidence: sitemap + JSON-LD JobPosting, verified live on 12 sampled pages
+- name: Philips
+  provider: workday
+  token: philips
+  host: philips.wd3.myworkdayjobs.com
+  site: jobs-and-careers
+  careers_url: https://www.careers.philips.com/
+  sector: pharma
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 784
+  swiss_jobs: 2
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: Philips
+  provider: jsonld
+  token: philips-site
+  host: www.careers.philips.com
+  sitemaps:
+  - https://www.careers.philips.com/sitemap.xml
+  id_pattern: /(\d{8,})/?$
+  careers_url: https://www.careers.philips.com/
+  sector: pharma
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 782
+  jobs_by_country:
+    DE: 6
+    UK: 1
+    CH: 1
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:philips
+- name: Pinterest
+  provider: greenhouse
+  token: pinterest
+  careers_url: null
+  sector: tech
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 161
+  swiss_jobs: 3
+  evidence: 'slug probe: board name ''Pinterest'', 3 Swiss postings'
+- name: Procter & Gamble
+  provider: workday
+  token: pg
+  host: pg.wd5.myworkdayjobs.com
+  site: '1000'
+  careers_url: https://www.pgcareers.com/
+  sector: consumer
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 859
+  swiss_jobs: 3
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: Procter & Gamble
+  provider: jsonld
+  token: procter-gamble-site
+  host: www.pgcareers.com
+  sitemaps:
+  - https://www.pgcareers.com/global/en/sitemap_index.xml
+  careers_url: https://www.pgcareers.com/
+  sector: consumer
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 899
+  jobs_by_country:
+    UK: 2
+    BE: 1
+    CH: 2
+    DE: 3
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:pg
+- name: Proton
+  provider: greenhouse
+  token: proton
+  careers_url: https://proton.me/careers
+  sector: tech
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 33
+  swiss_jobs: 25
+  evidence: 'slug probe: board name ''Proton'', 25 Swiss postings'
+- name: Puma
+  provider: jsonld
+  token: about-puma-com-ld
+  country: DE
+  host: about.puma.com
+  sitemaps:
+  - https://about.puma.com/sitemap.xml
+  careers_url: https://about.puma.com/en/careers
+  sector: consumer
+  verified_at: '2026-10-28T11:03:43+00:00'
+  jobs: 643
+  jobs_by_country:
+    DE: 6
+  evidence: careers-site sitemap + JSON-LD
+- name: PVH
+  provider: workday
+  token: pvh
+  host: pvh.wd1.myworkdayjobs.com
+  site: PVH_Careers
+  careers_url: null
+  sector: consumer
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 1539
+  swiss_jobs: 7
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: PVH
+  provider: jsonld
+  token: pvh-site
+  host: careers.pvh.com
+  sitemaps:
+  - https://careers.pvh.com/us/en/sitemap_index.xml
+  careers_url: https://careers.pvh.com/
+  sector: consumer
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 1299
+  jobs_by_country:
+    DE: 8
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:pvh
+- name: PwC
+  provider: workday
+  token: pwc
+  host: pwc.wd3.myworkdayjobs.com
+  site: Global_Experienced_Careers
+  careers_url: https://www.pwc.ch/en/careers.html
+  sector: consulting
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 3903
+  swiss_jobs: 18
+  evidence: known URL, verified live; extra sites from tenant robots.txt, verified live 2026-10-24
+  extra_sites:
+  - Global_Campus_Careers
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: PwC
+  provider: workday_sitemap
+  token: pwc-wds
+  country: CH
+  host: wd3.myworkdaysite.com
+  tenant: pwc
+  sites:
+  - Global_Experienced_Careers
+  - Global_Campus_Careers
+  careers_url: https://www.pwc.ch/en/careers.html
+  sector: consulting
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 4778
+  jobs_by_country:
+    CH: 17
+    LU: 85
+    BE: 64
+    AT: 54
+    IE: 73
+    UK: 3
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:pwc
+- name: PwC Middle East
+  provider: successfactors
+  token: pwc-me-site
+  country: AE
+  host: careers.pwc.com
+  sitemaps:
+  - https://careers.pwc.com/sitemap.xml
+  careers_url: https://careers.pwc.com/
+  sector: consulting
+  verified_at: '2026-11-19T13:06:52+00:00'
+  jobs: 70
+  jobs_by_country:
+    AE: 12
+  evidence: sitemap + schema.org JobPosting (successfactors), verified live on 12 sampled pages
+- name: Raisin
+  provider: greenhouse
+  token: raisin
+  country: DE
+  careers_url: https://www.raisin.com/en-de/careers/
+  sector: tech
+  verified_at: '2026-11-04T11:05:39+00:00'
+  jobs: 30
+  jobs_by_country:
+    DE: 21
+    UK: 6
+  evidence: 'slug probe: board name ''Raisin'', 21 postings in DE'
+- name: Reckitt
+  provider: successfactors
+  token: careers-reckitt-com-su
+  country: NL
+  host: careers.reckitt.com
+  sitemaps:
+  - https://careers.reckitt.com/sitemap.xml
+  careers_url: https://careers.reckitt.com/
+  sector: consumer
+  verified_at: '2026-11-04T11:02:58+00:00'
+  jobs: 454
+  jobs_by_country:
+    BE: 2
+    DE: 3
+    UK: 6
+    CH: 1
+  evidence: linked from careers page
+- name: Red Bull
+  provider: jsonld
+  token: redbull
+  host: jobs.redbull.com
+  sitemaps:
+  - https://jobs.redbull.com/sitemap.xml
+  url_filter: -\d{5,}/?$
+  id_pattern: -(\d{5,})/?$
+  prefer: /int-en/|-en/
+  careers_url: https://jobs.redbull.com/
+  sector: consumer
+  verified_at: '2026-10-24T08:40:54+00:00'
+  jobs: 74
+  jobs_by_country:
+    AE: 1
+    BE: 1
+  evidence: sitemap + JSON-LD JobPosting, verified live on 12 sampled pages
+- name: Redalpine
+  provider: personio
+  token: redalpine
+  careers_url: null
+  sector: banking
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 4
+  swiss_jobs: 3
+  evidence: 'slug probe: 3 Swiss postings'
+- name: REWE Group
+  provider: jsonld
+  token: karriere-rewe-de-ld
+  country: DE
+  host: karriere.rewe.de
+  sitemaps:
+  - https://karriere.rewe.de/sitemap.xml
+  careers_url: https://karriere.rewe.de/
+  sector: retail
+  verified_at: '2026-10-28T11:05:09+00:00'
+  jobs: 10438
+  jobs_by_country:
+    DE: 12
+  evidence: careers-site sitemap + JSON-LD
+- name: Richemont
+  provider: workday
+  token: richemont
+  host: richemont.wd3.myworkdayjobs.com
+  site: broadbean_external
+  careers_url: https://www.richemont.com/careers/
+  sector: luxury
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 494
+  swiss_jobs: 34
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Richemont
+  provider: workday_sitemap
+  token: richemont-wds
+  country: CH
+  host: wd3.myworkdaysite.com
+  tenant: richemont
+  sites:
+  - broadbean_external
+  careers_url: https://www.richemont.com/careers/
+  sector: luxury
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 497
+  jobs_by_country:
+    CH: 33
+    NL: 8
+    AE: 7
+    BE: 1
+    DE: 4
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:richemont
+- name: Ripple
+  provider: greenhouse
+  token: ripple
+  careers_url: https://ripple.com/careers/
+  sector: tech
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 99
+  swiss_jobs: 1
+  evidence: 'slug probe: board name ''Ripple '', 1 Swiss postings'
+- name: Rituals
+  provider: jsonld
+  token: careers-rituals-com-ld
+  country: NL
+  host: careers.rituals.com
+  sitemaps:
+  - https://careers.rituals.com/api/sitemap/
+  careers_url: https://careers.rituals.com/en-NL/
+  sector: retail
+  verified_at: '2026-11-04T11:02:58+00:00'
+  jobs: 743
+  jobs_by_country:
+    UK: 2
+    BE: 1
+    NL: 2
+    DE: 7
+  evidence: careers-site sitemap + JSON-LD
+- name: Roche
+  provider: workday
+  token: roche
+  host: roche.wd3.myworkdayjobs.com
+  site: roche-ext
+  careers_url: https://careers.roche.com/global/en
+  sector: pharma
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 1279
+  swiss_jobs: 85
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: Roche
+  provider: jsonld
+  token: roche-site
+  host: careers.roche.com
+  sitemaps:
+  - https://careers.roche.com/global/en/sitemap_index.xml
+  id_pattern: /(\d{8,})/?$
+  careers_url: https://careers.roche.com/
+  sector: pharma
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 1211
+  jobs_by_country:
+    CH: 6
+    DE: 2
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:roche
+- name: Rockwell Automation
+  provider: workday
+  token: rockwellautomation
+  host: rockwellautomation.wd1.myworkdayjobs.com
+  site: External_Rockwell_Automation
+  careers_url: null
+  sector: industrial
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 439
+  swiss_jobs: 1
+  evidence: known URL, verified live; extra sites from tenant robots.txt, verified live 2026-10-24
+  extra_sites:
+  - External-Rockwell-Automation-Early-Careers
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Rockwell Automation
+  provider: workday_sitemap
+  token: rockwellautomation-wds
+  country: CH
+  host: wd1.myworkdaysite.com
+  tenant: rockwellautomation
+  sites:
+  - External_Rockwell_Automation
+  - External-Rockwell-Automation-Early-Careers
+  careers_url: null
+  sector: industrial
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 144
+  jobs_by_country:
+    DE: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:rockwellautomation
+- name: Rossmann
+  provider: jsonld
+  token: jobs-rossmann-de-ld
+  country: DE
+  host: jobs.rossmann.de
+  sitemaps:
+  - https://jobs.rossmann.de/sitemap.xml
+  careers_url: https://jobs.rossmann.de/jobsuche.html
+  sector: retail
+  verified_at: '2026-10-28T11:05:06+00:00'
+  jobs: 1071
+  jobs_by_country:
+    DE: 12
+  evidence: careers-site sitemap + JSON-LD
+- name: Rothschild & Co
+  provider: workday
+  token: rothschildandco
+  host: rothschildandco.wd3.myworkdayjobs.com
+  site: Rothschildandco_Lateral
+  careers_url: null
+  sector: banking
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 117
+  swiss_jobs: 6
+  evidence: known URL, verified live; extra sites from tenant robots.txt, verified live 2026-10-24
+  extra_sites:
+  - Rothschildandco_Interns
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Rothschild & Co
+  provider: workday_sitemap
+  token: rothschildandco-wds
+  country: CH
+  host: wd3.myworkdaysite.com
+  tenant: rothschildandco
+  sites:
+  - Rothschildandco_Lateral
+  - Rothschildandco_Interns
+  careers_url: null
+  sector: banking
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 100
+  jobs_by_country:
+    UK: 7
+    CH: 8
+    DE: 4
+    LU: 2
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:rothschildandco
+- name: S&P Global
+  provider: workday
+  token: spgi
+  host: spgi.wd5.myworkdayjobs.com
+  site: SPGI_Careers
+  careers_url: https://careers.spglobal.com/
+  sector: banking
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 301
+  swiss_jobs: 1
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: S&P Global
+  provider: workday_sitemap
+  token: spgi-wds
+  country: CH
+  host: wd5.myworkdaysite.com
+  tenant: spgi
+  sites:
+  - SPGI_Careers
+  careers_url: https://careers.spglobal.com/
+  sector: banking
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 100
+  jobs_by_country:
+    UK: 14
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:spgi
+- name: Salesforce
+  provider: workday
+  token: salesforce
+  host: salesforce.wd12.myworkdayjobs.com
+  site: External_Career_Site
+  careers_url: https://careers.salesforce.com/
+  sector: tech
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 1582
+  swiss_jobs: 18
+  evidence: known URL, verified live; extra sites from tenant robots.txt, verified live 2026-10-24
+  extra_sites:
+  - Futureforce_Internships
+  - Futureforce_NewGradRoles
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Salesforce
+  provider: workday_sitemap
+  token: salesforce-wds
+  country: CH
+  host: wd12.myworkdaysite.com
+  tenant: salesforce
+  sites:
+  - External_Career_Site
+  - Futureforce_Internships
+  - Futureforce_NewGradRoles
+  careers_url: https://careers.salesforce.com/
+  sector: tech
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 152
+  jobs_by_country:
+    IE: 26
+    CH: 2
+    UK: 5
+    NL: 5
+    DE: 2
+    BE: 1
+    AE: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:salesforce
+- name: Sanofi
+  provider: workday
+  token: sanofi
+  host: sanofi.wd3.myworkdayjobs.com
+  site: SanofiCareers
+  careers_url: https://www.sanofi.com/en/careers
+  sector: pharma
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 1033
+  swiss_jobs: 2
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: Sanofi
+  provider: jsonld
+  token: sanofi-site
+  host: jobs.sanofi.com
+  sitemaps:
+  - https://jobs.sanofi.com/sitemap.xml
+  id_pattern: /(\d{8,})/?$
+  careers_url: https://jobs.sanofi.com/
+  sector: pharma
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 1443
+  jobs_by_country:
+    NL: 2
+    DE: 5
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:sanofi
+- name: SAP
+  provider: jsonld
+  token: sap-site
+  country: DE
+  host: jobs.sap.com
+  sitemaps:
+  - https://jobs.sap.com/sitemap.xml
+  id_pattern: /(\d{8,})/?$
+  careers_url: https://jobs.sap.com/
+  sector: tech
+  verified_at: '2026-11-20T15:55:12+00:00'
+  jobs: 1166
+  jobs_by_country:
+    CH: 1
+    DE: 4
+    UK: 7
+  evidence: sitemap + schema.org JobPosting (jsonld), verified live on 12 sampled pages
+- name: Saxo Bank
+  provider: workday
+  token: saxobank
+  host: saxobank.wd3.myworkdayjobs.com
+  site: CareeratSaxoBank
+  careers_url: null
+  sector: banking
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 58
+  swiss_jobs: 1
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Saxo Bank
+  provider: workday_sitemap
+  token: saxobank-wds
+  country: CH
+  host: wd3.myworkdaysite.com
+  tenant: saxobank
+  sites:
+  - CareeratSaxoBank
+  careers_url: null
+  sector: banking
+  verified_at: '2026-11-24T16:58:58+00:00'
+  jobs: 58
+  jobs_by_country:
+    NL: 7
+    BE: 1
+    CH: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:saxobank
+- name: Scandit
+  provider: greenhouse
+  token: scandit
+  careers_url: https://www.scandit.com/company/careers/
+  sector: tech
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 14
+  swiss_jobs: 9
+  evidence: 'slug probe: board name ''Scandit'', 9 Swiss postings'
+- name: Schroders
+  provider: oracle
+  token: ekbq
+  country: CH
+  host: ekbq.fa.em2.oraclecloud.com
+  site: CX_2
+  careers_url: https://www.schroders.com/en/global/individual/careers/
+  sector: banking
+  verified_at: '2026-10-28T10:47:20+00:00'
+  jobs: 93
+  jobs_by_country:
+    UK: 33
+    LU: 4
+    CH: 12
+    DE: 4
+  evidence: linked from careers page
+- name: Schwarz Group
+  provider: jsonld
+  token: jobs-schwarz
+  country: DE
+  host: jobs.schwarz
+  sitemaps:
+  - https://jobs.schwarz/sitemap.xml
+  url_filter: /jobsearch/[^/]+/.
+  id_pattern: -([A-Z]{2}\d+)/?$
+  careers_url: https://jobs.schwarz/jobsearch
+  sector: retail
+  verified_at: '2026-10-28T11:05:29+00:00'
+  jobs: 173
+  jobs_by_country:
+    DE: 12
+  evidence: sitemap + schema.org JobPosting (jsonld), verified live on 12 sampled pages
+- name: Sendcloud
+  provider: jsonld
+  token: jobs-sendcloud-com-ld
+  country: NL
+  host: jobs.sendcloud.com
+  sitemaps:
+  - https://jobs.sendcloud.com/sitemap.xml
+  careers_url: https://jobs.sendcloud.com/
+  sector: tech
+  verified_at: '2026-11-04T11:02:58+00:00'
+  jobs: 35
+  jobs_by_country:
+    NL: 6
+  evidence: careers-site sitemap + JSON-LD
+- name: Siegfried
+  provider: workday
+  token: siegfried
+  host: siegfried.wd103.myworkdayjobs.com
+  site: external
+  careers_url: https://www.siegfried.ch/careers/
+  sector: pharma
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 53
+  swiss_jobs: 20
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Siegfried
+  provider: workday_sitemap
+  token: siegfried-wds
+  country: CH
+  host: wd103.myworkdaysite.com
+  tenant: siegfried
+  sites:
+  - external
+  careers_url: https://www.siegfried.ch/careers/
+  sector: pharma
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 47
+  jobs_by_country:
+    CH: 18
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:siegfried
+- name: Siemens Healthineers
+  provider: workday
+  token: onehealthineers
+  host: onehealthineers.wd3.myworkdayjobs.com
+  site: SHSJB
+  careers_url: https://www.siemens-healthineers.com/careers
+  sector: pharma
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 508
+  swiss_jobs: 5
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Siemens Healthineers
+  provider: workday_sitemap
+  token: onehealthineers-wds
+  country: CH
+  host: wd3.myworkdaysite.com
+  tenant: onehealthineers
+  sites:
+  - SHSJB
+  careers_url: https://www.siemens-healthineers.com/careers
+  sector: pharma
+  verified_at: '2026-11-24T16:58:58+00:00'
+  jobs: 99
+  jobs_by_country: {}
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:onehealthineers
+- name: SIX Group
+  provider: successfactors
+  token: jobs-six-group-com-su
+  country: CH
+  host: jobs.six-group.com
+  sitemaps:
+  - https://jobs.six-group.com/sitemap.xml
+  careers_url: https://www.six-group.com/en/careers.html
+  sector: banking
+  verified_at: '2026-11-27T00:09:14+00:00'
+  jobs: 97
+  jobs_by_country:
+    CH: 5
+  evidence: linked from careers page
+- name: Smith+Nephew
+  provider: workday
+  token: smithnephew
+  host: smithnephew.wd5.myworkdayjobs.com
+  site: External
+  careers_url: null
+  sector: pharma
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 365
+  swiss_jobs: 4
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Smith+Nephew
+  provider: workday_sitemap
+  token: smithnephew-wds
+  country: CH
+  host: wd5.myworkdaysite.com
+  tenant: smithnephew
+  sites:
+  - External
+  careers_url: null
+  sector: pharma
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 100
+  jobs_by_country:
+    UK: 12
+    AT: 2
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:smithnephew
+- name: Snowflake
+  provider: ashby
+  token: snowflake
+  careers_url: https://careers.snowflake.com/
+  sector: tech
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 353
+  swiss_jobs: 4
+  evidence: 'slug probe: 4 Swiss postings'
+- name: Sonar
+  provider: lever
+  token: sonarsource
+  careers_url: https://www.sonarsource.com/company/careers/
+  sector: tech
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 116
+  swiss_jobs: 26
+  evidence: linked from careers page
+- name: Sony
+  provider: workday
+  token: sonyglobal
+  host: sonyglobal.wd1.myworkdayjobs.com
+  site: SonyGlobalCareers
+  careers_url: https://ai.sony/joinus/
+  sector: tech
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 130
+  swiss_jobs: 2
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Sony
+  provider: workday_sitemap
+  token: sonyglobal-wds
+  country: CH
+  host: wd1.myworkdaysite.com
+  tenant: sonyglobal
+  sites:
+  - SonyGlobalCareers
+  careers_url: https://ai.sony/joinus/
+  sector: tech
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 100
+  jobs_by_country:
+    UK: 14
+    DE: 2
+    CH: 2
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:sonyglobal
+- name: Sophia Genetics
+  provider: jsonld
+  token: careers-sophiagenetics-com-ld
+  country: CH
+  host: careers.sophiagenetics.com
+  sitemaps:
+  - https://careers.sophiagenetics.com/sitemap.xml
+  careers_url: https://careers.sophiagenetics.com/home
+  sector: pharma
+  verified_at: '2026-11-27T00:09:15+00:00'
+  jobs: 28
+  jobs_by_country:
+    CH: 1
+  evidence: careers-site sitemap + JSON-LD
+- name: Spotify
+  provider: lever
+  token: spotify
+  careers_url: https://www.lifeatspotify.com/jobs
+  sector: tech
+  country: UK
+  verified_at: '2026-11-20T15:57:41+00:00'
+  jobs: 90
+  jobs_by_country:
+    UK: 38
+    DE: 1
+    AE: 1
+  evidence: Lever board api.lever.co/v0/postings/spotify, verified live
+- name: Squarepoint Capital
+  provider: greenhouse
+  token: squarepointcapital
+  careers_url: https://www.squarepoint-capital.com/careers
+  sector: banking
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 91
+  swiss_jobs: 10
+  evidence: 'slug probe: board name ''Squarepoint Capital'', 10 Swiss postings'
+- name: Squarespace
+  provider: greenhouse
+  token: squarespace
+  country: IE
+  careers_url: https://www.squarespace.com/careers
+  sector: tech
+  verified_at: '2026-11-24T12:08:53+00:00'
+  jobs: 20
+  jobs_by_country:
+    IE: 3
+  evidence: 'slug probe: board name ''Squarespace'', 3 postings in IE'
+- name: Squirro
+  provider: bamboohr
+  token: squirro
+  country: CH
+  careers_url: https://squirro.com/careers
+  sector: tech
+  verified_at: '2026-11-27T00:14:29+00:00'
+  jobs: 2
+  jobs_by_country:
+    CH: 1
+  evidence: linked from careers page
+- name: Stadler Rail
+  provider: umantis
+  token: recruitingapp-2787
+  country: CH
+  host: recruitingapp-2787.umantis.com
+  careers_url: https://www.stadlerrail.com/en/us/careers
+  sector: industrial
+  verified_at: '2026-11-27T00:14:26+00:00'
+  jobs: 40
+  jobs_by_country:
+    DE: 15
+    UK: 8
+    AT: 4
+    CH: 3
+  evidence: linked from careers page
+- name: State Street
+  provider: phenom
+  token: careers-statestreet-com-ph
+  country: CH
+  host: careers.statestreet.com
+  careers_url: https://careers.statestreet.com/global/en
+  sector: banking
+  verified_at: '2026-11-27T00:14:29+00:00'
+  jobs: 1080
+  jobs_by_country:
+    CH: 1
+    IE: 3
+    LU: 1
+    DE: 1
+  evidence: linked from careers page
+- name: Stripe
+  provider: greenhouse
+  token: stripe
+  country: IE
+  careers_url: https://stripe.com/jobs/search
+  sector: tech
+  verified_at: '2026-11-24T12:08:52+00:00'
+  jobs: 770
+  jobs_by_country:
+    IE: 97
+    UK: 64
+    NL: 2
+    DE: 15
+    BE: 3
+    LU: 3
+  evidence: 'slug probe: board name ''Stripe'', 97 postings in IE'
+- name: Stryker
+  provider: workday
+  token: stryker
+  host: stryker.wd1.myworkdayjobs.com
+  site: StrykerCareers
+  careers_url: https://careers.stryker.com/
+  sector: pharma
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 1492
+  swiss_jobs: 8
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: Stryker
+  provider: jsonld
+  token: stryker-site
+  host: careers.stryker.com
+  sitemaps:
+  - https://careers.stryker.com/sitemap.xml
+  id_pattern: /(\d{8,})/?$
+  careers_url: https://careers.stryker.com/
+  sector: pharma
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 1505
+  jobs_by_country:
+    DE: 3
+    CH: 2
+    AT: 3
+    BE: 1
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:stryker
+- name: SumUp
+  provider: greenhouse
+  token: sumup
+  country: DE
+  careers_url: https://www.sumup.com/careers/
+  sector: tech
+  verified_at: '2026-11-04T11:05:32+00:00'
+  jobs: 352
+  jobs_by_country:
+    UK: 95
+    DE: 65
+    BE: 2
+    NL: 5
+    LU: 1
+  evidence: 'slug probe: board name ''SumUp'', 65 postings in DE'
+- name: Sunrise
+  provider: phenom
+  token: careers-sunrise-ch-ph
+  country: CH
+  host: careers.sunrise.ch
+  careers_url: https://careers.sunrise.ch/de/de
+  sector: tech
+  verified_at: '2026-11-04T11:02:58+00:00'
+  jobs: 31
+  jobs_by_country:
+    CH: 12
+  evidence: linked from careers page
+- name: Swarovski
+  provider: workday
+  token: swarovski
+  host: swarovski.wd3.myworkdayjobs.com
+  site: Swarovski
+  careers_url: null
+  sector: luxury
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 834
+  swiss_jobs: 28
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Swarovski
+  provider: workday_sitemap
+  token: swarovski-wds
+  country: CH
+  host: wd3.myworkdaysite.com
+  tenant: swarovski
+  sites:
+  - Swarovski
+  careers_url: null
+  sector: luxury
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 100
+  jobs_by_country:
+    AT: 3
+    CH: 1
+    UK: 11
+    LU: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:swarovski
+- name: Swiss Re
+  provider: successfactors
+  token: swissre-sf
+  host: careers.swissre.com
+  sitemaps:
+  - https://careers.swissre.com/sitemap.xml
+  careers_url: https://careers.swissre.com/
+  sector: insurance
+  verified_at: '2026-10-24T16:44:01+00:00'
+  jobs: 247
+  jobs_by_country:
+    UK: 5
+    DE: 1
+  evidence: sitemap + schema.org JobPosting (successfactors), verified live on 12 sampled pages
+- name: SwissBorg
+  provider: lever
+  token: swissborg
+  careers_url: https://swissborg.com/careers
+  sector: banking
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 6
+  swiss_jobs: 6
+  evidence: linked from careers page
+- name: Swisscom
+  provider: workday
+  token: swisscom
+  host: swisscom.wd103.myworkdayjobs.com
+  site: SwisscomExternalCareers
+  careers_url: https://www.swisscom.ch/en/about/jobs.html
+  sector: tech
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 59
+  swiss_jobs: 36
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Swisscom
+  provider: workday_sitemap
+  token: swisscom-wds
+  country: CH
+  host: wd103.myworkdaysite.com
+  tenant: swisscom
+  sites:
+  - SwisscomExternalCareers
+  careers_url: https://www.swisscom.ch/en/about/jobs.html
+  sector: tech
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 46
+  jobs_by_country:
+    CH: 40
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:swisscom
+- name: Swissto12
+  provider: hibob
+  token: swissto12-b67d359b42
+  country: CH
+  careers_url: https://swissto12.com/careers/
+  sector: industrial
+  verified_at: '2026-11-27T00:09:23+00:00'
+  jobs: 27
+  jobs_by_country:
+    CH: 20
+  evidence: linked from careers page
+- name: Synpulse
+  provider: hibob
+  token: synpulse
+  country: CH
+  careers_url: https://www.synpulse.com/en/careers
+  sector: consulting
+  verified_at: '2026-11-27T00:09:25+00:00'
+  jobs: 98
+  jobs_by_country:
+    UK: 16
+    AE: 1
+    DE: 11
+    CH: 6
+  evidence: linked from careers page
+- name: Synthesia
+  provider: ashby
+  token: synthesia
+  careers_url: null
+  sector: tech
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 34
+  swiss_jobs: 4
+  evidence: 'slug probe: 4 Swiss postings'
+- name: Taurus
+  provider: join
+  token: taurusgroup
+  country: CH
+  careers_url: https://www.taurushq.com/careers/
+  sector: banking
+  verified_at: '2026-11-27T00:14:30+00:00'
+  jobs: 4
+  jobs_by_country:
+    CH: 2
+  evidence: linked from careers page
+- name: Taxfix
+  provider: ashby
+  token: taxfix.com
+  country: DE
+  careers_url: https://taxfix.de/en/careers/
+  sector: tech
+  verified_at: '2026-11-04T11:05:56+00:00'
+  jobs: 15
+  jobs_by_country:
+    DE: 12
+  evidence: linked from careers page
+- name: Temenos
+  provider: workday
+  token: temenos
+  host: temenos.wd103.myworkdayjobs.com
+  site: Temenoscareers
+  careers_url: https://www.temenos.com/careers/
+  sector: tech
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 18
+  swiss_jobs: 0
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Temenos
+  provider: workday_sitemap
+  token: temenos-wds
+  country: CH
+  host: wd103.myworkdaysite.com
+  tenant: temenos
+  sites:
+  - Temenoscareers
+  careers_url: https://www.temenos.com/careers/
+  sector: tech
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 27
+  jobs_by_country:
+    AE: 1
+    UK: 5
+    LU: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:temenos
+- name: Tether
+  provider: recruitee
+  token: tether
+  careers_url: null
+  sector: tech
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 243
+  swiss_jobs: 32
+  evidence: 'slug probe: 32 Swiss postings'
+- name: Teylor
+  provider: hibob
+  token: teylorag
+  country: CH
+  careers_url: https://teylor.com/de/
+  sector: banking
+  verified_at: '2026-11-27T00:10:58+00:00'
+  jobs: 2
+  jobs_by_country:
+    DE: 1
+    CH: 1
+  evidence: linked from careers page
+- name: The Global Fund
+  provider: workday
+  token: theglobalfund
+  host: theglobalfund.wd1.myworkdayjobs.com
+  site: External
+  careers_url: https://www.theglobalfund.org/en/careers/
+  sector: international
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 3
+  swiss_jobs: 3
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: The Global Fund
+  provider: workday_sitemap
+  token: theglobalfund-wds
+  country: CH
+  host: wd1.myworkdaysite.com
+  tenant: theglobalfund
+  sites:
+  - External
+  careers_url: https://www.theglobalfund.org/en/careers/
+  sector: international
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 15
+  jobs_by_country:
+    CH: 15
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:theglobalfund
+- name: Thermo Fisher Scientific
+  provider: workday
+  token: thermofisher
+  host: thermofisher.wd5.myworkdayjobs.com
+  site: ThermoFisherCareers
+  careers_url: https://jobs.thermofisher.com/
+  sector: pharma
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 2985
+  swiss_jobs: 9
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: Thermo Fisher Scientific
+  provider: jsonld
+  token: thermo-fisher-scientific-site
+  host: jobs.thermofisher.com
+  sitemaps:
+  - https://jobs.thermofisher.com/global/en/sitemap_index.xml
+  careers_url: https://jobs.thermofisher.com/
+  sector: pharma
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 3033
+  jobs_by_country:
+    NL: 3
+    CH: 1
+    BE: 1
+    UK: 3
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:thermofisher
+- name: Tony's Chocolonely
+  provider: recruitee
+  token: tonyschocolonely
+  country: NL
+  careers_url: https://tonyschocolonely.com/nl/en/jobs
+  sector: consumer
+  verified_at: '2026-10-23T19:54:26+00:00'
+  jobs: 16
+  jobs_by_country:
+    NL: 10
+  evidence: 'slug probe: 10 postings in NL'
+- name: Trafigura
+  provider: workday
+  token: trafigura
+  host: trafigura.wd3.myworkdayjobs.com
+  site: TrafiguraCareerSite
+  careers_url: https://www.trafigura.com/careers/
+  sector: commodities
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 71
+  swiss_jobs: 9
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Trafigura
+  provider: workday_sitemap
+  token: trafigura-wds
+  country: CH
+  host: wd3.myworkdaysite.com
+  tenant: trafigura
+  sites:
+  - TrafiguraCareerSite
+  careers_url: https://www.trafigura.com/careers/
+  sector: commodities
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 64
+  jobs_by_country:
+    CH: 7
+    UK: 6
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:trafigura
+- name: Trimble
+  provider: workday
+  token: trimble
+  host: trimble.wd1.myworkdayjobs.com
+  site: TrimbleCareers
+  careers_url: null
+  sector: tech
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 210
+  swiss_jobs: 1
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Trimble
+  provider: workday_sitemap
+  token: trimble-wds
+  country: CH
+  host: wd1.myworkdaysite.com
+  tenant: trimble
+  sites:
+  - TrimbleCareers
+  careers_url: null
+  sector: tech
+  verified_at: '2026-11-24T16:58:58+00:00'
+  jobs: 100
+  jobs_by_country:
+    UK: 31
+    DE: 3
+    AE: 2
+    NL: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:trimble
+- name: Twint
+  provider: recruitee
+  token: twint
+  careers_url: null
+  sector: banking
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 1
+  swiss_jobs: 1
+  evidence: 'slug probe: 1 Swiss postings'
+- name: UCB
+  provider: phenom
+  token: careers-ucb-com-ph
+  country: BE
+  host: careers.ucb.com
+  careers_url: https://www.ucb.com/careers
+  sector: pharma
+  verified_at: '2026-11-04T11:09:31+00:00'
+  jobs: 338
+  jobs_by_country:
+    UK: 8
+    DE: 2
+    BE: 2
+  evidence: linked from careers page
+- name: UNHCR
+  provider: workday
+  token: unhcr
+  host: unhcr.wd3.myworkdayjobs.com
+  site: External
+  careers_url: https://www.unhcr.org/careers
+  sector: international
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 11
+  swiss_jobs: 0
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: UNHCR
+  provider: workday_sitemap
+  token: unhcr-wds
+  country: CH
+  host: wd3.myworkdaysite.com
+  tenant: unhcr
+  sites:
+  - External
+  careers_url: https://www.unhcr.org/careers
+  sector: international
+  verified_at: '2026-11-24T16:58:58+00:00'
+  jobs: 29
+  jobs_by_country:
+    CH: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:unhcr
+- name: Unilever
+  provider: workday
+  token: unilever
+  host: unilever.wd3.myworkdayjobs.com
+  site: Unilever_Experienced_Professionals
+  careers_url: https://careers.unilever.com/
+  sector: consumer
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 261
+  swiss_jobs: 2
+  evidence: linked from careers page; extra sites from tenant robots.txt, verified live 2026-10-24
+  extra_sites:
+  - Unilever_Early_Careers
+  disabled: true
+  disabled_reason: Workday blocks automated clients since 2026-11-16 (HTTP 429); replaced by the company's own job site
+- name: Unilever
+  provider: jsonld
+  token: unilever-site
+  host: careers.unilever.com
+  sitemaps:
+  - https://careers.unilever.com/sitemap.xml
+  id_pattern: /(\d{8,})/?$
+  careers_url: https://careers.unilever.com/
+  sector: consumer
+  verified_at: '2026-11-19T10:23:12+00:00'
+  jobs: 255
+  jobs_by_country:
+    DE: 1
+    NL: 7
+  evidence: own careers-site sitemap + JSON-LD (replaces the blocked Workday feed), verified live on 8 sampled pages
+  replaces: workday:unilever
+- name: Vandebron
+  provider: recruitee
+  token: vandebron
+  country: NL
+  careers_url: https://werkenbij.vandebron.nl/
+  sector: consumer
+  verified_at: '2026-10-23T19:54:34+00:00'
+  jobs: 10
+  jobs_by_country:
+    NL: 10
+  evidence: 'slug probe: 10 postings in NL'
+- name: Vertex Pharmaceuticals
+  provider: workday
+  token: vrtx
+  host: vrtx.wd501.myworkdayjobs.com
+  site: Vertex_Careers
+  careers_url: null
+  sector: pharma
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 313
+  swiss_jobs: 1
+  evidence: known URL, verified live; extra sites from tenant robots.txt, verified live 2026-10-24
+  extra_sites:
+  - vertex_intern
+  - vertex_industrial_placement_student
+  - vertex_mba_intern
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Vertex Pharmaceuticals
+  provider: workday_sitemap
+  token: vrtx-wds
+  country: CH
+  host: wd501.myworkdaysite.com
+  tenant: vrtx
+  sites:
+  - Vertex_Careers
+  - vertex_intern
+  - vertex_industrial_placement_student
+  - vertex_mba_intern
+  careers_url: null
+  sector: pharma
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 108
+  jobs_by_country:
+    NL: 2
+    UK: 8
+    IE: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:vrtx
+- name: Viatris
+  provider: workday
+  token: viatris
+  host: viatris.wd5.myworkdayjobs.com
+  site: External
+  careers_url: null
+  sector: pharma
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 348
+  swiss_jobs: 6
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Viatris
+  provider: workday_sitemap
+  token: viatris-wds
+  country: CH
+  host: wd5.myworkdaysite.com
+  tenant: viatris
+  sites:
+  - External
+  careers_url: null
+  sector: pharma
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 100
+  jobs_by_country:
+    UK: 3
+    DE: 2
+    BE: 1
+    IE: 24
+    CH: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:viatris
+- name: Volkswagen Group
+  provider: successfactors
+  token: jobs-volkswagen-group-com-su
+  country: DE
+  host: jobs.volkswagen-group.com
+  sitemaps:
+  - https://jobs.volkswagen-group.com/sitemap.xml
+  careers_url: https://jobs.volkswagen-group.com/
+  sector: automotive
+  verified_at: '2026-10-28T11:05:03+00:00'
+  jobs: 968
+  jobs_by_country:
+    DE: 12
+  evidence: linked from careers page
+- name: Volvo Cars
+  provider: successfactors
+  token: volvo-cars-site
+  country: BE
+  host: jobs.volvocars.com
+  sitemaps:
+  - https://jobs.volvocars.com/sitemap.xml
+  id_pattern: /(\d{8,})/?$
+  careers_url: https://jobs.volvocars.com/
+  sector: automotive
+  verified_at: '2026-11-20T15:56:09+00:00'
+  jobs: 52
+  jobs_by_country:
+    BE: 5
+  evidence: sitemap + schema.org JobPosting (successfactors), verified live on 12 sampled pages
+- name: Vontobel
+  provider: workday
+  token: vontobel
+  host: vontobel.wd3.myworkdayjobs.com
+  site: Vontobel_External_Career
+  careers_url: https://www.vontobel.com/en-ch/about-vontobel/careers/
+  sector: banking
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 40
+  swiss_jobs: 25
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Vontobel
+  provider: workday_sitemap
+  token: vontobel-wds
+  country: CH
+  host: wd3.myworkdaysite.com
+  tenant: vontobel
+  sites:
+  - Vontobel_External_Career
+  careers_url: https://www.vontobel.com/en-ch/about-vontobel/careers/
+  sector: banking
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 45
+  jobs_by_country:
+    DE: 5
+    LU: 1
+    CH: 2
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:vontobel
+- name: Weleda
+  provider: workday
+  token: weleda
+  country: CH
+  host: weleda.wd3.myworkdayjobs.com
+  site: weleda_jobs
+  careers_url: https://www.weleda.ch/weleda/ueber-uns/karriere
+  sector: consumer
+  verified_at: '2026-11-04T11:02:58+00:00'
+  jobs: 24
+  jobs_by_country:
+    CH: 1
+    DE: 23
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Weleda
+  provider: workday_sitemap
+  token: weleda-wds
+  country: CH
+  host: wd3.myworkdaysite.com
+  tenant: weleda
+  sites:
+  - weleda_jobs
+  careers_url: https://www.weleda.ch/weleda/ueber-uns/karriere
+  sector: consumer
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 21
+  jobs_by_country:
+    DE: 1
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:weleda
+- name: Westwing
+  provider: personio
+  token: westwing
+  country: DE
+  careers_url: https://www.westwing.com/careers/
+  sector: retail
+  verified_at: '2026-11-04T11:05:48+00:00'
+  jobs: 66
+  jobs_by_country:
+    DE: 57
+  evidence: 'slug probe: 57 postings in DE'
+- name: World Economic Forum
+  provider: workday
+  token: weforum
+  host: weforum.wd3.myworkdayjobs.com
+  site: Forum_Careers
+  careers_url: https://www.weforum.org/about/careers/
+  sector: international
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 18
+  swiss_jobs: 9
+  evidence: known URL, verified live
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: World Economic Forum
+  provider: workday_sitemap
+  token: weforum-wds
+  country: CH
+  host: wd3.myworkdaysite.com
+  tenant: weforum
+  sites:
+  - Forum_Careers
+  careers_url: https://www.weforum.org/about/careers/
+  sector: international
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 27
+  jobs_by_country:
+    CH: 14
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:weforum
+- name: Zattoo
+  provider: greenhouse
+  token: zattoo
+  careers_url: https://zattoo.com/company/en/jobs
+  sector: tech
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 9
+  swiss_jobs: 2
+  evidence: 'slug probe: board name ''Zattoo '', 2 Swiss postings'
+- name: Zimmer Biomet
+  provider: phenom
+  token: careers-zimmerbiomet-com-ph
+  country: CH
+  host: careers.zimmerbiomet.com
+  careers_url: https://careers.zimmerbiomet.com/us/en
+  sector: pharma
+  verified_at: '2026-11-27T00:14:31+00:00'
+  jobs: 399
+  jobs_by_country:
+    NL: 2
+    UK: 1
+    AT: 1
+    BE: 1
+  evidence: linked from careers page
+- name: Zurich Instruments
+  provider: lever
+  token: zurichinstruments
+  careers_url: null
+  sector: tech
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 12
+  swiss_jobs: 7
+  evidence: 'slug probe: 7 Swiss postings'
+- name: Zurich Insurance
+  provider: successfactors
+  token: zurich-sf
+  host: www.careers.zurich.com
+  sitemaps:
+  - https://www.careers.zurich.com/sitemap.xml
+  careers_url: https://www.careers.zurich.com/
+  sector: insurance
+  verified_at: '2026-10-24T16:43:53+00:00'
+  jobs: 759
+  jobs_by_country:
+    DE: 7
+    CH: 2
+    BE: 1
+  evidence: sitemap + schema.org JobPosting (successfactors), verified live on 12 sampled pages
+- name: Zühlke
+  provider: workday
+  token: zuehlke
+  host: zuehlke.wd3.myworkdayjobs.com
+  site: Zuhlke-Careers
+  careers_url: https://www.zuehlke.com/en/careers
+  sector: consulting
+  verified_at: '2026-10-23T14:14:37+00:00'
+  jobs: 40
+  swiss_jobs: 6
+  evidence: linked from careers page
+  disabled: true
+  disabled_reason: 'Workday challenges automated clients since 2026-11-16 (HTTP 429, cf-mitigated: challenge); replaced by the Workday sitemap feed'
+- name: Zühlke
+  provider: workday_sitemap
+  token: zuehlke-wds
+  country: CH
+  host: wd3.myworkdaysite.com
+  tenant: zuehlke
+  sites:
+  - Zuhlke-Careers
+  careers_url: https://www.zuehlke.com/en/careers
+  sector: consulting
+  verified_at: '2026-11-24T16:35:42+00:00'
+  jobs: 42
+  jobs_by_country:
+    UK: 3
+    CH: 10
+    AT: 3
+    DE: 10
+  evidence: Workday's own sitemap (named in the tenant's robots.txt), listing only; verified live
+  replaces: workday:zuehlke

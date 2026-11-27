@@ -1,0 +1,85 @@
+name: Daily internship update
+
+on:
+  # schedule disabled in the showcase copy (it would use the owner's Actions minutes).
+  # To run daily, restore e.g.:
+  # schedule:
+  #   - cron: "0 9 * * *"
+  workflow_dispatch: {}     # "Run workflow" button in the Actions tab
+
+# contents: push the refreshed data/ and docs/. issues: open/close "Internship finder needs attention".
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: daily-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      # Always the latest tip of the branch (a re-run would otherwise reuse the old commit).
+      - uses: actions/checkout@v6
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Keep the previous run summary
+        run: cp data/last_run.json "$RUNNER_TEMP/previous_run.json" || true
+
+      - uses: actions/setup-python@v6
+        id: python
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        id: deps
+        run: pip install -r requirements.txt
+
+      - name: Unit tests
+        id: tests
+        run: python -m unittest discover -s tests -t . -v
+
+      - name: Fetch feeds and rebuild outputs
+        id: run
+        run: python -m finder run
+
+      - name: Commit updated data/ and docs/
+        id: publish
+        run: bash .github/scripts/publish.sh "${GITHUB_REF_NAME}"
+
+      # Fallback for private repos without Pages: download the page from the run summary.
+      - name: Upload viewer
+        if: steps.run.outcome == 'success'
+        uses: actions/upload-artifact@v6
+        with:
+          name: ch-intern-finder-viewer
+          path: |
+            docs/index.html
+            data/new_today.md
+            data/review.md
+          retention-days: 14
+
+      # Opens (or comments on) the issue "Internship finder needs attention" when the run failed,
+      # more than 10% of feeds failed, or internships dropped by more than 40%; closes it after a healthy run.
+      - name: Health check and attention issue
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          OUTCOMES: setup=${{ steps.deps.outcome }},tests=${{ steps.tests.outcome }},run=${{ steps.run.outcome }},publish=${{ steps.publish.outcome }}
+        run: |
+          body="$RUNNER_TEMP/attention.md"
+          status="$(python -m finder health --previous "$RUNNER_TEMP/previous_run.json" --current data/last_run.json \
+                      --outcome "$OUTCOMES" --run-url "$RUN_URL" --out "$body" 2>/dev/null || echo unknown)"
+          if [ "$status" = "healthy" ]; then
+            bash .github/scripts/attention.sh resolve daily
+          else
+            if [ ! -s "$body" ]; then
+              printf 'The daily internship update failed before its health check could run (%s).\n\nRun log: %s\n\nSee the README section *Troubleshooting*.\n' "$OUTCOMES" "$RUN_URL" > "$body"
+            fi
+            bash .github/scripts/attention.sh open daily "$body"
+          fi

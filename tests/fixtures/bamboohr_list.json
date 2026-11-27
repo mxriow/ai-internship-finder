@@ -1,0 +1,67 @@
+{
+ "meta": {
+  "totalCount": 25
+ },
+ "result": [
+  {
+   "id": "28",
+   "jobOpeningName": "Senior System Engineer ",
+   "departmentId": null,
+   "departmentLabel": null,
+   "employmentStatusLabel": "Full-Time",
+   "employmentType": null,
+   "location": {
+    "city": "London",
+    "state": "London, City of"
+   },
+   "atsLocation": {
+    "country": null,
+    "state": null,
+    "province": null,
+    "city": null
+   },
+   "isRemote": null,
+   "locationType": "0"
+  },
+  {
+   "id": "31",
+   "jobOpeningName": "Senior Product/Quality Assurance Engineer (Luxembourg)",
+   "departmentId": null,
+   "departmentLabel": null,
+   "employmentStatusLabel": "Full-Time",
+   "employmentType": null,
+   "location": {
+    "city": "Luxembourg",
+    "state": null
+   },
+   "atsLocation": {
+    "country": null,
+    "state": null,
+    "province": null,
+    "city": null
+   },
+   "isRemote": null,
+   "locationType": "0"
+  },
+  {
+   "id": "35",
+   "jobOpeningName": "Ground Segment Test Engineer (UK or LUX)",
+   "departmentId": null,
+   "departmentLabel": null,
+   "employmentStatusLabel": "Full-Time",
+   "employmentType": null,
+   "location": {
+    "city": "Various countries",
+    "state": null
+   },
+   "atsLocation": {
+    "country": null,
+    "state": null,
+    "province": null,
+    "city": null
+   },
+   "isRemote": null,
+   "locationType": "0"
+  }
+ ]
+}

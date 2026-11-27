@@ -1,0 +1,40 @@
+# Large German employers that hire business interns (round 7). Careers pages only: the ATS is detected
+# from links/markers on the page and verified live; nothing here names a guessed feed.
+seeds:
+  - {name: "Beiersdorf", country: DE, sector: consumer, careers_url: "https://www.beiersdorf.com/career/your-application/job-search"}
+  - {name: "adidas", country: DE, sector: consumer, careers_url: "https://careers.adidas-group.com/"}
+  - {name: "Puma", country: DE, sector: consumer, careers_url: "https://about.puma.com/en/careers"}
+  - {name: "Bosch", country: DE, sector: industrial, careers_url: "https://jobs.bosch.de/"}
+  - {name: "Siemens", country: DE, sector: industrial, careers_url: "https://jobs.siemens.com/careers"}
+  - {name: "BMW Group", country: DE, sector: automotive, careers_url: "https://www.bmwgroup.jobs/de/en/jobfinder.html"}
+  - {name: "Mercedes-Benz Group", country: DE, sector: automotive, careers_url: "https://group.mercedes-benz.com/careers/"}
+  - {name: "Porsche", country: DE, sector: automotive, careers_url: "https://jobs.porsche.com/"}
+  - {name: "Volkswagen Group", country: DE, sector: automotive, careers_url: "https://jobs.volkswagen-group.com/"}
+  - {name: "SAP", country: DE, sector: tech, careers_url: "https://jobs.sap.com/"}
+  - {name: "Allianz", country: DE, sector: insurance, careers_url: "https://careers.allianz.com/"}
+  - {name: "Munich Re", country: DE, sector: insurance, careers_url: "https://careers.munichre.com/en/search-jobs"}
+  - {name: "Deutsche Telekom", country: DE, sector: tech, careers_url: "https://careers.telekom.com/en"}
+  - {name: "Lufthansa Group", country: DE, sector: travel, careers_url: "https://www.lufthansagroup.careers/en/"}
+  - {name: "Zalando", country: DE, sector: retail, careers_url: "https://jobs.zalando.com/en/jobs"}
+  - {name: "Haribo", country: DE, sector: consumer, careers_url: "https://www.haribo.com/de-de/karriere/jobboerse"}
+  - {name: "Ferrero", country: DE, sector: consumer, careers_url: "https://www.ferrerocareers.com/"}
+  - {name: "L'Oréal", country: DE, sector: consumer, careers_url: "https://careers.loreal.com/en"}
+  - {name: "Coca-Cola Europacific Partners", country: DE, sector: consumer, careers_url: "https://www.cocacolaep.com/careers/"}
+  - {name: "Douglas", country: DE, sector: retail, careers_url: "https://careers.douglas.group/de/en/"}
+  - {name: "dm-drogerie markt", country: DE, sector: retail, careers_url: "https://www.dm.de/unternehmen/karriere"}
+  - {name: "Rossmann", country: DE, sector: retail, careers_url: "https://jobs.rossmann.de/jobsuche.html"}
+  - {name: "Metro", country: DE, sector: retail, careers_url: "https://careers.metroag.de/"}
+  - {name: "REWE Group", country: DE, sector: retail, careers_url: "https://karriere.rewe.de/"}
+  - {name: "Lidl", country: DE, sector: retail, careers_url: "https://jobs.lidl.de/"}
+  - {name: "Schwarz Group", country: DE, sector: retail, careers_url: "https://jobs.schwarz/jobsearch"}
+  - {name: "Aldi Süd", country: DE, sector: retail, careers_url: "https://karriere.aldi-sued.de/"}
+  - {name: "Bayer", country: DE, sector: pharma, careers_url: "https://career.bayer.com/"}
+  - {name: "Merck KGaA", country: DE, sector: pharma, careers_url: "https://www.merckgroup.com/en/careers.html"}
+  - {name: "BASF", country: DE, sector: industrial, careers_url: "https://basf.jobs/search?locale=en_US"}
+  - {name: "E.ON", country: DE, sector: energy, careers_url: "https://www.eon.com/en/about-us/careers.html"}
+  - {name: "RWE", country: DE, sector: energy, careers_url: "https://www.rwe.com/en/careers/"}
+  - {name: "Otto Group", country: DE, sector: retail, careers_url: "https://www.ottogroup.com/en/careers/jobs/"}
+  - {name: "HelloFresh", country: DE, sector: tech, careers_url: "https://careers.hellofresh.com/"}
+  - {name: "Delivery Hero", country: DE, sector: tech, careers_url: "https://careers.deliveryhero.com/jobs"}
+  - {name: "N26", country: DE, sector: banking, careers_url: "https://n26.com/en/careers"}
+  - {name: "Trade Republic", country: DE, sector: banking, careers_url: "https://traderepublic.com/careers"}

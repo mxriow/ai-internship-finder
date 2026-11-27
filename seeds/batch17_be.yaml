@@ -1,0 +1,11 @@
+# Belgium, round 9. Coca-Cola Europacific Partners is skipped: its careers site answered 403 (gaps.yaml).
+seeds:
+  - {name: "AB InBev", country: BE, sector: consumer, careers_url: "https://www.ab-inbev.com/careers/"}
+  - {name: "UCB", country: BE, sector: pharma, careers_url: "https://www.ucb.com/careers"}
+  - {name: "Lotus Bakeries", country: BE, sector: consumer, careers_url: "https://www.lotusbakeries.com/careers"}
+  - {name: "Ontex", country: BE, sector: consumer, careers_url: "https://ontex.com/careers/"}
+  - {name: "Barco", country: BE, sector: tech, careers_url: "https://www.barco.com/en/about/careers"}
+  - {name: "Delhaize", country: BE, sector: retail, careers_url: "https://www.delhaize.be/en/jobs"}
+  - {name: "Duvel Moortgat", country: BE, sector: consumer, careers_url: "https://www.duvel.com/en/careers"}
+  - {name: "Etex", country: BE, sector: industrial, careers_url: "https://www.etexgroup.com/en/careers/"}
+  - {name: "Umicore", country: BE, sector: industrial, careers_url: "https://www.umicore.com/en/careers/"}

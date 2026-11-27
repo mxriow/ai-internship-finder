@@ -1,0 +1,121 @@
+seeds:
+  - {name: "Becton Dickinson", sector: pharma, urls: ["https://bdx.wd1.myworkdayjobs.com/EXTERNAL_CAREER_SITE_USA"]}
+  - {name: "Baxter", sector: pharma, urls: ["https://baxter.wd1.myworkdayjobs.com/baxter"]}
+  - {name: "Organon", sector: pharma, urls: ["https://organon.wd5.myworkdayjobs.com/organoncareers"]}
+  - {name: "Viatris", sector: pharma, urls: ["https://viatris.wd5.myworkdayjobs.com/Careers"]}
+  - {name: "UCB", sector: pharma, urls: ["https://ucb.wd3.myworkdayjobs.com/UCBCareers"]}
+  - {name: "Agilent Technologies", sector: pharma, urls: ["https://agilent.wd5.myworkdayjobs.com/Agilent_Careers"]}
+  - {name: "Smith+Nephew", sector: pharma, urls: ["https://smithnephew.wd5.myworkdayjobs.com/External"]}
+  - {name: "Envista (Nobel Biocare)", sector: pharma, urls: ["https://envista.wd5.myworkdayjobs.com/Envista_Careers"]}
+  - {name: "Kenvue", sector: consumer, urls: ["https://kenvue.wd1.myworkdayjobs.com/KenvueCareers"]}
+  - {name: "Reckitt", sector: consumer, urls: ["https://reckitt.wd3.myworkdayjobs.com/Reckitt"]}
+  - {name: "PepsiCo", sector: consumer, urls: ["https://pepsico.wd1.myworkdayjobs.com/PepsiCoCareers"]}
+  - {name: "Bacardi", sector: consumer, urls: ["https://bacardi.wd3.myworkdayjobs.com/Bacardi"]}
+  - {name: "Swarovski", sector: luxury, urls: ["https://swarovski.wd3.myworkdayjobs.com/Swarovski"]}
+  - {name: "Ralph Lauren", sector: luxury, urls: ["https://ralphlauren.wd5.myworkdayjobs.com/RalphLauren_Careers"]}
+  - {name: "PVH", sector: consumer, urls: ["https://pvh.wd1.myworkdayjobs.com/PVH_Careers"]}
+  - {name: "Levi Strauss & Co.", sector: consumer, urls: ["https://levistrauss.wd5.myworkdayjobs.com/External"]}
+  - {name: "Tapestry", sector: luxury, urls: ["https://tapestry.wd1.myworkdayjobs.com/Tapestry_Careers"]}
+  - {name: "PIMCO", sector: banking, urls: ["https://pimco.wd1.myworkdayjobs.com/pimco-careers"]}
+  - {name: "T. Rowe Price", sector: banking, urls: ["https://troweprice.wd5.myworkdayjobs.com/TRowePrice"]}
+  - {name: "Invesco", sector: banking, urls: ["https://invesco.wd1.myworkdayjobs.com/IVZ"]}
+  - {name: "Northern Trust", sector: banking, urls: ["https://ntrs.wd1.myworkdayjobs.com/northerntrust"]}
+  - {name: "BNY", sector: banking, urls: ["https://bnymellon.wd5.myworkdayjobs.com/BNY_Careers"]}
+  - {name: "Nomura", sector: banking, urls: ["https://nomura.wd3.myworkdayjobs.com/Nomura_Careers"]}
+  - {name: "Standard Chartered", sector: banking, urls: ["https://scb.wd3.myworkdayjobs.com/External"]}
+  - {name: "Rothschild & Co", sector: banking, urls: ["https://rothschildandco.wd3.myworkdayjobs.com/Rothschild_Careers"]}
+  - {name: "Lazard", sector: banking, urls: ["https://lazard.wd5.myworkdayjobs.com/Lazard"]}
+  - {name: "Moody's", sector: banking, urls: ["https://moodys.wd5.myworkdayjobs.com/moodys"]}
+  - {name: "Fitch Group", sector: banking, urls: ["https://fitch.wd5.myworkdayjobs.com/FitchCareers"]}
+  - {name: "American Express", sector: banking, urls: ["https://aexp.wd5.myworkdayjobs.com/AmEx"]}
+  - {name: "Western Union", sector: banking, urls: ["https://westernunion.wd5.myworkdayjobs.com/WesternUnionCareers"]}
+  - {name: "ServiceNow", sector: tech, urls: ["https://servicenow.wd1.myworkdayjobs.com/ServiceNow"]}
+  - {name: "Synopsys", sector: tech, urls: ["https://synopsys.wd1.myworkdayjobs.com/SynopsysCareers"]}
+  - {name: "Cadence", sector: tech, urls: ["https://cadence.wd1.myworkdayjobs.com/External_Careers"]}
+  - {name: "Ansys", sector: tech, urls: ["https://ansys.wd1.myworkdayjobs.com/ANSYS"]}
+  - {name: "Hexagon", sector: industrial, urls: ["https://hexagon.wd3.myworkdayjobs.com/Hexagon_Careers"]}
+  - {name: "Trimble", sector: tech, urls: ["https://trimble.wd1.myworkdayjobs.com/TrimbleCareers"]}
+  - {name: "STMicroelectronics", sector: tech, urls: ["https://st.wd3.myworkdayjobs.com/STMicroelectronics_Careers"]}
+  - {name: "TE Connectivity", sector: industrial, urls: ["https://te.wd5.myworkdayjobs.com/TECareers"]}
+  - {name: "GE Vernova", sector: industrial, urls: ["https://gevernova.wd5.myworkdayjobs.com/Vernova_ExternalSite"]}
+  - {name: "GE HealthCare", sector: pharma, urls: ["https://gehc.wd5.myworkdayjobs.com/GEHC_ExternalSite"]}
+  - {name: "Emerson", sector: industrial, urls: ["https://emerson.wd5.myworkdayjobs.com/Emerson"]}
+  - {name: "Johnson Controls", sector: industrial, urls: ["https://jci.wd5.myworkdayjobs.com/JCI"]}
+  - {name: "Rockwell Automation", sector: industrial, urls: ["https://rockwellautomation.wd1.myworkdayjobs.com/External_Rockwell_Automation"]}
+  - {name: "Danaher", sector: pharma, urls: ["https://danaher.wd1.myworkdayjobs.com/DanaherJobs"]}
+  - {name: "Hyatt", sector: travel, urls: ["https://hyatt.wd5.myworkdayjobs.com/Hyatt"]}
+  - {name: "Royal Caribbean Group", sector: travel, urls: ["https://rclcorp.wd5.myworkdayjobs.com/RCL"]}
+  - {name: "Korn Ferry", sector: consulting, urls: ["https://kornferry.wd1.myworkdayjobs.com/Korn_Ferry"]}
+  - {name: "FTI Consulting", sector: consulting, urls: ["https://fticonsulting.wd5.myworkdayjobs.com/FTI_Careers"]}
+  - {name: "Publicis Groupe", sector: consulting, urls: ["https://publicis.wd3.myworkdayjobs.com/Publicis_Careers"]}
+  - {name: "WPP", sector: consulting, urls: ["https://wpp.wd3.myworkdayjobs.com/WPP"]}
+  - {name: "Omnicom", sector: consulting, urls: ["https://omnicom.wd1.myworkdayjobs.com/Omnicom"]}
+  - {name: "Dentsu", sector: consulting, urls: ["https://dentsu.wd3.myworkdayjobs.com/DentsuCareers"]}
+  - {name: "Bosch", sector: industrial, urls: ["https://bosch.wd3.myworkdayjobs.com/Bosch"]}
+  - {name: "Siemens Energy", sector: industrial, urls: ["https://siemensenergy.wd3.myworkdayjobs.com/SiemensEnergy"]}
+  - {name: "Schneider Electric", sector: industrial, urls: ["https://schneiderelectric.wd3.myworkdayjobs.com/SE_Careers"]}
+  - {name: "Cognizant", sector: consulting, urls: ["https://cognizant.wd1.myworkdayjobs.com/Cognizant"]}
+  - {name: "Infosys", sector: consulting, urls: ["https://infosys.wd3.myworkdayjobs.com/Infosys"]}
+  - {name: "Booking Holdings", sector: travel, urls: ["https://bookingholdings.wd5.myworkdayjobs.com/BookingHoldings"]}
+  - {name: "Uber", sector: tech, urls: ["https://uber.wd1.myworkdayjobs.com/Uber"]}
+  - {name: "Visa", sector: banking, urls: ["https://visa.wd5.myworkdayjobs.com/Visa"]}
+  - {name: "Coca-Cola Company", sector: consumer, urls: ["https://coke.wd1.myworkdayjobs.com/coca-cola-careers"]}
+  - {name: "Kellanova", sector: consumer, urls: ["https://kellanova.wd5.myworkdayjobs.com/Kellanova_Careers"]}
+  - {name: "Colgate-Palmolive", sector: consumer, urls: ["https://colgate.wd1.myworkdayjobs.com/Colgate"]}
+  - {name: "Kimberly-Clark", sector: consumer, urls: ["https://kimberlyclark.wd1.myworkdayjobs.com/GLOBAL"]}
+  - {name: "Henkel", sector: consumer, urls: ["https://henkel.wd3.myworkdayjobs.com/Henkel"]}
+  - {name: "Beiersdorf", sector: consumer, urls: ["https://beiersdorf.wd3.myworkdayjobs.com/BDF_Jobs"]}
+  - {name: "Puma", sector: consumer, urls: ["https://puma.wd3.myworkdayjobs.com/Puma"]}
+  - {name: "Adidas", sector: consumer, urls: ["https://adidas.wd3.myworkdayjobs.com/adidas"]}
+  - {name: "Electrolux", sector: consumer, urls: ["https://electrolux.wd3.myworkdayjobs.com/Electrolux"]}
+  - {name: "Husqvarna", sector: consumer, urls: ["https://husqvarna.wd3.myworkdayjobs.com/Husqvarna"]}
+  - {name: "Volvo Cars", sector: consumer, urls: ["https://volvocars.wd3.myworkdayjobs.com/VolvoCars"]}
+  - {name: "BMW Group", sector: consumer, urls: ["https://bmwgroup.wd3.myworkdayjobs.com/BMWGroup"]}
+  - {name: "Continental", sector: industrial, urls: ["https://continental.wd3.myworkdayjobs.com/Continental"]}
+  - {name: "Novo Nordisk", sector: pharma, urls: ["https://novonordisk.wd3.myworkdayjobs.com/Novo_Nordisk"]}
+  - {name: "Merck KGaA", sector: pharma, urls: ["https://merckgroup.wd3.myworkdayjobs.com/MerckGroup"]}
+  - {name: "Teva", sector: pharma, urls: ["https://teva.wd3.myworkdayjobs.com/TEVA"]}
+  - {name: "Bausch + Lomb", sector: pharma, urls: ["https://bauschhealth.wd5.myworkdayjobs.com/BauschLomb"]}
+  - {name: Niantic, sector: tech}
+  - {name: Terra Quantum, sector: tech, tokens: [terraquantum]}
+  - {name: Open Systems, sector: tech, tokens: [opensystems]}
+  - {name: Securosys, sector: tech}
+  - {name: Zurich Instruments, sector: tech, tokens: [zurichinstruments, zhinst]}
+  - {name: ID Quantique, sector: tech, tokens: [idquantique]}
+  - {name: Egon Zehnder, sector: consulting, tokens: [egonzehnder]}
+  - {name: ZS Associates, sector: consulting, tokens: [zs, zsassociates]}
+  - {name: Moonfare, sector: banking}
+  - {name: Helsing, sector: tech}
+  - {name: Isomorphic Labs, sector: tech, tokens: [isomorphiclabs]}
+  - {name: Wayve, sector: tech}
+  - {name: Revolut, sector: banking}
+  - {name: Monzo, sector: banking}
+  - {name: Wise, sector: banking, tokens: [transferwise]}
+  - {name: Ebury, sector: banking}
+  - {name: Payhawk, sector: banking}
+  - {name: Pleo, sector: banking}
+  - {name: Spendesk, sector: banking}
+  - {name: Lemon Squeezy, sector: tech, tokens: [lemonsqueezy]}
+  - {name: Veeam, sector: tech}
+  - {name: Acronis, sector: tech}
+  - {name: Kaspersky, sector: tech}
+  - {name: Kudelski Security, sector: tech, tokens: [kudelskisecurity]}
+  - {name: Nothing Technology, sector: tech, tokens: [nothing, nothingtech]}
+  - {name: Teads, sector: tech}
+  - {name: Criteo, sector: tech}
+  - {name: Taboola, sector: tech}
+  - {name: Outbrain, sector: tech}
+  - {name: Mirakl, sector: tech}
+  - {name: Sprinklr, sector: tech}
+  - {name: Braze, sector: tech}
+  - {name: Amplitude, sector: tech}
+  - {name: Mixpanel, sector: tech}
+  - {name: Segment, sector: tech}
+  - {name: Adjust, sector: tech}
+  - {name: AppsFlyer, sector: tech}
+  - {name: Similarweb, sector: tech}
+  - {name: Semrush, sector: tech}
+  - {name: Brandwatch, sector: tech}
+  - {name: Meltwater, sector: tech}
+  - {name: Hootsuite, sector: tech}
+  - {name: Sprout Social, sector: tech, tokens: [sproutsocial]}

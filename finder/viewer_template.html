@@ -1,0 +1,604 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Intern Finder</title>
+<style>
+  :root { --bg:#fff; --fg:#1b1f24; --muted:#5f6b7a; --line:#e3e7ec; --accent:#0b62d6; --chip:#eef3fb; --new:#137333;
+          --head:#f6f8fa; --star:#b7791f; --applied:#137333; --danger:#b42318; --toast:#1b1f24; --toastfg:#fff; --warn:#a15c07; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#14171b; --fg:#e6e9ed; --muted:#9aa5b1; --line:#2a3038; --accent:#6aa8ff; --chip:#1f2a3a; --new:#6fcf8e;
+            --head:#1a1e23; --star:#f0b44c; --applied:#6fcf8e; --danger:#ff8a80; --toast:#e6e9ed; --toastfg:#14171b; --warn:#f5b04a; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--fg); font:14px/1.45 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  header { padding:14px 16px 6px; display:flex; flex-wrap:wrap; gap:8px 16px; align-items:baseline; justify-content:space-between; }
+  h1 { font-size:20px; margin:0; }
+  .sub { color:var(--muted); font-size:13px; }
+  .views { display:flex; gap:4px; flex-wrap:wrap; padding:4px 16px 8px; }
+  .views button { border:1px solid var(--line); background:var(--bg); color:var(--fg); border-radius:16px; padding:5px 12px; font:inherit; cursor:pointer; }
+  .views button[aria-pressed=true] { background:var(--accent); border-color:var(--accent); color:#fff; }
+  details.filters { border-top:1px solid var(--line); border-bottom:1px solid var(--line); background:var(--bg); position:sticky; top:0; z-index:2; }
+  details.filters > summary { padding:8px 16px; cursor:pointer; color:var(--muted); font-weight:600; list-style:none; }
+  details.filters > summary::-webkit-details-marker { display:none; }
+  .frow { display:flex; flex-wrap:wrap; gap:8px; padding:0 16px 10px; align-items:center; }
+  .frow input[type=search] { flex:1 1 220px; }
+  input, select { font:inherit; color:var(--fg); background:var(--bg); border:1px solid var(--line); border-radius:6px; padding:6px 8px; max-width:100%; }
+  label.chk { display:inline-flex; align-items:center; gap:5px; white-space:nowrap; color:var(--fg); }
+  .group { display:inline-flex; gap:10px; flex-wrap:wrap; align-items:center; padding:4px 8px; border:1px solid var(--line); border-radius:6px; }
+  .group b { color:var(--muted); font-weight:600; font-size:12px; }
+  .tools { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+  .btn { border:1px solid var(--line); background:var(--bg); color:var(--fg); border-radius:6px; padding:6px 10px; font:inherit; cursor:pointer; }
+  .btn:hover { border-color:var(--accent); }
+  #counters { padding:8px 16px; color:var(--muted); display:flex; flex-wrap:wrap; gap:4px 14px; }
+  #counters strong { color:var(--fg); }
+  .notice { margin:0 16px 8px; padding:8px 10px; border:1px solid var(--line); border-radius:6px; color:var(--muted); font-size:13px; }
+  .wrap { padding:0 16px 32px; }
+  .tablebox { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+  table { border-collapse:collapse; width:100%; }
+  th, td { text-align:left; padding:7px 8px; border-bottom:1px solid var(--line); vertical-align:top; }
+  th { background:var(--head); font-weight:600; white-space:nowrap; }
+  th button { all:unset; cursor:pointer; }
+  th[aria-sort=descending] button::after { content:" ▾"; } th[aria-sort=ascending] button::after { content:" ▴"; }
+  a { color:var(--accent); text-decoration:none; } a:hover { text-decoration:underline; }
+  .title a { font-weight:500; }
+  .chip { display:inline-block; background:var(--chip); border-radius:10px; padding:1px 8px; font-size:12px; white-space:nowrap; }
+  .badge { font-size:11px; font-weight:600; margin-left:4px; }
+  .badge.stale, .badge.early { color:var(--warn); }
+  td.fit { font-variant-numeric:tabular-nums; color:var(--muted); text-align:right; }
+  .new { color:var(--new); } .isstar { color:var(--star); } .isapplied { color:var(--applied); }
+  .review { color:var(--muted); font-size:12px; }
+  .locs { color:var(--muted); font-size:12px; max-width:240px; }
+  .nw { white-space:nowrap; }
+  .closed td { opacity:.55; }
+  .act { white-space:nowrap; width:1%; }
+  .act .row2 { display:flex; gap:4px; }
+  .act button { border:1px solid var(--line); background:var(--bg); color:var(--fg); border-radius:6px; min-width:32px; height:30px; padding:0 6px; cursor:pointer; font:inherit; }
+  .act button[aria-pressed=true].star { color:var(--star); border-color:var(--star); }
+  .act button[aria-pressed=true].applied { color:var(--applied); border-color:var(--applied); }
+  .act button.hide:hover, .act button.hideco:hover { color:var(--danger); border-color:var(--danger); }
+  .act button.hideco, .act button.copy { font-size:12px; margin-top:4px; width:100%; }
+  .act button.copy { display:block; white-space:nowrap; }
+  .act button.copy:hover { color:var(--accent); border-color:var(--accent); }
+  .act button.copy.done { color:var(--applied); border-color:var(--applied); }
+  #copybox { position:fixed; inset:0; background:rgba(0,0,0,.45); display:none; align-items:center; justify-content:center; z-index:6; padding:16px; }
+  #copybox > div { background:var(--bg); color:var(--fg); border-radius:10px; padding:14px; width:min(720px, 100%); display:flex; flex-direction:column; gap:8px; }
+  #copybox textarea { width:100%; height:50vh; font:12px/1.4 ui-monospace, SFMono-Regular, Menlo, monospace; color:var(--fg); background:var(--bg); border:1px solid var(--line); border-radius:6px; padding:8px; }
+  .empty { padding:32px 0; color:var(--muted); }
+  .hiddenco { margin:8px 0 12px; display:flex; flex-wrap:wrap; gap:6px; }
+  .hiddenco span { border:1px solid var(--line); border-radius:14px; padding:3px 4px 3px 10px; display:inline-flex; gap:6px; align-items:center; }
+  #toast { position:fixed; left:50%; bottom:16px; transform:translateX(-50%); background:var(--toast); color:var(--toastfg); padding:8px 12px; border-radius:8px; display:none; gap:12px; align-items:center; z-index:5; max-width:calc(100% - 32px); }
+  #toast button { background:none; border:none; color:inherit; font:inherit; font-weight:700; text-decoration:underline; cursor:pointer; }
+  .sr { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+
+  /* Phones: rows become cards */
+  @media (max-width: 760px) {
+    header { padding:12px 16px 4px; }
+    table, tbody, tr, td { display:block; width:100%; }
+    thead { display:none; }
+    tr { border:1px solid var(--line); border-radius:10px; padding:8px 10px; margin:0 0 10px; }
+    td { border:none; padding:2px 0; }
+    td[data-label]::before { content:attr(data-label) ": "; color:var(--muted); font-size:12px; }
+    td.title { font-size:15px; padding-bottom:4px; }
+    td.title::before, td.act::before { content:none !important; }
+    td.act { padding-top:6px; width:100%; }
+    .act .row2 { display:inline-flex; }
+    .act button.hideco { width:auto; margin:0 0 0 4px; }
+    .act button.copy { display:inline-block; width:auto; margin:0 0 0 4px; }
+    .tablebox { overflow:visible; }
+    td.fit { text-align:left; }
+    .act button { min-width:40px; height:36px; }
+    .locs { max-width:none; }
+    td.mini { display:inline-block; width:auto; margin-right:14px; }
+  }
+  .sortbar { display:flex; gap:8px; align-items:center; padding:0 16px 8px; flex-wrap:wrap; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Business internships · __COUNTRIES__</h1>
+  <div class="sub" id="meta"></div>
+</header>
+<div class="views" role="group" aria-label="View">
+  <button type="button" data-view="list" aria-pressed="true">Listings</button>
+  <button type="button" data-view="starred" aria-pressed="false">★ Starred</button>
+  <button type="button" data-view="applied" aria-pressed="false">✓ Applied</button>
+  <button type="button" data-view="hidden" aria-pressed="false">Hidden</button>
+</div>
+<details class="filters" id="filters" open>
+  <summary>Filters</summary>
+  <div class="frow">
+    <input type="search" id="q" placeholder="Search title or company…" aria-label="Search title or company">
+    <span class="group" id="countries" role="group" aria-label="Countries"><b>Country</b></span>
+  </div>
+  <div class="frow">
+    <select id="city" aria-label="City"><option value="">All cities</option></select>
+    <select id="category" aria-label="Category"><option value="">Category (per toggle)</option></select>
+    <select id="language" aria-label="Language"><option value="">All languages</option></select>
+    <select id="company" aria-label="Company"><option value="">All companies</option></select>
+    <select id="type" aria-label="Type"><option value="">All types</option></select>
+    <label class="chk" for="minpay">Min. pay €/month <input type="number" id="minpay" min="0" step="100" inputmode="numeric" placeholder="any" aria-label="Minimum pay, gross EUR per month" style="width:6.5em"></label>
+  </div>
+  <div class="frow">
+    <label class="chk"><input type="checkbox" id="t_business" checked> Business categories only</label>
+    <label class="chk"><input type="checkbox" id="t_english" checked> English only</label>
+    <label class="chk"><input type="checkbox" id="t_nows" checked> Hide working-student roles</label>
+    <label class="chk"><input type="checkbox" id="t_nograd" checked> Hide graduate programmes</label>
+    <label class="chk"><input type="checkbox" id="t_open" checked> Open postings only</label>
+    <label class="chk"><input type="checkbox" id="t_recent"> New in last 7 days</label>
+    <label class="chk"><input type="checkbox" id="t_nomaster"> Hide roles requiring a master's/MBA</label>
+    <label class="chk"><input type="checkbox" id="t_nolocal"> Hide roles requiring fluent German/French/Dutch</label>
+    <label class="chk"><input type="checkbox" id="t_noearly"> Hide roles that only start before <span class="earlymonth">April 2027</span></label>
+    <button type="button" class="btn" id="reset">Reset filters</button>
+  </div>
+  <div class="frow tools">
+    <button type="button" class="btn" id="export">Export state</button>
+    <label class="btn" for="importfile">Import state</label>
+    <input type="file" id="importfile" accept="application/json,.json" class="sr">
+    <span class="sub" id="storagewarn"></span>
+  </div>
+</details>
+<div id="counters" aria-live="polite"></div>
+<div class="sortbar">
+  <label for="msort" class="sub">Sort</label>
+  <select id="msort" aria-label="Sort">
+    <option value="recent:desc">Most recent (posted date)</option><option value="fit:desc">Best fit</option><option value="pay:desc">Highest pay</option>
+    <option value="first_seen:desc">Newest in the finder</option><option value="start_sort:asc">Start date</option><option value="company:asc">Company A–Z</option>
+    <option value="title:asc">Title A–Z</option><option value="countries:asc">Country</option>
+    <option value="category:asc">Category</option>
+  </select>
+</div>
+<div id="notice"></div>
+<div class="wrap">
+  <div id="hiddenco"></div>
+  <div class="tablebox"><table>
+    <thead><tr>
+      <th><span class="sr">Actions</span></th>
+      <th data-k="fit"><button type="button" title="Best-fit score, 0-100 (see README)">Fit</button></th>
+      <th data-k="title"><button type="button">Title</button></th>
+      <th data-k="company"><button type="button">Company</button></th>
+      <th data-k="countries"><button type="button">Country</button></th>
+      <th data-k="city"><button type="button">City</button></th>
+      <th data-k="category"><button type="button">Category</button></th>
+      <th data-k="type"><button type="button">Type</button></th>
+      <th data-k="language"><button type="button">Lang</button></th>
+      <th data-k="duration"><button type="button">Duration</button></th>
+      <th data-k="start_sort"><button type="button">Start</button></th>
+      <th data-k="pay"><button type="button" title="Gross EUR per month, as stated (annual /12)">Pay</button></th>
+      <th data-k="degree"><button type="button">Degree</button></th>
+      <th data-k="langs"><button type="button">Languages</button></th>
+      <th data-k="recent"><button type="button" title="Date the company posted it (or first found, if no date given)">Posted</button></th>
+    </tr></thead>
+    <tbody id="rows"></tbody>
+  </table></div>
+  <div class="empty" id="empty" hidden></div>
+</div>
+<div id="toast" role="status"><span id="toastmsg"></span><button type="button" id="toastundo">Undo</button></div>
+<div id="copybox" role="dialog" aria-modal="true" aria-labelledby="copyboxtitle"><div>
+  <strong id="copyboxtitle">Copy this text (Ctrl+C / ⌘C)</strong>
+  <span class="sub">This browser blocked automatic copying. The text is selected below.</span>
+  <textarea id="copytext" readonly></textarea>
+  <div><button type="button" class="btn" id="copyclose">Close</button></div>
+</div></div>
+<script id="jobs-data" type="application/json">__JOBS_JSON__</script>
+<script id="desc-data" type="application/json">__DESC_JSON__</script>
+<script>
+(function () {
+  "use strict";
+  var page = JSON.parse(document.getElementById("jobs-data").textContent);
+  var CFG = page.config || {};
+  var LABEL = CFG.category_labels || {};
+  var DEFAULT_CATS = CFG.default_categories || [];
+  var TYPE = { intern: "Internship", working_student: "Working student", trainee: "Trainee", graduate: "Graduate programme" };
+  var DEGREE = { bachelor_ok: "Bachelor OK", master_required: "Master/MBA", unclear: "?" };
+  var LOCAL_LANGS = ["DE", "FR", "NL"];
+  var MON = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+  var MONTH_LONG = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  var EARLY = CFG.early_before || "";   // "YYYY-MM": starts before this get a badge (and an optional filter)
+  function monthName(ym, long) { return (long ? MONTH_LONG : MON)[+ym.slice(5, 7) - 1] + " " + ym.slice(0, 4); }
+  var $ = function (id) { return document.getElementById(id); };
+  var jobs = Object.keys(page.jobs).map(function (id) { var j = page.jobs[id]; j.id = id; return j; });
+  var generated = page.generated_at ? new Date(page.generated_at) : new Date();
+  var genDay = (page.generated_at || "").slice(0, 10);
+  function dayMonth(iso) {
+    var m = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"][+iso.slice(5, 7) - 1];
+    return m ? +iso.slice(8, 10) + " " + m : iso;
+  }
+  var cutoff = new Date(generated.getTime() - 7 * 864e5).toISOString().slice(0, 10);
+
+  // ---------------------------------------------------------------- per-viewer state (localStorage)
+  var KEY = "intern-finder-state-v1";
+  var storageOk = true;
+  function blank() { return { hidden: {}, hiddenCompanies: {}, star: {}, applied: {} }; }
+  function loadState() {
+    try {
+      var raw = window.localStorage.getItem(KEY);
+      var s = raw ? JSON.parse(raw) : blank();
+      ["hidden", "hiddenCompanies", "star", "applied"].forEach(function (k) { if (!s[k] || typeof s[k] !== "object") s[k] = {}; });
+      return s;
+    } catch (e) { storageOk = false; return blank(); }
+  }
+  function saveState() {
+    try { window.localStorage.setItem(KEY, JSON.stringify(state)); }
+    catch (e) { storageOk = false; showStorageWarning(); }
+  }
+  var state = loadState();
+  function showStorageWarning() {
+    $("storagewarn").textContent = storageOk ? "" : "Browser storage is blocked: changes last until you close this page. Use Export to keep them.";
+  }
+
+  // Local choices override the build-time marks from data/user_state.json.
+  function isStar(j) { return j.id in state.star ? !!state.star[j.id] : !!j.starred; }
+  function isApplied(j) { return j.id in state.applied ? !!state.applied[j.id] : !!j.applied; }
+  function isHidden(j) { return !!state.hidden[j.id] || !!state.hiddenCompanies[j.company]; }
+
+  // ---------------------------------------------------------------- derived fields
+  jobs.forEach(function (j) {
+    j.countries = j.countries || [];
+    j.cities = j.cities || [];
+    j.city = j.cities.join(", ");
+    var L = j.locations || [];   // drop entries contained in a longer one ("Switzerland" vs "Basel, Switzerland")
+    j.locs = L.filter(function (a, i) {
+      return !L.some(function (b, k) { return k !== i && b.length > a.length && b.toLowerCase().indexOf(a.toLowerCase()) >= 0; });
+    }).join(" · ");
+    j.hay = (j.title + " " + j.company).toLowerCase();
+    j.lang_required = j.lang_required || []; j.lang_plus = j.lang_plus || [];
+    j.langs = j.lang_required.join(" ") + (j.lang_plus.length ? " +" + j.lang_plus.join(" +") : "");
+    j.degree = j.degree || "unclear";
+    // Start: a month ("Feb 2027"), ASAP, or blank when the posting doesn't say
+    j.startTxt = j.start_month ? monthName(j.start_month) : j.start_asap ? "ASAP" : "";
+    j.early = !!EARLY && (j.start_asap || (!!j.start_month && j.start_month < EARLY));
+    j.recent = j.posted || j.first_seen || "";
+    j.start_sort = j.start_month || (j.start_asap ? "0000-00" : "9999-99");   // unclear sorts last
+  });
+
+  function uniq(f) {
+    var s = {}; jobs.forEach(function (j) { [].concat(f(j)).forEach(function (v) { if (v) s[v] = 1; }); });
+    return Object.keys(s).sort(function (a, b) { return a.localeCompare(b); });
+  }
+  function fill(id, values, label) {
+    var sel = $(id);
+    values.forEach(function (v) { var o = document.createElement("option"); o.value = v; o.textContent = label ? (label[v] || v) : v; sel.appendChild(o); });
+  }
+  var countryList = (CFG.countries && CFG.countries.length ? CFG.countries : uniq(function (j) { return j.countries; }));
+  countryList.forEach(function (c) {
+    var l = document.createElement("label"); l.className = "chk";
+    l.innerHTML = '<input type="checkbox" value="' + c + '" checked> ' + c;
+    $("countries").appendChild(l);
+  });
+  fill("city", uniq(function (j) { return j.cities; }));
+  fill("category", Object.keys(LABEL).filter(function (c) { return jobs.some(function (j) { return j.category === c; }); }), LABEL);
+  fill("language", uniq(function (j) { return j.language; }));
+  fill("company", uniq(function (j) { return j.company; }));
+  fill("type", uniq(function (j) { return j.type; }), TYPE);
+
+  // ---------------------------------------------------------------- filtering + sorting
+  var view = "list", sortKey = "recent", asc = false;
+  function selectedCountries() {
+    return Array.prototype.filter.call($("countries").querySelectorAll("input"), function (i) { return i.checked; })
+      .map(function (i) { return i.value; });
+  }
+  function passesFilters(j) {
+    var q = $("q").value.trim().toLowerCase(), cat = $("category").value, lang = $("language").value;
+    var cs = selectedCountries();
+    if (!j.countries.some(function (c) { return cs.indexOf(c) >= 0; })) return false;
+    if ($("t_open").checked && j.status !== "open") return false;
+    if (cat) { if (j.category !== cat) return false; }
+    else if ($("t_business").checked && DEFAULT_CATS.indexOf(j.category) < 0) return false;
+    if (lang) { if (j.language !== lang) return false; }
+    else if ($("t_english").checked && j.language !== "EN") return false;
+    if ($("type").value) { if (j.type !== $("type").value) return false; }
+    else if (($("t_nows").checked && j.type === "working_student") || ($("t_nograd").checked && j.type === "graduate")) return false;
+    if ($("city").value && j.cities.indexOf($("city").value) < 0) return false;
+    if ($("company").value && j.company !== $("company").value) return false;
+    if ($("t_recent").checked && !(j.first_seen >= cutoff)) return false;
+    if ($("t_nomaster").checked && j.degree === "master_required") return false;
+    if ($("t_nolocal").checked && j.lang_required.some(function (l) { return LOCAL_LANGS.indexOf(l) >= 0; })) return false;
+    if ($("t_noearly").checked && j.early) return false;
+    var minpay = parseInt($("minpay").value, 10);
+    if (minpay > 0 && j.pay != null && j.pay < minpay) return false;   // postings that state no pay stay visible
+    if (q && j.hay.indexOf(q) < 0) return false;
+    return true;
+  }
+  function sortVal(j, k) { var v = j[k]; return Array.isArray(v) ? v.join(",") : String(v == null ? "" : v); }
+  function compare(a, b) {
+    var r = sortKey === "fit" || sortKey === "pay" ? (a[sortKey] == null ? -1 : a[sortKey]) - (b[sortKey] == null ? -1 : b[sortKey])
+      : sortVal(a, sortKey).localeCompare(sortVal(b, sortKey));
+    if (!asc) r = -r;
+    if (!r && (sortKey === "fit" || sortKey === "recent")) r = -sortVal(a, "first_seen").localeCompare(sortVal(b, "first_seen"));   // ties: newest first
+    return r || a.company.localeCompare(b.company) || a.title.localeCompare(b.title);
+  }
+
+  // ---------------------------------------------------------------- rendering
+  function esc(s) { return String(s == null ? "" : s).replace(/[&<>"']/g, function (c) { return { "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c]; }); }
+  function safeUrl(u) { return /^https?:\/\//i.test(u || "") ? u : "#"; }
+
+  function eur(n) { return "€" + Math.round(n).toLocaleString("en-US"); }
+  function payTxt(j) {
+    if (j.pay == null) return "";
+    var t = eur(j.pay) + (j.pay_max ? "–" + eur(j.pay_max).slice(1) : "");
+    if (j.pay_compulsory) t += " (compulsory " + eur(j.pay_compulsory) + ")";
+    return t + (j.pay_basis === "hour" ? " ≈" : "");
+  }
+  function row(j) {
+    var star = isStar(j), applied = isApplied(j), hidden = isHidden(j);
+    var acts = hidden
+      ? '<button type="button" class="undo" data-act="undo" data-id="' + esc(j.id) + '">Undo</button>'
+      : '<span class="row2"><button type="button" class="star" data-act="star" data-id="' + esc(j.id) + '" aria-pressed="' + star + '" title="Star (shortlist)" aria-label="Star">' + (star ? "★" : "☆") + "</button> " +
+        '<button type="button" class="applied" data-act="applied" data-id="' + esc(j.id) + '" aria-pressed="' + applied + '" title="Mark as applied" aria-label="Applied">✓</button> ' +
+        '<button type="button" class="hide" data-act="hide" data-id="' + esc(j.id) + '" title="Hide this posting" aria-label="Hide">×</button></span>' +
+        '<button type="button" class="hideco" data-act="hideco" data-id="' + esc(j.id) + '" title="Hide all postings from ' + esc(j.company) + '">Hide co.</button>';
+    acts += '<button type="button" class="copy" data-act="copy" data-id="' + esc(j.id) + '" title="Copy company, title, location, start, pay, link and the full job description as plain text">Copy for Claude</button>';
+    return '<tr class="' + (j.status === "open" ? "" : "closed") + '">' +
+      '<td class="act">' + acts + "</td>" +
+      '<td data-label="Fit" class="fit mini" title="Best-fit score (0-100)">' + esc(j.fit) + "</td>" +
+      '<td class="title"><a href="' + esc(safeUrl(j.url)) + '" target="_blank" rel="noopener noreferrer">' + esc(j.title) + "</a>" +
+        (j.first_seen >= cutoff ? '<span class="badge new">new</span>' : "") +
+        (star ? '<span class="badge isstar">★</span>' : "") + (applied ? '<span class="badge isapplied">applied</span>' : "") +
+        (j.status !== "open" ? '<span class="badge">closed</span>' : "") +
+        (j.compulsory_only ? '<span class="badge early" title="Titled as a compulsory internship: usually only for students who must do one for their degree">compulsory only</span>' : "") +
+        (j.status === "open" && j.last_seen && j.last_seen < genDay ? '<span class="badge stale" title="This company\'s job site could not be read since ' + esc(j.last_seen) + ': the posting may have closed. Check it on the company\'s site.">not updated since ' + esc(dayMonth(j.last_seen)) + "</span>" : "") +
+        (j.stale ? '<span class="badge stale" title="The stated start (' + esc(j.start) + ') has already passed: the posting may be out of date">possibly stale</span>' : "") +
+        (j.needs_review ? '<div class="review" title="' + esc(j.review_reason) + '">category uncertain</div>' : "") + "</td>" +
+      '<td data-label="Company">' + esc(j.company) + "</td>" +
+      '<td data-label="Country" class="nw mini">' + esc(j.countries.join(" ")) + "</td>" +
+      '<td data-label="City"' + (j.locs && j.locs !== j.city ? ' title="All locations: ' + esc(j.locs) + '"' : "") + ">" + esc(j.city) +
+        (j.countries.length > 1 || j.cities.length > 1 ? '<div class="locs">' + esc(j.locs) + "</div>" : "") + "</td>" +
+      '<td data-label="Category"><span class="chip">' + esc(LABEL[j.category] || j.category) + "</span></td>" +
+      '<td data-label="Type" class="mini">' + esc(TYPE[j.type] || j.type) + "</td>" +
+      '<td data-label="Lang" class="mini">' + esc(j.language) + "</td>" +
+      '<td data-label="Duration" class="mini">' + esc(j.duration) + "</td>" +
+      '<td data-label="Start" class="nw mini"' + (j.start ? ' title="' + esc(j.start) + '"' : "") + ">" + esc(j.startTxt) +
+        (j.early ? '<span class="badge early" title="Starts before ' + esc(monthName(EARLY, true)) + '">before ' + esc(MON[+EARLY.slice(5, 7) - 1]) + "</span>" : "") + "</td>" +
+      '<td data-label="Pay" class="nw mini"' + (j.pay_text ? ' title="' + esc(j.pay_text) + '"' : "") + ">" + esc(payTxt(j)) + "</td>" +
+      '<td data-label="Degree" class="mini"' + (j.degree_note ? ' title="' + esc(j.degree_note) + '"' : "") + ">" + esc(DEGREE[j.degree] || j.degree) + "</td>" +
+      '<td data-label="Languages" class="mini" title="Required: ' + esc(j.lang_required.join(", ") || "none stated") +
+        (j.lang_plus.length ? " · A plus: " + esc(j.lang_plus.join(", ")) : "") + '">' + esc(j.langs) + "</td>" +
+      '<td data-label="Posted" class="nw mini" title="First found by the finder: ' + esc(j.first_seen) + '">' + esc(j.posted || "") +
+        (j.posted ? "" : '<span class="sub">found ' + esc(j.first_seen) + "</span>") + "</td></tr>";
+  }
+
+  function render() {
+    var list;
+    if (view === "hidden") list = jobs.filter(isHidden);
+    else if (view === "starred") list = jobs.filter(function (j) { return !isHidden(j) && isStar(j); });
+    else if (view === "applied") list = jobs.filter(function (j) { return !isHidden(j) && isApplied(j); });
+    else list = jobs.filter(function (j) { return !isHidden(j) && passesFilters(j); });
+    list.sort(compare);
+    $("rows").innerHTML = list.map(row).join("");
+    $("empty").hidden = list.length > 0;
+    $("empty").textContent = view === "hidden" ? "Nothing hidden." : view === "list" ? "No postings match these filters." : "Nothing here yet.";
+
+    var cos = Object.keys(state.hiddenCompanies).filter(function (c) { return state.hiddenCompanies[c]; }).sort();
+    $("hiddenco").innerHTML = view === "hidden" && cos.length
+      ? '<div class="sub">Hidden companies</div><div class="hiddenco">' + cos.map(function (c) {
+          return '<span>' + esc(c) + ' <button type="button" class="btn" data-act="undoco" data-co="' + esc(c) + '">Undo</button></span>';
+        }).join("") + "</div>" : "";
+
+    var visible = jobs.filter(function (j) { return !isHidden(j); });
+    var nStar = visible.filter(isStar).length, nApplied = visible.filter(isApplied).length;
+    var nHidden = jobs.filter(isHidden).length;
+    $("counters").innerHTML = "<span><strong>" + list.length + "</strong> shown</span>" +
+      "<span><strong>" + nStar + "</strong> starred</span><span><strong>" + nApplied + "</strong> applied</span>" +
+      "<span><strong>" + nHidden + "</strong> hidden" + (CFG.build_hidden ? " (+" + CFG.build_hidden + " removed via user_state.json)" : "") + "</span>";
+    document.querySelectorAll(".views button").forEach(function (b) { b.setAttribute("aria-pressed", String(b.getAttribute("data-view") === view)); });
+    $("filters").style.display = view === "list" ? "" : "none";
+  }
+
+  // ---------------------------------------------------------------- actions
+  var byId = {}; jobs.forEach(function (j) { byId[j.id] = j; });
+  var undoFn = null, toastTimer = null;
+  function toast(msg, undo) {
+    undoFn = undo; $("toastmsg").textContent = msg; $("toast").style.display = "flex";
+    $("toastundo").style.display = undo ? "" : "none";
+    clearTimeout(toastTimer); toastTimer = setTimeout(function () { $("toast").style.display = "none"; undoFn = null; }, 6000);
+  }
+  $("toastundo").addEventListener("click", function () { if (undoFn) undoFn(); $("toast").style.display = "none"; });
+
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest("button[data-act]"); if (!b) return;
+    var act = b.getAttribute("data-act"), j = byId[b.getAttribute("data-id")];
+    if (act === "copy") { copyForClaude(j, b); return; }
+    if (act === "star") state.star[j.id] = !isStar(j);
+    else if (act === "applied") state.applied[j.id] = !isApplied(j);
+    else if (act === "hide") {
+      state.hidden[j.id] = 1;
+      toast("Hidden: " + j.title, function () { delete state.hidden[j.id]; saveState(); render(); });
+    } else if (act === "hideco") {
+      var co = j.company; state.hiddenCompanies[co] = 1;
+      toast("Hidden all from " + co, function () { delete state.hiddenCompanies[co]; saveState(); render(); });
+    } else if (act === "undo") { delete state.hidden[j.id]; if (state.hiddenCompanies[j.company]) delete state.hiddenCompanies[j.company]; }
+    else if (act === "undoco") delete state.hiddenCompanies[b.getAttribute("data-co")];
+    saveState(); render();
+  });
+
+  document.querySelectorAll(".views button").forEach(function (b) {
+    b.addEventListener("click", function () { view = b.getAttribute("data-view"); render(); });
+  });
+  // ---------------------------------------------------------------- remembered filters (per browser)
+  var FKEY = "intern-finder-filters-v1";
+  var SELECTS = ["city", "category", "language", "company", "type", "minpay"];
+  var TOGGLES = ["t_business", "t_english", "t_nows", "t_nograd", "t_open", "t_recent", "t_nomaster", "t_nolocal", "t_noearly"];
+  function saveFilters() {
+    var f = { q: $("q").value, sel: {}, tog: {},
+              // store the countries switched OFF, so countries added later start switched on
+              off: Array.prototype.filter.call($("countries").querySelectorAll("input"), function (i) { return !i.checked; })
+                     .map(function (i) { return i.value; }) };
+    SELECTS.forEach(function (id) { f.sel[id] = $(id).value; });
+    TOGGLES.forEach(function (id) { f.tog[id] = $(id).checked; });
+    try { window.localStorage.setItem(FKEY, JSON.stringify(f)); } catch (e) { /* storage blocked: filters just aren't remembered */ }
+  }
+  function loadFilters() {
+    var f = null;
+    try { f = JSON.parse(window.localStorage.getItem(FKEY) || "null"); } catch (e) { f = null; }
+    if (!f || typeof f !== "object") return;          // first visit: page defaults (all countries)
+    if (typeof f.q === "string") $("q").value = f.q;
+    SELECTS.forEach(function (id) {
+      var v = f.sel && f.sel[id];
+      if (v && (!$(id).options || Array.prototype.some.call($(id).options, function (o) { return o.value === v; }))) $(id).value = v;
+    });
+    TOGGLES.forEach(function (id) { if (f.tog && typeof f.tog[id] === "boolean") $(id).checked = f.tog[id]; });
+    $("countries").querySelectorAll("input").forEach(function (i) { i.checked = (f.off || []).indexOf(i.value) < 0; });
+  }
+  function onFilterChange() { saveFilters(); render(); }
+  ["q"].concat(SELECTS, TOGGLES).forEach(function (id) {
+    $(id).addEventListener(id === "q" || id === "minpay" ? "input" : "change", onFilterChange);
+  });
+  $("countries").addEventListener("change", onFilterChange);
+  $("reset").addEventListener("click", function () {
+    $("q").value = ""; ["city", "category", "language", "company", "type", "minpay"].forEach(function (id) { $(id).value = ""; });
+    ["t_business", "t_english", "t_nows", "t_open"].forEach(function (id) { $(id).checked = true; });
+    $("t_recent").checked = false; $("t_nomaster").checked = false; $("t_nolocal").checked = false; $("t_nograd").checked = true;
+    $("t_noearly").checked = false;
+    try { window.localStorage.removeItem(FKEY); } catch (e) { /* ignore */ }
+    $("countries").querySelectorAll("input").forEach(function (i) { i.checked = true; });
+    render();
+  });
+
+  var SKEY = "intern-finder-sort-v1";
+  function setSort(k, ascending) {
+    sortKey = k; asc = ascending;
+    try { window.localStorage.setItem(SKEY, k + ":" + (asc ? "asc" : "desc")); } catch (e) { /* not remembered */ }
+    var v = k + ":" + (asc ? "asc" : "desc");
+    if (Array.prototype.some.call($("msort").options, function (o) { return o.value === v; })) $("msort").value = v;
+    document.querySelectorAll("th[data-k]").forEach(function (th) {
+      th.setAttribute("aria-sort", th.getAttribute("data-k") === k ? (asc ? "ascending" : "descending") : "none");
+    });
+    render();
+  }
+  document.querySelectorAll("th[data-k] button").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var k = btn.parentNode.getAttribute("data-k");
+      setSort(k, sortKey === k ? !asc : ["first_seen", "recent", "fit", "pay"].indexOf(k) < 0);
+    });
+  });
+  $("msort").addEventListener("change", function () { var p = $("msort").value.split(":"); setSort(p[0], p[1] === "asc"); });
+
+  // ---------------------------------------------------------------- "Copy for Claude"
+  // Descriptions are embedded as gzip + base64 chunks (one per feed) and decoded in the background after
+  // the first render, so a click can usually copy synchronously (some browsers only allow copying inside
+  // the click itself).
+  var COUNTRY_NAMES = CFG.country_names || {};
+  var descChunks = [];
+  try { descChunks = JSON.parse(document.getElementById("desc-data").textContent) || []; } catch (e) { descChunks = []; }
+  var DESC = null, descPromise = null;
+  function inflate(b64) {
+    var bin = atob(b64), bytes = new Uint8Array(bin.length);
+    for (var i = 0; i < bin.length; i++) bytes[i] = bin.charCodeAt(i);
+    var stream = new Blob([bytes]).stream().pipeThrough(new DecompressionStream("gzip"));
+    return new Response(stream).text().then(JSON.parse);
+  }
+  function loadDescriptions() {
+    if (descPromise) return descPromise;
+    if (!descChunks.length || typeof DecompressionStream === "undefined" || !window.Response || !Blob.prototype.stream) {
+      DESC = {}; descPromise = Promise.resolve(DESC); return descPromise;
+    }
+    descPromise = Promise.all(descChunks.map(function (c) { return inflate(c).catch(function () { return {}; }); }))
+      .then(function (parts) { var all = {}; parts.forEach(function (p) { for (var k in p) all[k] = p[k]; }); DESC = all; return all; })
+      .catch(function () { DESC = {}; return DESC; });
+    return descPromise;
+  }
+  function fmtDate(iso) { return iso ? +iso.slice(8, 10) + " " + MON[+iso.slice(5, 7) - 1] + " " + iso.slice(0, 4) : ""; }
+  function copyHeader(j) {
+    var place = j.cities.concat(j.countries.map(function (c) { return COUNTRY_NAMES[c] || c; })).join(", ") || j.locs || "not stated";
+    var pay = payTxt(j);
+    var line2 = "Location: " + place + " | Start: " + (j.startTxt || "not stated") + " | Pay: " + (pay ? pay + " gross per month" : "not stated") +
+      (j.deadline ? " | Deadline: " + fmtDate(j.deadline) : "");
+    return j.company + ": " + j.title + "\n" + line2 + "\nLink: " + j.url + "\n---\n";
+  }
+  function copyText(j) {
+    var d = DESC && DESC[j.id];
+    return copyHeader(j) + (d ? d : "(Job description not captured; open the link.)");
+  }
+  window.__copyText = function (id) { return loadDescriptions().then(function () { return copyText(byId[id]); }); };   // for tests
+  function legacyCopy(text) {
+    var ta = document.createElement("textarea");
+    ta.value = text; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.top = "0"; ta.style.left = "0"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.focus(); ta.select();
+    try { ta.setSelectionRange(0, text.length); } catch (e) { /* old browsers */ }
+    var ok = false;
+    try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+    ta.remove();
+    return ok;
+  }
+  function showCopyBox(text) {
+    $("copytext").value = text; $("copybox").style.display = "flex";
+    $("copytext").focus(); $("copytext").select();
+  }
+  $("copyclose").addEventListener("click", function () { $("copybox").style.display = "none"; });
+  $("copybox").addEventListener("click", function (e) { if (e.target === $("copybox")) $("copybox").style.display = "none"; });
+  function copied(btn, j) {
+    btn.classList.add("done"); btn.textContent = "Copied ✓";
+    setTimeout(function () { btn.classList.remove("done"); btn.textContent = "Copy for Claude"; }, 1600);
+    toast("Copied for Claude: " + j.title + (DESC && DESC[j.id] ? "" : " (no description captured)"), null);
+  }
+  function writeText(text, btn, j) {
+    function fallback() { if (legacyCopy(text)) copied(btn, j); else showCopyBox(text); }
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { copied(btn, j); }, fallback);
+    } else fallback();
+  }
+  function copyForClaude(j, btn) {
+    if (DESC) { writeText(copyText(j), btn, j); return; }
+    // Still decoding: Safari needs the clipboard call inside the click, so hand it a promise of the text.
+    if (navigator.clipboard && navigator.clipboard.write && window.ClipboardItem) {
+      try {
+        var blob = loadDescriptions().then(function () { return new Blob([copyText(j)], { type: "text/plain" }); });
+        navigator.clipboard.write([new ClipboardItem({ "text/plain": blob })]).then(function () { copied(btn, j); },
+          function () { loadDescriptions().then(function () { writeText(copyText(j), btn, j); }); });
+        return;
+      } catch (e) { /* fall through */ }
+    }
+    loadDescriptions().then(function () { writeText(copyText(j), btn, j); });
+  }
+
+  // ---------------------------------------------------------------- export / import
+  function ids(map) { return Object.keys(map).filter(function (k) { return map[k]; }).sort(); }
+  $("export").addEventListener("click", function () {
+    var starred = jobs.filter(isStar).map(function (j) { return j.id; });
+    var applied = jobs.filter(isApplied).map(function (j) { return j.id; });
+    var out = { version: 1, exported_at: new Date().toISOString(), hidden: ids(state.hidden),
+                hidden_companies: ids(state.hiddenCompanies), starred: starred.sort(), applied: applied.sort() };
+    var blob = new Blob([JSON.stringify(out, null, 1)], { type: "application/json" });
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(blob); a.download = "user_state.json";
+    document.body.appendChild(a); a.click(); a.remove();
+    setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
+  });
+  $("importfile").addEventListener("change", function () {
+    var f = this.files && this.files[0]; if (!f) return;
+    var reader = new FileReader();
+    reader.onload = function () {
+      try {
+        var d = JSON.parse(reader.result);
+        (d.hidden || []).forEach(function (id) { state.hidden[id] = 1; });
+        (d.hidden_companies || []).forEach(function (c) { state.hiddenCompanies[c] = 1; });
+        (d.starred || []).forEach(function (id) { state.star[id] = true; });
+        (d.applied || []).forEach(function (id) { state.applied[id] = true; });
+        saveState(); render();
+        toast("Imported " + ((d.hidden || []).length + (d.starred || []).length + (d.applied || []).length) + " marks", null);
+      } catch (e) { toast("Could not read that file (expected the JSON from Export)", null); }
+    };
+    reader.readAsText(f);
+    this.value = "";
+  });
+
+  // ---------------------------------------------------------------- start
+  var openN = jobs.filter(function (j) { return j.status === "open"; }).length;
+  $("meta").textContent = openN + " open internships in all categories · " + uniq(function (j) { return j.company; }).length +
+    " companies · updated " + generated.toISOString().slice(0, 16).replace("T", " ") + " UTC";
+  if (window.matchMedia && window.matchMedia("(max-width: 760px)").matches) $("filters").removeAttribute("open");
+  document.querySelectorAll(".earlymonth").forEach(function (e) { e.textContent = EARLY ? monthName(EARLY, true) : ""; });
+  if (!EARLY) $("t_noearly").parentNode.style.display = "none";
+  showStorageWarning();
+  loadFilters();
+  var savedSort = null;
+  try { savedSort = window.localStorage.getItem(SKEY); } catch (e) { savedSort = null; }
+  var sp = (savedSort || "recent:desc").split(":");
+  setSort(sp[0], sp[1] === "asc");
+  setTimeout(loadDescriptions, 50);
+})();
+</script>
+</body>
+</html>

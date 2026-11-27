@@ -1,0 +1,520 @@
+# ch-intern-finder configuration. All classification rules live here.
+# Patterns are Python regular expressions, matched case-insensitively unless
+# listed under a *_case_sensitive key. Use single quotes so backslashes survive.
+
+user_agent: "ch-intern-finder/0.1 (personal internship search; contact via repo issues)"
+http:
+  max_rps_per_host: 2
+  timeout: 40
+  retries: 2
+  workers: 6            # parallel hosts; each host is still rate-limited on its own
+
+# Health check (the "needs attention" issue). Providers listed here are known to refuse the finder,
+# so their failures don't reopen the issue every day. Their postings keep their last known state and
+# the viewer marks them "not updated since …". Remove a provider once its feeds work again.
+health:
+  known_blocked_providers:
+    - workday           # since 16 Nov 2026 Workday's sites return HTTP 429 to automated clients (Cloudflare bot filter)
+
+# Which countries count as a match. Add e.g. AE or SG under `countries` and list
+# them here; nothing else needs to change.
+target_countries: [CH, NL, LU, AE, BE, DE, UK, AT, IE]
+
+# A location string naming one of these places never counts through a *city* name
+# ("Cambridge (US), Massachusetts", "Charleroi USA", "Durham (Old Oxford), North Carolina").
+# Explicit country names still count, so "Zurich, Switzerland; Boston, USA" stays Swiss.
+city_match_blockers: ['\b(USA|U\.S\.A?\.?|United States|Canada|Australia)\b', '\((US|USA|CA|AU)\)', '\b(Massachusetts|North Carolina|South Carolina|Pennsylvania|Connecticut|New Hampshire|New Jersey|Wisconsin|Ohio|Kentucky|Illinois|Michigan|Indiana|Maryland|Virginia|Ontario|Quebec|British Columbia|Alberta|New South Wales|Victoria, Australia|Queensland)\b']
+
+countries:
+  CH:
+    name: Switzerland
+    codes: [CH, CHE]   # ISO codes as returned by feeds (Lever, Recruitee, ...)
+    suffix_codes: [CH, CHE]   # codes accepted at the END of a free-text location ("Nyon, VD, CH")
+    names: [Switzerland, Schweiz, Suisse, Svizzera, Svizra, Swiss, Helvetia]
+    # City / town names; matched on word boundaries against every location string.
+    # (Ambiguous names such as Stein, Root, Cham or Freiburg are deliberately left out.)
+    cities:
+      Zurich: ['Z[uü]e?rich', 'Zurigo', 'Zürich']
+      Geneva: ['Gen[eè]v[ea]', 'Genf', 'Ginevra', 'Gen[eè]ve']
+      Basel: ['Basel', 'B[aâ]le', 'Basilea', 'Allschwil', 'Kaiseraugst', 'Pratteln', 'Muttenz', 'Riehen', 'Münchenstein']
+      Bern: ['Bern', 'Berne', 'Berna', 'Ittigen', 'Köniz']
+      Lausanne: ['Lausanne', 'Losanna', 'Renens', 'Ecublens', 'Epalinges', 'Prilly', 'Crissier', 'Morges']
+      Zug: ['Zug', 'Baar', 'Rotkreuz', 'Steinhausen', 'Risch']
+      Lugano: ['Lugano', 'Mendrisio', 'Chiasso', 'Bellinzona', 'Locarno', 'Manno', 'Stabio']
+      Lucerne: ['Luzern', 'Lucerne', 'Lucerna', 'Kriens', 'Emmen', 'Ebikon']
+      Winterthur: ['Winterthur']
+      St. Gallen: ['St\.? ?Gallen', 'Sankt Gallen', 'Saint-Gall', 'Rorschach']
+      Greater Zurich: ['Schlieren', 'Wallisellen', 'Opfikon', 'Glattbrugg', 'Kloten', 'Dübendorf', 'Rüschlikon', 'Thalwil', 'Horgen', 'Dietikon', 'Uster', 'Pfäffikon', 'Zollikon', 'Küsnacht', 'Adliswil', 'Regensdorf', 'Bülach', 'Volketswil', 'Wädenswil', 'Zürich Airport', 'Glattpark', 'Kilchberg', 'Kemptthal', 'Stäfa', 'Meilen', 'Männedorf', 'Bubikon', 'Embrach', 'Effretikon', 'Urdorf', 'Bassersdorf', 'Oerlikon', 'Altstetten', 'Thalwil']
+      Greater Geneva: ['Plan-les-Ouates', 'Meyrin', 'Vernier', 'Satigny', 'Carouge', 'Lancy', 'Cologny', 'Nyon', 'Rolle', 'Gland', 'Coppet', 'Versoix', 'Le Grand-Saconnex']
+      Vaud Riviera: ['Vevey', 'Montreux', 'La Tour-de-Peilz', 'Aigle', 'Corsier-sur-Vevey']
+      Vaud (other): ['Tolochenaz', 'Eysins', 'Aubonne', 'Prangins', 'Saint-Prex', 'Lonay', 'Yverdon(-les-Bains)?', 'Bussigny', 'Chavannes-près-Renens', 'Mies', 'Etoy', 'Ballaigues', 'Orbe', 'Payerne', 'Le Mont-sur-Lausanne']
+      Jura arc / watch valley: ['Biel', 'Bienne', 'Neuch[aâ]tel', 'La Chaux-de-Fonds', 'Le Locle', 'Le Brassus', 'Le Sentier', 'Grenchen', 'Saint-Imier', 'Villeret', 'Marin-Epagnier', 'Fleurier', 'Delémont', 'Porrentruy']
+      Other: ['Aarau', 'Baden(?![- ](Baden|Württemberg|bei))', 'Olten', 'Solothurn', 'Schaffhausen', 'Neuhausen am Rheinfall', 'Thun', 'Chur', 'Sion', 'Sitten', 'Visp', 'Fribourg', 'Martigny', 'Monthey', 'Frauenfeld', 'Kreuzlingen', 'Arbon', 'Wil SG', 'Rapperswil', 'Jona', 'Davos', 'St\.? ?Moritz', 'Interlaken', 'Burgdorf', 'Langenthal', 'Zofingen', 'Brugg', 'Wettingen', 'Spreitenbach', 'Dornach', 'Liestal', 'Schwyz', 'Altdorf', 'Sarnen', 'Stans', 'Glarus', 'Appenzell', 'Herisau', 'Buchs SG', 'Baden-D(ä|ae)ttwil', 'Dättwil', 'Oberentfelden', 'Birr', 'Turgi', 'Boudry', 'Evionnaz', 'Évionnaz', 'Lachen', 'Zuchwil', 'Bubendorf', 'Bulle', 'Heerbrugg', 'Lenzburg', 'Sursee', 'Hochdorf', 'Schachen', 'Werthenstein', 'Selzach', 'Neuhausen', 'Stein am Rhein', 'Sisseln', 'Stein AG', 'Münchwilen', 'Gland', 'Mendrisio', 'Bioggio', 'Coldrerio', 'Balerna', 'Visp', 'Siders', 'Sierre', 'Brig', 'Collombey', 'Monthey']
+    # Strings that look Swiss but are not (checked before the city rules).
+    not_here: ['Baden-Baden', 'Baden-Württemberg', 'Bern(e)?,? (NC|North Carolina|IN|Indiana)', 'Lucerne,? (CA|California)', 'Geneva,? (IL|Illinois|NY|New York|OH|Ohio|AL|FL)', 'New Bern', 'Swiss Re America', 'Lake Zurich', 'Zurich,? (IL|Illinois)', 'Geneva,? (IL|Illinois|NY|New York|OH|Ohio|AL|Alabama|FL|Florida)', 'Lucerne Valley', 'Bern Township', 'Lugano,? (FL|Florida)', 'Emmen,? (Netherlands|Nederland|NL|Drenthe)']
+
+  NL:
+    name: Netherlands
+    codes: [NL, NLD]
+    suffix_codes: [NL, NLD]
+    names: [Netherlands, The Netherlands, Nederland, Pays-Bas, Niederlande, Paesi Bassi]
+    cities:
+      Amsterdam: ['Amsterdam(-Zuidoost| Zuidoost| Zuid| Noord| West)?', 'Diemen']
+      Amstelveen: ['Amstelveen']
+      Rotterdam: ['Rotterdam', 'Capelle aan den IJssel', 'Schiedam']
+      Utrecht: ['Utrecht', 'Nieuwegein', 'Zeist']
+      The Hague: ['Den Haag', 'The Hague', "'s-Gravenhage", 'La Haye', 'Rijswijk', 'Voorburg']
+      Eindhoven: ['Eindhoven', 'Veldhoven']
+      Hoofddorp: ['Hoofddorp', 'Haarlemmermeer', 'Badhoevedorp']
+      Schiphol: ['Schiphol(-Rijk| Airport)?']
+      Haarlem: ['Haarlem']
+      Leiden: ['Leiden', 'Oegstgeest']
+      Nijmegen: ['Nijmegen']
+      Groningen: ['Groningen']
+      Maastricht: ['Maastricht']
+      Breda: ['Breda']
+      Zwolle: ['Zwolle']
+      Other: ['Delft', 'Tilburg', 'Arnhem', 'Amersfoort', 'Almere', "'s-Hertogenbosch", 'Den Bosch', 'Enschede', 'Venlo', 'Hilversum', 'Naarden', 'Wageningen', 'Apeldoorn', 'Dordrecht', 'Leeuwarden', 'Heerlen', 'Roermond', 'Oss', 'Helmond', 'Deventer', 'Ede', 'Gouda', 'Alkmaar', 'Zaandam', 'Hengelo', 'Veenendaal', 'Woerden', 'Barneveld', 'Roosendaal', 'Lelystad', 'Geleen', 'Leidschendam', 'Baarle-Nassau', 'Sittard', 'Venray', 'Bergen op Zoom']
+    not_here: ['Amsterdam,? (NY|New York)', 'Rotterdam,? (NY|New York)', 'New Amsterdam', 'Holland,? (MI|Michigan|OH|Ohio)', 'Utrecht Street', 'Breda,? (IA|Iowa)', 'Groningen,? (Suriname|SR)', 'Leiden(er)? Stra(ss|ß)e']
+
+  LU:
+    name: Luxembourg
+    codes: [LU, LUX]
+    suffix_codes: [LUX]       # "LU" alone is also the Swiss canton code for Lucerne
+    names: [Luxembourg, Luxemburg, Grand Duchy of Luxembourg, Grand-Duché de Luxembourg, Grand Duchy, Lussemburgo, Lëtzebuerg]
+    cities:
+      Luxembourg: ['Luxembourg(-Ville| City| Ville)?', 'Luxemburg(-Stadt| Stadt)?', 'Kirchberg', 'Gasperich', 'Cloche d.Or', 'Howald', 'Hesperange', 'Cessange', 'Findel']
+      Esch-sur-Alzette: ['Esch(-sur-|/)Alzette', 'Belval']
+      Strassen: ['Strassen']
+      Bertrange: ['Bertrange']
+      Leudelange: ['Leudelange']
+      Contern: ['Contern']
+      Other: ['Munsbach', 'Capellen', 'Mamer', 'Windhof', 'Senningerberg', 'Niederanven', 'Foetz', 'Differdange', 'Dudelange', 'Ettelbruck', 'Diekirch', 'Wiltz', 'Grevenmacher', 'Sandweiler', 'Bettembourg', 'Mondercange', 'Steinsel', 'Walferdange', 'Bascharage', 'Kockelscheuer']
+    # Belgian province of Luxembourg, and same-named places elsewhere.
+    not_here: ['Province (de|of) Luxembourg', 'Luxembourg Province', 'Provin[cz]i?e? Luxemburg', 'Arlon', 'Bastogne', 'Marche-en-Famenne', 'Libramont', 'Neufch[aâ]teau', 'Virton', 'Luxembourg,? (Belgium|Belgique|België|BE)\b', 'Luxemburg,? (Belgien|België)', 'Kirchberg,? (SG|BE|St\.? ?Gallen|Bern|Switzerland|Schweiz|Germany|Deutschland|Austria|Österreich|Tirol|Sachsen|Hunsrück|an der)', 'Kirchberg (an|am|in|bei)\b', 'Bertrange,? (France|Moselle|57)', 'Strassen,? (Austria|Österreich|Tirol)', 'Luxembourg Gardens', 'Jardin du Luxembourg', 'Luxembourg,? (WI|Wisconsin|MN|Minnesota|IA|Iowa)']
+
+  AE:
+    name: United Arab Emirates
+    codes: [AE, ARE]
+    suffix_codes: [AE, ARE, UAE]
+    names: [United Arab Emirates, UAE, 'U.A.E.', 'U.A.E', Arab Emirates, Emirats arabes unis, Vereinigte Arabische Emirate]
+    cities:
+      Dubai: ['Dubai', 'DIFC', 'Dubai Silicon Oasis', 'Jebel Ali', 'JAFZA', 'Business Bay', 'Dubai Media City', 'Dubai Internet City', 'Dubai Marina', 'Jumeirah( Lake Towers)?', 'JLT', 'DMCC', 'Dubai South', 'Al Quoz', 'Deira', 'Downtown Dubai', 'Dubai Hills', 'Dubai Healthcare City', 'Dubai Design District', 'Dubai Science Park', 'Dubai Production City', 'Dubai Investments Park', 'Dubai Studio City', 'Dubai Knowledge Park', 'Dubai Airport Free ?Zone', 'DAFZA']
+      Abu Dhabi: ['Abu Dhabi', 'ADGM', 'Masdar( City)?', 'Al Maryah( Island)?', 'Khalifa City', 'Saadiyat', 'Yas Island', 'Mussafah', 'KIZAD']
+      Sharjah: ['Sharjah', 'SAIF Zone', 'Hamriyah']
+      Ajman: ['Ajman']
+      Other: ['Ras Al[- ]Khaimah', 'RAK', 'Fujairah', 'Al Ain', 'Umm Al[- ]Quwain']
+    # Dubai/Abu Dhabi only count as a location string, never from a title such as "MEA region".
+    not_here: ['Dubai,? (TX|Texas)', 'Ruwais,? (Qatar)']
+
+  BE:
+    name: Belgium
+    codes: [BE, BEL]
+    suffix_codes: [BEL]       # "BE" alone is also the Swiss canton code for Bern
+    names: [Belgium, Belgique, België, Belgien, Belgio, Bélgica]
+    cities:
+      Brussels: ['Brussels', 'Bruxelles', 'Brussel', 'Brüssel', 'Bruselas', 'Etterbeek', 'Ixelles', 'Elsene', 'Schaerbeek', 'Anderlecht', 'Evere', 'Woluwe(-Saint-Lambert|-Saint-Pierre)?', 'Uccle', 'Saint-Gilles', 'Auderghem', 'Watermael-Boitsfort', 'Laeken', 'Jette']
+      Antwerp: ['Antwerp(en)?', 'Anvers', 'Wilrijk', 'Mortsel', 'Kontich', 'Aartselaar', 'Edegem']
+      Ghent: ['Ghent', 'Gent', 'Gand']
+      Leuven: ['Leuven', 'Louvain(?!-la-Neuve)', 'Heverlee', 'Haasrode']
+      Mechelen: ['Mechelen', 'Malines']
+      Zaventem: ['Zaventem', 'Brussels Airport']
+      Diegem: ['Diegem']
+      Machelen: ['Machelen']
+      Wavre: ['Wavre', 'Waver']
+      Louvain-la-Neuve: ['Louvain-la-Neuve', 'Ottignies']
+      Liège: ['Li[eè]ge', 'Luik', 'Lüttich', 'Herstal', 'Seraing']
+      Other: ['Namur', 'Charleroi', 'Mons', 'Hasselt', 'Genk', 'Brugge', 'Bruges', 'Kortrijk', 'Courtrai', 'Aalst', 'Vilvoorde', 'Wemmel', "Braine-l'Alleud", 'Nivelles', 'Oostende', 'Ostend', 'Sint-Niklaas', 'Beerse', 'Puurs', 'Geel', 'Rixensart', 'Tienen', 'Turnhout', 'Roeselare', 'Waregem', 'Gosselies', 'Mont-Saint-Guibert', 'Arlon', 'Bastogne', 'Marche-en-Famenne', 'Libramont', 'Virton', 'Province (de|of) Luxembourg', 'Luxembourg Province']
+    not_here: ['Brussels,? (WI|Wisconsin|IL|Illinois|ON|Ontario)', 'Ghent,? (NY|New York|KY|Kentucky|MN|Minnesota|WV)', 'Antwerp,? (OH|Ohio|NY|New York)', 'Mechelen,? (NL|Netherlands|Nederland|Limburg)', 'Gent(?:illy|ofte)', 'Mons,? (France)', 'Genk,? (NL)']
+
+  DE:
+    name: Germany
+    codes: [DE, DEU]
+    suffix_codes: [DEU]       # "DE" alone is also the US state Delaware
+    names: [Germany, Deutschland, Allemagne, Duitsland, Germania, Alemania, Bavaria, Bayern, Baden-Württemberg, Hessen, Hesse, Nordrhein-Westfalen, North Rhine-Westphalia, Niedersachsen, Lower Saxony]
+    cities:
+      Berlin: ['Berlin']
+      Munich: ['Munich', 'München', 'Muenchen', 'Unterföhring', 'Garching', 'Unterschleißheim', 'Ismaning', 'Grasbrunn', 'Aschheim']
+      Hamburg: ['Hamburg']
+      Frankfurt: ['Frankfurt( am Main)?', 'Eschborn', 'Offenbach', 'Bad Homburg', 'Neu-Isenburg', 'Kronberg', 'Schwalbach( am Taunus)?']
+      Cologne: ['Cologne', 'Köln', 'Koeln']
+      Düsseldorf: ['Düsseldorf', 'Duesseldorf', 'Dusseldorf', 'Ratingen', 'Neuss', 'Monheim( am Rhein)?']
+      Stuttgart: ['Stuttgart', 'Böblingen', 'Sindelfingen', 'Leinfelden(-Echterdingen)?']
+      Other: ['Leipzig', 'Dresden', 'Hannover', 'Hanover', 'N[üu]rnberg', 'Nuernberg', 'Nuremberg', 'Bonn', 'Mannheim', 'Karlsruhe', 'Wiesbaden', 'Mainz', 'Essen', 'Dortmund', 'Bremen', 'Heidelberg', 'Freiburg( im Breisgau)?', 'Walldorf', 'Herzogenaurach', 'Wolfsburg', 'Ingolstadt', 'Gütersloh', 'Darmstadt', 'Erlangen', 'Potsdam', 'Augsburg', 'Regensburg', 'Münster', 'Aachen', 'Bielefeld', 'Ludwigshafen', 'Leverkusen', 'Konstanz', 'Baden-Baden', 'Ulm', 'Kiel', 'Rostock', 'Jena', 'Bochum', 'Duisburg', 'Wuppertal', 'Heilbronn', 'Kassel', 'Braunschweig', 'Osnabrück', 'Oldenburg', 'Würzburg', 'Göttingen', 'Saarbrücken', 'Trier', 'Lörrach', 'Weil am Rhein', 'Penzberg', 'Marburg', 'Biberach']
+    not_here: ['New Berlin', 'Berlin,? (NH|New Hampshire|CT|Connecticut|NJ|New Jersey|MD|Maryland|WI|Wisconsin|PA|Pennsylvania|VT|OH)', 'Hamburg,? (NY|New York|PA|Pennsylvania|NJ|IA|AR|MI)', 'Hanover,? (NH|New Hampshire|PA|Pennsylvania|MD|Maryland|VA|Virginia|MA|Ontario|ON|Jamaica)', 'Munich,? (ND|North Dakota)', 'Dresden,? (OH|Ohio|TN|Tennessee|ON|Ontario)', 'Stuttgart,? (AR|Arkansas)', 'Heidelberg,? (Australia|VIC|Victoria|South Africa|Gauteng|MS|PA)', 'Bremen,? (GA|Georgia|IN|Indiana|OH|AL)', 'Potsdam,? (NY|New York)', 'Kiel,? (WI)', 'Ulm,? (MT|Montana)', 'Freiburg,? (Switzerland|Schweiz|Suisse|CH|FR)\b', 'Freiburg im Üechtland', 'Essen,? (Belgium|Belgique|België)', 'Münster,? (VS|Valais|Wallis|Switzerland|Schweiz|IN|Indiana)', 'Germantown', 'Frankfort']
+
+  UK:
+    name: United Kingdom
+    codes: [GB, GBR, UK]
+    suffix_codes: [GB, GBR, UK]
+    names: [United Kingdom, UK, 'U.K.', Great Britain, Britain, England, Scotland, Wales, Northern Ireland, Royaume-Uni, Vereinigtes Königreich, Großbritannien, Grossbritannien, Verenigd Koninkrijk, Regno Unito]
+    cities:
+      London: ['London', 'City of London', 'Canary Wharf', 'Westminster', 'Shoreditch', 'Hammersmith', 'Chiswick', 'Paddington', "King'?s Cross", 'Croydon', 'Holborn', 'Wimbledon', 'Brentford']
+      Manchester: ['Manchester', 'Salford', 'MediaCity(UK)?']
+      Birmingham: ['Birmingham', 'Solihull']
+      Edinburgh: ['Edinburgh']
+      Glasgow: ['Glasgow']
+      Leeds: ['Leeds']
+      Bristol: ['Bristol']
+      Cambridge: ['Cambridge']
+      Oxford: ['Oxford', 'Abingdon']
+      Reading: ['Reading', 'Thames Valley Park']
+      Other: ['Slough', 'Milton Keynes', 'Liverpool', 'Newcastle( upon Tyne)?', 'Sheffield', 'Nottingham', 'Belfast', 'Cardiff', 'Brighton', 'Southampton', 'Guildford', 'Maidenhead', 'Uxbridge', 'Hatfield', 'Watford', 'Stevenage', 'Weybridge', 'Leatherhead', 'Basingstoke', 'Bracknell', 'Marlow', 'Staines(-upon-Thames)?', 'Leicester', 'Coventry', 'Aberdeen', 'Dundee', 'Swansea', 'Exeter', 'Norwich', 'Hemel Hempstead', 'High Wycombe', 'Woking', 'Crawley', 'Farnborough', 'Feltham', 'Egham', 'Luton', 'Chertsey', 'Sunbury(-on-Thames)?', 'Stockley Park', 'Theale', 'Harlow', 'Warrington', 'Crewe', 'Macclesfield', 'Knutsford', 'Altrincham', 'Wilmslow', 'Heathrow']
+    not_here: ['New London', 'London,? (ON|Ontario|Canada|KY|Kentucky|OH|Ohio)', 'Londonderry,? (NH|New Hampshire)', 'Manchester,? (NH|New Hampshire|CT|Connecticut|VT|Vermont|NJ|MO|TN|MI|MA)', 'Birmingham,? (AL|Alabama|MI|Michigan)', 'Cambridge,? (MA|Massachusetts|US|USA|United States|ON|Ontario|Canada|MD|MN|OH|NY)', 'Oxford,? (MS|Mississippi|OH|Ohio|AL|NC|CT|MI|PA|GA)', 'Reading,? (PA|Pennsylvania|MA|Massachusetts)', 'Bristol,? (CT|Connecticut|TN|Tennessee|VA|Virginia|RI|Rhode Island|PA)', 'Glasgow,? (KY|Kentucky|MT|Montana)', 'Edinburgh,? (IN|Indiana)', 'Leeds,? (AL|Alabama|MA|UT)', 'Newcastle,? (NSW|New South Wales|Australia|PA|WY|OK|Ontario)', 'New England', 'New South Wales', 'Wales,? (WI|ME|ND|AK)', 'North Wales,? \(?(Upper Gwynedd|PA\b|Pennsylvania)', '(Pennsylvania|\bPA)\W+North Wales', 'Cardiff,? (CA|by the Sea)', 'Brighton,? (MA|MI|CO|NY|Victoria|Australia)', 'Southampton,? (NY|PA)', 'Liverpool,? (NY|Australia|NSW)', 'Sheffield,? (AL|MA)', 'Aberdeen,? (SD|WA|MD|NC|NJ|Hong Kong)', 'Exeter,? (NH|New Hampshire)', 'Norwich,? (CT|Connecticut|NY)', 'Luton,? (ND)', 'Coventry,? (RI|CT)']
+
+# ---------------------------------------------------------------- internship
+  AT:
+    name: Austria
+    codes: [AT, AUT]
+    suffix_codes: [AUT]       # "AT" alone is too common in free text
+    names: [Austria, Österreich, Oesterreich, Autriche, Oostenrijk, Republic of Austria]
+    cities:
+      Wien: ['Wien', 'Vienna', 'Vienne', 'Wenen']
+      Graz: ['Graz']
+      Linz: ['Linz']
+      Salzburg: ['Salzburg']
+      Innsbruck: ['Innsbruck']
+      Klagenfurt: ['Klagenfurt( am Wörthersee)?']
+      Dornbirn: ['Dornbirn']
+      Wattens: ['Wattens']
+      Fuschl am See: ['Fuschl( am See)?']
+      Wiener Neudorf: ['Wiener Neudorf']
+      Vösendorf: ['Vösendorf', 'Voesendorf']
+      Other: ['St\.? Pölten', 'Wels', 'Villach', 'Leoben', 'Bregenz', 'Feldkirch', 'Steyr', 'Krems', 'Wiener Neustadt', 'Schwechat', 'Brunn am Gebirge', 'Kundl', 'Schwaz', 'Hallein', 'Hagenberg', 'Gmunden', 'Traun', 'Leonding', 'Lustenau', 'Wolfurt', 'Kufstein']
+    # Same-named places elsewhere: Vienna in the US, Linz am Rhein (Germany), Salzburg in Romania.
+    not_here: ['Vienna,? (VA|Virginia|WV|West Virginia|OH|Ohio|IL|Illinois|MD|Maryland|GA|Georgia|MO|Missouri|NJ|New Jersey|ME|Maine|NY|SD)\b', 'Vienna,? (US|USA|United States)', 'Tysons', 'Linz am Rhein', 'Linz,? (Rhein|Germany|Deutschland|Rheinland)', 'Salzburg,? (Romania|Rumänien|Sibiu)', 'Ocna Sibiului', 'Wien,? (WI|Wisconsin)', 'Wels,? (TX|Texas)', 'Traun,? (Germany)']
+
+  IE:
+    name: Ireland
+    codes: [IE, IRL]
+    suffix_codes: [IRL]       # "IE" alone also appears in free text ("i.e.")
+    names: [Ireland, Republic of Ireland, Irland, Irlande, Ierland, Éire]
+    cities:
+      Dublin: ['Dublin( \d{1,2}[Ww]?)?', 'D(ú|u)n Laoghaire', 'Sandyford', 'Blanchardstown', 'Swords', 'Leopardstown', 'Grand Canal (Dock|Quay|Square)', 'Ballsbridge', 'Citywest', 'Tallaght', 'Dundrum', 'Clonskeagh', 'Cherrywood', 'Liffey Valley']
+      Cork: ['Cork', 'Little Island', 'Ringaskiddy', 'Carrigtwohill']
+      Galway: ['Galway']
+      Limerick: ['Limerick']
+      Waterford: ['Waterford']
+      Athlone: ['Athlone']
+      Kildare/Naas: ['Kildare', 'Naas', 'Maynooth', 'Leixlip', 'Celbridge']
+      Shannon: ['Shannon']
+      Dundalk: ['Dundalk']
+      Sligo: ['Sligo']
+      Letterkenny: ['Letterkenny']
+      Other: ['Drogheda', 'Kilkenny', 'Wexford', 'Carlow', 'Tralee', 'Killarney', 'Ennis', 'Mullingar', 'Navan', 'Bray', 'Wicklow', 'Portlaoise', 'Tullamore', 'Castlebar', 'Clonmel', 'Cavan']
+    # Same-named places in the US and London; Northern Ireland belongs to UK, not IE.
+    not_here: ['Dublin,? (OH|Ohio|CA|California|GA|Georgia|VA|Virginia|PA|Pennsylvania|TX|Texas|NH|New Hampshire|IN|Indiana|NC|MD)\b', 'Cork Street', 'Galway,? (NY|New York)\b', 'Limerick,? (PA|Pennsylvania|ME|Maine)\b', 'Waterford,? (MI|Michigan|CT|Connecticut|WI|Wisconsin|NY|PA|CA)\b', 'Dundalk,? (MD|Maryland)\b', 'Shannon,? (MS|IL|GA)\b', 'Kildare,? (TX|OK)\b', 'Northern Ireland', 'Nordirland', 'Irlande du Nord', 'Noord-Ierland', 'Belfast', 'Derry', 'Londonderry', 'Newry', 'Lisburn', 'Co\.? (Antrim|Down|Armagh|Fermanagh|Tyrone)\b']
+
+internship:
+  # Title patterns. Word boundaries everywhere, so internal/international/internet never match.
+  intern:
+    - '\bintern(s|ship|ships)?\b'
+    - '\binterne?ship\b'
+    - 'praktik(um|ant|antin|anten|ant/in|ant:in|ant\*in|antIn)'   # also compounds: Hochschulpraktikum, Marketingpraktikant
+    - '\bstagiair(e|es|s)?\b'                # FR/NL/LU
+    - '\bstage\b'
+    - '\b(afstudeer|meewerk|snuffel|onderzoeks|eind|marketing|sales|finance|hr|communicatie|business)stage\b'   # NL compounds
+    - '\bstage(plaats|plek|vacature|opdracht)\b'
+    - '\btirocini(o|ante|anti)\b'
+    - '\bstagista\b'
+    - '\bsummer (analyst|associate)\b'      # banks' name for summer internships
+    - '\boff[- ]cycle\b'
+    - '\b(industrial|sandwich|year[- ]long|summer|work) placements?\b'      # UK: placement year = internship
+    - '\bplacement (year|student|students|programme|program|scheme)\b'
+    - '\bplacement\s*\(\s*\d+\s*(months?|weeks?)\)'
+  working_student:
+    - '\bworking student\b'
+    - '\bwerkstudent(in|en|/in|:in|\*in)?\b'
+    - '\bstudent (assistant|job|worker|employee)\b'
+    - '\bstudentische (aushilfe|mitarbeit|hilfskraft)\b'
+    - '\balternan(ce|t|te)\b'
+  trainee:
+    - '\btrainees?\b'
+    - '\btraineeprogramm(a|e)?\b'
+    - '\btraineeships?\b'
+  # Graduate / early-career programmes (shown as type "graduate", hidden by default in the viewer).
+  graduate:
+    - '\bgraduate (programme|program|scheme|trainee|analyst|associate|rotation|consultant|engineer|trader|researcher|software|hardware|quantitative|opportunit|role|position|talent)'
+    - '\bgrad(uate)? scheme\b'
+    - '\b(new|recent) grad(uate)?s?\b'
+    - '\bearly[- ]careers?\b'
+    - '\byoung (professionals?|talents?)( program(me)?)?\b'
+    - '\b(future|emerging) (leaders?|talents?) program'
+    - '\b(leadership development|rotational) program'
+    - '\blaunch program\b'
+  # A graduate match is cancelled by these (recruiters hiring *for* early careers, etc.).
+  not_graduate:
+    - '\brecruit(ing|er|ment)?\b'
+    - '\b(coordinator|manager|lead|head|director|partner|specialist)\b.*\b(early careers?|campus|graduates?)\b'
+  # If a title matches one of these the internship match is cancelled.
+  not_internship:
+    - '\b(early|late|growth|seed|series [a-e]|multi|first|final|next|clinical)[- ]stage\b'
+    - '\bstage (manager|technician|hand|crew|director|gate)\b'
+    - '\bbackstage\b'
+    - '\bintern(ship)?s? (program(me)?|recruit(ing|ment)?) (manager|coordinator|lead|specialist)\b'
+    - '\b(manager|coordinator|head|lead) (of )?(intern(ship)?s|trainees)\b'
+    - '\bsales trainee manager\b'
+    - '\bstage(begeleider|co[oö]rdinator|bureau)\b'          # NL: internship supervisor / office
+  # Structured employment-type values from the feeds that also count.
+  employment_types:
+    intern: ['\bintern(ship)?s?\b', 'praktikum', '\bstage\b']
+    working_student: ['working.?student', 'werkstudent']
+    trainee: ['trainee']
+    graduate: ['\bgraduate\b', 'new grad', 'early career']
+
+# ---------------------------------------------------------------- function / category
+# Checked in order; the first category whose title pattern matches wins, so the
+# specific categories (e-commerce, analytics, commercial) come before the generic ones.
+categories:
+  # hr first: an explicit HR title ("HR Retail", "Employer Branding", "HR Reporting & Campaign Support") is HR
+  hr:
+    - '\b(hr|human resources?|recruit(ing|ment|er)?|talent (acquisition|management|attraction)|employer branding)\b'
+    - 'personal(wesen|abteilung|management|gewinnung)'
+    - '\b(personeelszaken|werving)\b'
+    - '\bressources humaines\b'
+    - '\brisorse umane\b'
+    - '\bpeople (&|and) culture\b'
+  ecommerce_digital:
+    - '\be-?commerce\b'
+    - '\b(d2c|dtc|direct[- ]to[- ]consumer)\b'
+    - '\b(performance|digital|online|growth|search|affiliate) marketing\b'
+    - '\bonline (shop|sales|retail|channels?)\b'
+    - '\b(amazon|shopify|marketplaces?|webshop|omni-?channel)\b'
+    - '\b(seo|(?-i:SEA)|sem|ppc|paid (media|social|search))\b'
+    - '\bdigital (media|channels?|campaigns?|commerce|sales|acquisition)\b'
+  marketing_analytics:
+    - '\b(consumer|shopper|customer|market) insights?\b'
+    - '\b(market|marketing|sales|commercial|customer|pricing|crm|media) (research|intelligence|analytics|analysis|analyst|science)\b'
+    - 'marktforschung|marktonderzoek|[ée]tudes? de march[ée]'
+  commercial:
+    - '\b(trade|customer|shopper|channel) marketing\b'
+    - '\bcategory (management|manager|development|planning)\b'
+    - '\bkey account'
+    - '\baccount management\b'
+    - '\bcommercial\b'
+    - '\bcommerci[eë]le?\b'
+    - '\bcustomer development\b'
+    - '\bfield sales\b'
+    - '\b(sales force effectiveness|sfe|sales excellence|revenue (growth )?management|rgm)\b'
+  brand:
+    - '(?<!employer )\bbrand(s|ing)?\b'
+    - 'marken(management|führung|kommunikation)'
+    - '\b(marque|marchio|merk)\b'
+  business_development:
+    - '\bbusiness development\b'
+    - '\bbiz ?dev\b'
+    - '\bpartnerships?\b'
+    - 'gesch[aä]ftsentwicklung'
+    - 'd[ée]veloppement (commercial|des affaires)'
+    - '\bnew business\b'
+    - '\bmarket (entry|expansion)\b'
+  consulting:
+    - '\bconsult(ing|ant|ants|ancy)?\b'
+    - '(unternehmens|strategie|management)beratung'
+    - '\b(conseil|consulenza|advies)\b'
+    - '\badvisory\b'
+  strategy:
+    - '\bstrat[eé]g(y|ic|ie|ia|isch|ique)\b(?!\s+(purchasing|sourcing|procurement|buying|einkauf|finance))'
+    - '\bcorporate development\b'
+    - '\btransformation\b'
+    - '\bbusiness analyst\b'
+  marketing:
+    - 'marketing'
+    - '\b(social media|crm|influencer|campaigns?|consumer engagement)\b'
+    - '^(?!.*(financ|finanz|transfer pricing|verrechnungspreis|tax|steuer|actuar|aktuar|p&c|insurance|versicherung)).*\bpricing\b'   # finance/tax/actuarial pricing -> finance
+    - '\bcontent (marketing|creation|creator|manager)\b'
+    - '\bmerchandis(ing|er)\b'
+    - '\bgo[- ]to[- ]market\b'
+    - '\bproduct (marketing|launch)\b'
+  communications_pr:
+    - '\bcommunications?\b'
+    - 'kommunikation'
+    - '\bcommunicatie\b'
+    - '\bcomunicazione\b'
+    - '\b(pr|public relations|public affairs|media relations|press)\b'
+    - '\bevents?\b'
+    - '\b(editorial|redaktion|journalis[mt])'
+    - '\bcorporate affairs\b'
+  sales:
+    - '\bsales\b'
+    - 'vertrieb'
+    - '\bverkoop\b'
+    - 'verkauf'
+    - '\bvente(s)?\b'
+    - '\bvendite\b'
+    - '\baccount executive\b'
+    - '\bclient (advisor|adviser|relations|services?|coverage)\b'
+    - '\bkundenberat'
+    - '\bretail\b'
+    - '\bcustomer success\b'
+    - '\binside sales\b'
+    - '\bpre-?sales\b'
+  finance:
+    - '\bfinanc(e|ial)\b'
+    - 'finanz'
+    - '\b(accounting|accountant|controlling|controller|audit|treasury|tax)\b'
+    - '\b(transfer pricing|verrechnungspreise?|actuar(y|ial)|aktuar(iat)?)|(financ|finanz|p&c|insurance).*\bpricing\b'
+    - 'buchhaltung|rechnungswesen|steuer'
+    - '\b(financi[eë]n|financieel|boekhouding|comptabilit[ée])\b'
+    - '\b(funds?|fund (administration|accounting|services|operations)|transfer agency|depositary|custody)\b'
+    - '\b(investment|asset|wealth|portfolio|private) (banking|management|equity)\b'
+    - '\binvestment\b'
+    - '\b(m&a|mergers|corporate finance|equity research|private equity|venture capital|credit|trading|commodit(y|ies)|risk)\b'
+    - '\b(banking|wealth|product control)\b'
+    - '\bsummer analyst\b'
+  operations_supply_chain:
+    - '\boperations?\b'
+    - '\bsupply chain\b'
+    - '\blogisti(k|cs|que|ca)\b'
+    - '\b(procurement|purchasing|sourcing|buyer)\b'
+    - 'einkauf|beschaffung'
+    - '\b(inkoop|logistiek)\b'
+    - '\b(achats|acquisti|approvisionnement)\b'
+    - '\b(demand|supply|production) planning\b'
+    - '\b(project|programme|program) manage'
+    - '\bpmo\b'
+    - '\bcustomer (service|support|care|operations)\b'
+  other_business:
+    - '\bbusiness\b'
+    - '\bmanagement\b'
+    - '\b(administration|administrative|office|assistant|assistenz|executive assistant)\b'
+    - 'kaufm[aä]nn|\bkv\b'
+    - '\b(bedrijfskunde|bedrijfseconomie)\b'
+    - '\b(sustainability|esg|csr|nachhaltigkeit|durabilit[ée]|citizenship|social impact|corporate responsibility)\b'
+    - '\b(compliance|governance)\b'
+    - '\bproduct manage(r|ment)\b'
+    - '\b(analyst|analytics)\b'
+    - '\bgeneral\b'
+    - '\bbetriebswirtschaft'
+
+# Categories shown by the viewer by default (the others stay one click away).
+default_view_categories: [marketing, brand, sales, business_development, strategy, ecommerce_digital, commercial, marketing_analytics, communications_pr]
+
+# Titles naming only an education level (Dutch HBO/WO/MBO "stage") with no clear
+# function are sent to review rather than silently filed as other_business.
+review_if_generic: ['\b(hbo|wo|mbo)\b']
+
+# Title patterns that put a posting into `excluded` (engineering, IT, data
+# science, lab, medical, legal, trades).
+# - excluded_hard: always excluded, even if the title also has a business word.
+# - excluded_soft: excluded, but if the title ALSO matches a business category
+#   (e.g. "Sales Engineer Intern") the posting goes to review instead.
+excluded_hard:
+  - '\b(software|firmware|embedded|devops|sre|backend|back-end|frontend|front-end|full[- ]?stack|ios|android)\b'
+  - '\b(developer|entwickler|développeur|sviluppatore|programmer|programmierer)'
+  - '\b(machine learning|deep learning|computer vision|nlp)\b'
+  - '\b(ai|ml|data|cloud|qa|test|platform|automation) (software )?engineer'
+  - '\b(lab(or)?|laborat|chemist|chemie|chimie|scientist|physic|clinical|klinisch|medical|medizin|pharmacist|apothek|nurse|pflege|physician|doctor|arzt|ärztin|veterinar)'
+  - '\b(legal|law|lawyer|counsel|paralegal|jurist|juristin|rechts|juridique|giuridic|attorney|notar)'
+  - '\b(electrician|elektriker|mechanic|mechaniker|polymechaniker|technician|techniker|technicien|automatiker|monteur|installateur|carpenter|schreiner|welder|plumber)'
+  - '\b(lernende|lernender|lernende/r|lehrstelle|lehre|apprentice|apprenticeship|efz|eba|cfc|afp)\b'
+  - '\b(phd|doctoral|postdoc|master thesis|masterarbeit|bachelor thesis|bachelorarbeit|thesis)\b'
+  - '(microbiolog|biochemi|biotechnolog|procestechnolog|werktuigbouw|elektrotechni|natuurkunde|scheikunde|laborant|chemie|chemistry)'   # incl. Dutch/German compounds
+  - '(analytik\b|bioanaly|pharmazeut|naturwissenschaft|dmpk|toxicolog|pharmacolog|chromatogra|spectromet|drug (disposition|discovery|metabolism|substance|product))'
+excluded_soft:
+  - '\b(hardware|mobile)\b'
+  - 'engineer(ing)?\b'            # also German compounds: Betriebsengineering
+  - '\bresearch (studio|labs?|scientists?|engineers?|assistants?)\b'
+  - '\b(image|signal|data) processing\b'
+  - '\bdata (scien(ce|tist)|engineer)'
+  - '\b(ml|ai)\b'
+  - '\b(informatik|informatique|informatica|cyber|security|cloud|network|netzwerk|infrastructure|sysadmin|system administrat)'
+  - '\b(qa|qc|test(ing|er)?|quality (assurance|control)|qualifizierung|validation)\b'
+  - '\b(biolog|biotech|r&d|regulatory affairs)'
+  - '\bproduct development\b'
+  - '\b(architect|architekt)'
+  - '\btechnische?\b'              # NL/DE "technical"; with a business word -> review
+excluded_case_sensitive:
+  - '\bIT\b'
+  - '\bTI\b'
+
+# Description fallback (used when the title has no category signal):
+# a category needs at least this many pattern hits in the description,
+# and the result is always flagged for review.
+description_min_hits: 3
+
+# ---------------------------------------------------------------- language detection
+language:
+  title_markers:
+    nl: ['\(m/v(/[xd])?\)', '\(v/m(/[xd])?\)', '\bstagiair\b', 'afstudeer', 'meewerkstage', '\bstage(plaats|plek)', '\b(voor|bij|het|medewerker)\b']
+    de: ['\((m|w|d)/(m|w|d)/(m|w|d)\)', '\bpraktik', '\bwerkstudent', '\b(und|für|im)\b', '(m/w/d)']
+    fr: ['\((h|f)/(h|f)\)', '\(f/h/x\)', '\bstagiaire\b', '\b(et|en|de la|des)\b']
+    it: ['\btirocini', '\bstagista\b']
+  stopwords:
+    en: [the, and, you, with, for, our, will, your, are, we, this, have, team]
+    de: [und, der, die, das, mit, für, wir, sie, eine, ist, bei, von, ihre, dich, du, auf]
+    fr: [et, le, les, des, vous, nous, pour, avec, une, est, dans, votre, sur, au]
+    it: [il, di, per, con, che, una, sono, del, della, nostro, nel, gli, ed]
+    nl: [het, een, van, jij, wij, voor, zijn, bij, onze, jouw, ook, naar, als, niet, deze, wordt, heb, je]
+  min_hits: 5
+
+# ---------------------------------------------------------------- extraction
+extract:
+  duration:
+    - '\b(\d{1,2}(?:\s*[-–]\s*\d{1,2})?)[- ]?(months?|monate?n?|mois|mesi|maanden|maand)\b'
+    - '\b(\d{1,2})[- ]?(weeks?|wochen|semaines|settimane|weken)\b'
+  # A duration match is ignored when the surrounding text shows it is about something
+  # else (benefits, notice period, probation, required experience).
+  duration_ignore_after: 'from (the date of )?(your|the) application|after (applying|your application|the interview)|(per|pro|par|a|each|jedes|per)\s+(year|jahr|an|année|anno|jaar)|vacation|ferien|urlaub|holiday|congé|vakantie|experience|erfahrung|expérience|ervaring|esperienza'
+  duration_ignore_before: 'assessment|interview|application|apply|recruit|selection|bewerbung|vorstellungsgespr|candidature|sollicitatie|within|innerhalb|remote|telearbeit|home ?office|t[ée]l[ée]travail|thuiswerk|probation|probezeit|notice|kündigung|pr[ée]avis|opzeg|parental|eltern|maternity|paternity|vacation|ferien|urlaub|holiday|experience|erfahrung|expérience|ervaring'
+  # Start dates are parsed by finder/dates.py (month names and start words in EN/DE/FR/NL/IT).
+
+# ---------------------------------------------------------------- requirements (degree, languages)
+# Applied to the posting description, sentence by sentence and clause by clause
+# (clauses are split at , ; : ( ) / and dashes).
+requirements:
+  # Words that make a mention optional ("a master's is a plus", "German is an advantage").
+  optional: '\b(plus|pluspunt|advantage|advantageous|asset|bonus|beneficial|helpful|desirable|preferred|preferably|ideally|nice[- ]to[- ]have|appreciated|optional|would be (great|nice|good))\b|von vorteil|ein plus|wünschenswert|erwünscht|idealerweise|un (plus|atout)|appr[ée]ci[ée]|souhait|serait un|een pr[ée]|mooi meegenomen|gewenst|gradit[oa]|costituisce'
+  degree:
+    master:
+      - '\bmaster(?:[''’]?s)?\s*(degree|program(me)?s?|students?|studies|study|level|course|track|curriculum)\b'
+      - '\b(enrolled|enrolment|enrollment|pursuing|studying|currently)\b[^.;]{0,60}\bmaster'
+      - '\bmaster (of|in) (science|arts|business|management|finance|economics|marketing)\b'
+      - '\b(mba|msc|m\.sc\.?|postgraduate|post-graduate)\b'
+      - 'master(studium|student|studentin|studiengang|programm|opleiding|studie)'
+      - '\b(wo[- ]master|en master ?[12]?|en m[12]|bac ?\+ ?[45])\b'
+    bachelor:
+      - '\bbachelor(?:[''’]?s)?\b'
+      - '\b(bsc|b\.sc\.?|undergraduate|undergrad|hbo)\b'
+      - 'bachelor(studium|student|studentin|studiengang|opleiding)'
+      - '\bbac ?\+ ?[23]\b'
+    # A bachelor's that is already finished (the role then usually wants a master's student).
+    bachelor_completed: '(completed|finished|holding|hold|obtained|already have|abgeschlossen\w*|afgeronde?|behaald|after (your|a|the)|following (your|a))\W+(?:\w+\W+){0,3}bachelor|bachelor\S*\s+(degree\s+)?(completed|abgeschlossen)'
+  languages:
+    names:
+      EN: ['english', 'englisch\w*', 'anglais', 'engels', 'engelse', 'inglese', 'ingl[eé]s']
+      DE: ['german', 'deutsch(e|en|er|kenntnisse|sprachig)?', 'schweizerdeutsch', 'allemand', 'duits', 'duitse', 'tedesco']
+      FR: ['french', 'franz[öo]sisch\w*', 'fran[cç]ais', 'frans', 'franse', 'francese']
+      NL: ['dutch', 'niederl[äa]ndisch\w*', 'n[ée]erlandais', 'nederlands', 'nederlandse', 'olandese', 'flemish', 'vlaams']
+      IT: ['italian', 'italienisch\w*', 'italien', 'italiaans', 'italiano']
+      AR: ['arabic', 'arabisch', 'arabe', 'arabo']
+    # Phrases where a language word is not about language skills.
+    not_language: 'deutsche (bank|börse|telekom|post|bahn|presse)|french fries|english channel|swiss german (part|region)|german[- ]speaking (part|region|switzerland)'
+    required: '\b(fluent|fluency|fluently|proficient|proficiency|business[- ](level|fluent)|native|mother tongue|excellent|very good|strong|good|full professional|must|required|essential|mandatory|necessary|c1|c2)\b|fließend|fliessend|verhandlungssicher|sehr gut|gute|stilsicher|muttersprach|zwingend|erforderlich|vorausgesetzt|courant|couramment|ma[iî]trise|excellent|parfait|bilingue|exig[ée]|indispensable|vloeiend|uitstekend|goede beheersing|perfect|vereist|noodzakelijk|moedertaal|fluente|ottim|madrelingua'
+
+# ---------------------------------------------------------------- viewer: start dates and "Best fit"
+# Postings that start (or are ASAP) before this month get a small badge, and can be hidden with a toggle.
+early_start_before: '2027-04'
+
+# Best-fit score (0-100), shown as a number and used as the default sort. Each part adds points;
+# see README "Best-fit score". Edit the numbers to change what counts most.
+fit_score:
+  degree: {bachelor_ok: 25, unclear: 15, master_required: 0}
+  language: {english: 25, german: 10, french_dutch: 5}     # what the role needs (see README)
+  category:
+    points: {top: 25, middle: 15, other: 5}
+    top: [brand, marketing, commercial, ecommerce_digital]
+    middle: [sales, strategy, marketing_analytics]
+  start: {from_cutoff_or_unclear: 15, earlier: 0}
+  duration: {three_to_six_months: 10, unclear: 6, shorter: 4, longer: 0}
+  pay_bonus: [[2000, 5], [1500, 3], [1000, 1]]     # [gross EUR/month at least, extra points]; max score 105
+
+# Pay: amounts are converted to gross EUR per month (annual /12, hourly x hours_per_month).
+# Fixed approximate exchange rates (EUR per unit); update now and then.
+pay:
+  eur_rates: {EUR: 1.0, CHF: 1.06, GBP: 1.17, AED: 0.25}
+  hours_per_month: 173
+
+# ---------------------------------------------------------------- viewer: embedded job descriptions
+viewer:
+  embed_closed_days: 30     # "Copy for Claude" texts are embedded for open postings + postings closed this many days ago

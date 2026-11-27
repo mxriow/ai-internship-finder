@@ -1,0 +1,4 @@
+seeds:
+  - {name: Temenos, careers_url: "https://www.temenos.com/careers/", sector: tech, swiss_hq: true}
+  - {name: Ferring Pharmaceuticals, careers_url: "https://www.ferring.com/careers/", sector: pharma, swiss_hq: true, urls: ["https://ferring.wd3.myworkdayjobs.com/Ferring"]}
+  - {name: UNHCR, careers_url: "https://www.unhcr.org/careers", sector: international, swiss_hq: true, urls: ["https://unhcr.wd3.myworkdayjobs.com/External"]}

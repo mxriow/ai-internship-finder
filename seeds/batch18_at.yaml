@@ -1,0 +1,12 @@
+# Austria, round 10: English-language business internships / CEE regional roles in Vienna.
+# Skipped: Beiersdorf, Mondelez, Novartis, Philips (tracked, global feeds include AT);
+# Coca-Cola HBC, JTI (re-checked 2026-11-04, unreadable); Takeda (Avature).
+seeds:
+  - {name: "Boehringer Ingelheim", country: AT, sector: pharma, careers_url: "https://www.boehringer-ingelheim.com/careers"}
+  - {name: "Bitpanda", country: AT, sector: tech, careers_url: "https://www.bitpanda.com/en/career"}
+  - {name: "GoStudent", country: AT, sector: tech, careers_url: "https://www.gostudent.org/en/careers"}
+  - {name: "A1 Telekom Austria", country: AT, sector: tech, careers_url: "https://www.a1.group/en/career"}
+  - {name: "Erste Group", country: AT, sector: banking, careers_url: "https://www.erstegroup.com/en/career"}
+  - {name: "OMV", country: AT, sector: industrial, careers_url: "https://www.omv.com/en/careers"}
+  - {name: "Manner", country: AT, sector: consumer, careers_url: "https://www.manner.com/en/karriere"}
+  - {name: "Dynatrace", country: AT, sector: tech, careers_url: "https://careers.dynatrace.com/"}

@@ -1,0 +1,52 @@
+seeds:
+- name: ABB
+  careers_url: https://careers.abb/global/en
+  sector: industrial
+  urls:
+  - https://careers.abb/global/en
+- name: DHL Group
+  careers_url: https://careers.dhl.com/amer/en
+  sector: logistics
+  urls:
+  - https://careers.dhl.com/global/en
+- name: Just Eat Takeaway.com
+  careers_url: https://careers.justeattakeaway.com/global/en
+  sector: tech
+  urls:
+  - https://careers.justeattakeaway.com/global/en
+  country: NL
+- name: Mars
+  careers_url: https://careers.mars.com/us/en
+  sector: consumer
+  urls:
+  - https://careers.mars.com/global/en
+- name: Honeywell
+  careers_url: https://careers.honeywell.com/en/sites/Honeywell
+  sector: industrial
+  urls:
+  - https://ibqbjb.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1
+- name: Chubb
+  careers_url: https://fa-ewgu-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2001
+  sector: insurance
+  urls:
+  - https://fa-ewgu-saasfaprod1.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2
+- name: Elca
+  careers_url: https://www.elca.ch/news/geneva-roadshow-digital-sovereignty-vision-action
+  sector: consulting
+  urls:
+  - https://iaaras.fa.ocs.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_1
+- name: Schroders
+  careers_url: https://www.schroders.com/en/global/individual/careers/
+  sector: banking
+  urls:
+  - https://ekbq.fa.em2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/CX_2
+- name: Millennium Management
+  careers_url: https://www.mlp.com/careers/
+  sector: banking
+  urls:
+  - https://mlp.eightfold.ai/careers
+- name: easyJet
+  careers_url: https://careers.easyjet.com/fr
+  sector: travel
+  urls:
+  - https://easyjet.taleo.net/careersection/2/jobsearch.ftl

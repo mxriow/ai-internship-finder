@@ -1,0 +1,2328 @@
+gaps:
+- name: 1KOMMA5°
+  careers_url: https://1komma5.com/de/karriere/
+  sector: tech
+  country: DE
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+- name: 21Shares
+  careers_url: https://job-boards.greenhouse.io/21shares
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: A.S. Watson (Kruidvat)
+  careers_url: https://www.aswatson.com/careers/
+  sector: retail
+  country: NL
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: A1 Telekom Austria
+  careers_url: https://www.a1.group/en/career
+  sector: tech
+  country: AT
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+- name: AB InBev
+  careers_url: https://www.ab-inbev.com/careers/
+  sector: consumer
+  country: BE
+  system: 'unknown: careers page links to a job search that answers 404; no feed found'
+  checked_at: '2026-11-26'
+  recheck: '2026-11-26: still no supported feed found'
+- name: Ace & Tate
+  careers_url: https://careers.aceandtate.com/
+  sector: retail
+  country: NL
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: not checked (robots.txt disallows)
+  url_checked_at: '2026-10-23'
+- name: Action
+  careers_url: https://careers.action.com/
+  sector: retail
+  country: NL
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: not checked (robots.txt disallows)
+  url_checked_at: '2026-10-23'
+- name: ADC Therapeutics
+  careers_url: https://www.adctherapeutics.com/culture-careers/culture/
+  sector: pharma
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: ADM
+  careers_url: https://www.adm.com/en-us/careers/
+  sector: commodities
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Adnovum
+  careers_url: https://www.adnovum.com/careers/working-at-adnovum/
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Aer Lingus
+  careers_url: https://careers.aerlingus.com/
+  sector: travel
+  country: IE
+  system: 'unknown: no ATS link or structured job data on careers.aerlingus.com'
+  checked_at: '2026-11-26'
+  recheck: '2026-11-26: still no supported feed found'
+- name: Ahold Delhaize
+  careers_url: https://aholddelhaize.com/careers/
+  sector: retail
+  country: NL
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: AIB
+  careers_url: https://aib.ie/our-story/careers
+  sector: banking
+  country: IE
+  system: 'unknown: no ATS link or structured job data on aib.ie'
+  checked_at: '2026-11-26'
+  recheck: '2026-11-26: still no supported feed found'
+- name: Al-Futtaim
+  careers_url: https://www.alfuttaim.com/en/careers/
+  sector: retail
+  country: AE
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Aldi Süd
+  careers_url: https://karriere.aldi-sued.de/
+  sector: retail
+  country: DE
+  system: SuccessFactors classic (career5.successfactors.eu, robots.txt disallows); karriere.aldi-sued.de sitemap 404
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-28'
+  recheck: '2026-11-27: still SuccessFactors'
+- name: Aleph Zero
+  careers_url: https://alephzero.org/careers
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Allianz Suisse
+  careers_url: https://careers.allianz.com/ch/de
+  sector: insurance
+  system: unknown / not detected
+  checked_at: '2026-10-23'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: Swiss postings are covered by the existing ''Allianz'' feed (phenom:careers-allianz-com-ph)'
+- name: Alshaya Group
+  careers_url: https://careers.alshaya.com/
+  sector: retail
+  country: AE
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Alvarez & Marsal
+  careers_url: https://www.alvarezandmarsal.com/careers
+  sector: consulting
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Amazon
+  careers_url: https://www.amazon.jobs/en/
+  sector: tech
+  country: IE
+  system: 'own site: no ATS link, page marker or schema.org job data found (careers page + sitemap check, 2026-11-24)'
+  checked_at: '2026-11-27'
+  recheck: '2026-11-27: still no supported feed found'
+- name: AMINA Bank
+  careers_url: https://aminagroup.com/careers/
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Audemars Piguet
+  careers_url: https://careers.audemarspiguet.com/en/home
+  sector: luxury
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Ava Women
+  careers_url: https://www.avawomen.com/careers/
+  sector: pharma
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Avaloq
+  careers_url: https://www.avaloq.com/careers
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Avolta
+  careers_url: https://www.avoltaworld.com/en/careers
+  sector: travel
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Axel Springer
+  careers_url: https://www.axelspringer.com/en/career
+  sector: tech
+  country: DE
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+- name: Bachem
+  careers_url: https://www.bachem.com/careers/
+  sector: pharma
+  system: SuccessFactors
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Backbase
+  careers_url: https://www.backbase.com/careers
+  sector: tech
+  country: NL
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Bain & Company
+  careers_url: https://www.bain.com/careers/
+  sector: consulting
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  priority: 16
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Baloise
+  careers_url: https://www.baloise.com/jobs/en/CH/jobs-for-students.html
+  sector: insurance
+  system: 'own site: sitemap lists content pages only, no job postings (checked 2026-10-24)'
+  checked_at: '2026-11-27'
+  priority: 12
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: still no supported feed found'
+- name: Bank J. Safra Sarasin
+  careers_url: https://www.jsafrasarasin.com/en/home.html
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Bank of Ireland
+  careers_url: https://careers.bankofireland.com/
+  sector: banking
+  country: IE
+  system: 'SuccessFactors RMK (careers.bankofireland.com): sitemap pages carry no job data'
+  checked_at: '2026-11-27'
+  recheck: '2026-11-27: still SuccessFactors'
+- name: Banque Cantonale Vaudoise
+  careers_url: https://www.bcv.ch/fr/home/la-bcv/carrieres.html
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Barco
+  careers_url: https://www.barco.com/en/about/careers
+  sector: tech
+  country: BE
+  system: 'unknown: site blocks automated requests (HTTP 403)'
+  checked_at: '2026-11-26'
+  recheck: '2026-11-26: still no supported feed found'
+- name: Barry Callebaut
+  careers_url: https://www.barry-callebaut.com/en/group/careers
+  sector: consumer
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Beekeeper
+  careers_url: https://www.lumapps.com/company?utm_source=beekeeper&utm_medium=referral&utm_content=%2Fcareers
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: not checked (robots.txt disallows)
+  url_checked_at: '2026-10-23'
+- name: Bell Food Group
+  careers_url: https://career.bellfoodgroup.com/de
+  sector: consumer
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Bending Spoons
+  careers_url: https://jobs.bendingspoons.com/
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Bertelsmann
+  careers_url: https://jobs.bertelsmann.com/
+  sector: tech
+  country: DE
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+- name: Bexio
+  careers_url: https://careers.bexio.com/
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Biognosys
+  careers_url: https://biognosys.com/careers/
+  sector: pharma
+  system: iCIMS (robots.txt disallows all bots)
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''unknown / not detected'''
+- name: Bird (MessageBird)
+  careers_url: https://bird.com/careers
+  sector: tech
+  country: NL
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Bitcoin Suisse
+  careers_url: https://bitcoinsuisse.com/careers
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: BlackRock
+  careers_url: https://careers.blackrock.com/
+  sector: banking
+  system: Beamery, Radancy / TalentBrew (no public feed)
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''Workday (board has no Swiss postings)'''
+- name: Blinkist
+  careers_url: https://www.blinkist.com/en/careers
+  sector: tech
+  country: DE
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+- name: BMW Group
+  careers_url: https://www.bmwgroup.jobs/de/en/jobfinder.html
+  sector: automotive
+  country: DE
+  system: SuccessFactors classic (career5.successfactors.eu, robots.txt disallows); bmwgroup.jobs sitemap has no job pages
+  checked_at: '2026-11-27'
+  url_status: not checked (robots.txt disallows)
+  url_checked_at: '2026-10-28'
+  recheck: '2026-11-27: still no supported feed found'
+- name: Bobst
+  careers_url: https://www.bobst.com/
+  sector: industrial
+  system: unknown / not detected
+  checked_at: '2026-11-26'
+  url_status: 'careers page not found automatically: start from homepage'
+  url_checked_at: '2026-10-23'
+- name: Booking.com
+  careers_url: https://jobs.booking.com/booking/jobs
+  sector: travel
+  country: NL
+  system: iCIMS (robots.txt disallows all bots)
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''iCIMS'''
+- name: Boston Scientific
+  careers_url: https://jobs.bostonscientific.com/
+  sector: pharma
+  system: SuccessFactors, Eightfold
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''Eightfold (job API answers 403 to automated requests)'''
+- name: Brack.ch
+  careers_url: https://www.brack.ch/jobs
+  sector: consumer
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: not checked (robots.txt disallows)
+  url_checked_at: '2026-10-23'
+- name: Breitling
+  careers_url: https://careers.breitling.com/
+  sector: luxury
+  system: SuccessFactors
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''unknown / not detected'''
+- name: Bucherer
+  careers_url: https://www.bucherer.com/careers
+  sector: luxury
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Bunge
+  careers_url: https://jobs.bunge.com/
+  sector: commodities
+  system: SuccessFactors
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Bühler
+  careers_url: https://www.buhlergroup.com/global/en/purpose-community.html
+  sector: industrial
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Calvin Risk
+  careers_url: https://www.calvin-risk.com/
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'careers page not found automatically: start from homepage'
+  url_checked_at: '2026-10-23'
+- name: Capgemini Invent
+  careers_url: https://www.capgemini.com/ch-en/careers/
+  sector: consulting
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Cargill
+  careers_url: https://careers.cargill.com/en
+  sector: commodities
+  system: SuccessFactors, Radancy / TalentBrew (no public feed)
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''SuccessFactors'''
+- name: Chainlink Labs
+  careers_url: https://chainlinklabs.com/careers
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Chalhoub Group
+  careers_url: https://www.chalhoubgroup.com/careers
+  sector: luxury
+  country: AE
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'unreachable: HTTP 500'
+  url_checked_at: '2026-10-23'
+- name: Chanel
+  careers_url: https://careers.chanel.com/
+  sector: luxury
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Chopard
+  careers_url: https://www.chopard.com/
+  sector: luxury
+  system: Cornerstone (job API needs a session token; no public feed)
+  checked_at: '2026-11-27'
+  url_status: 'careers page not found automatically: start from homepage'
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''unknown / not detected'''
+- name: Clariant
+  careers_url: https://www.clariant.com/en/Careers
+  sector: industrial
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Coca-Cola Europacific Partners
+  careers_url: https://www.cocacolaep.com/careers/
+  sector: consumer
+  country: DE
+  system: 'unknown: site blocks automated requests (HTTP 403)'
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-28'
+  recheck: '2026-11-27: still no supported feed found'
+- name: Coca-Cola Europacific Partners (NL)
+  careers_url: https://www.cocacolaep.com/careers/
+  sector: consumer
+  country: NL
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Coca-Cola HBC
+  careers_url: https://www.coca-colahellenic.com/en/careers
+  sector: consumer
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Comparis
+  careers_url: https://www.comparis.ch/comparis/jobs
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Concordium
+  careers_url: https://www.concordium.com/article/what-ccd-actually-does
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Coolblue
+  careers_url: https://www.coolblue.nl/en/vacancies
+  sector: retail
+  country: NL
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Coop
+  careers_url: https://www.coop.ch/en/company/jobs-careers.html
+  sector: consumer
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Crypto Finance
+  careers_url: https://www.crypto-finance.com/life-at-crypto-finance/
+  sector: banking
+  system: Workable (job API answers HTTP 429 with a 13-hour Retry-After to automated requests)
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''unknown / not detected'''
+- name: CSS Versicherung
+  careers_url: https://www.css.ch/de/ueber-css/arbeiten.html
+  sector: insurance
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Danone (NL)
+  careers_url: https://www.danone.com/nl/nl/careers.html
+  sector: consumer
+  country: NL
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: De Bijenkorf
+  careers_url: https://werkenbij.debijenkorf.nl/
+  sector: retail
+  country: NL
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: not checked (robots.txt disallows)
+  url_checked_at: '2026-10-23'
+- name: Debiopharm
+  careers_url: https://www.debiopharm.com/careers/
+  sector: pharma
+  system: Workable (job API answers HTTP 429 with a 13-hour Retry-After to automated requests)
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''Workable'''
+- name: Delhaize
+  careers_url: https://www.delhaize.be/en/jobs
+  sector: retail
+  country: BE
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+- name: Dell Technologies
+  careers_url: https://jobs.dell.com/
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Deloitte Switzerland
+  careers_url: https://www.deloitte.com/ch/en/careers/deloitte-life.html
+  sector: consulting
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  priority: 17
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: DER Touristik Suisse (Kuoni)
+  careers_url: https://jobs.dertour-suisse.com/
+  sector: travel
+  system: SuccessFactors
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''unknown / not detected'''
+- name: Deutsche Telekom
+  careers_url: https://careers.telekom.com/en
+  sector: tech
+  country: DE
+  system: 'Eightfold (telekom-growthhub): job API answers 403 to automated requests'
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-28'
+  recheck: '2026-11-27: still no supported feed found'
+- name: DFINITY
+  careers_url: https://dfinity.org/careers
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Diageo
+  careers_url: https://www.diageo.com/en/careers
+  sector: consumer
+  country: IE
+  system: 'unknown: no ATS link or structured job data on diageo.com/careers'
+  checked_at: '2026-11-27'
+  recheck: '2026-11-27: still no supported feed found'
+- name: Digitec Galaxus
+  careers_url: https://www.digitecgalaxus.ch/en/jobs
+  sector: consumer
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Disney Research
+  careers_url: https://studios.disneyresearch.com/careers/
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Distalmotion
+  careers_url: https://www.distalmotion.com/
+  sector: pharma
+  system: Workable (job API answers HTTP 429 with a 13-hour Retry-After to automated requests)
+  checked_at: '2026-11-27'
+  url_status: 'careers page not found automatically: start from homepage'
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''unknown / not detected'''
+- name: dm-drogerie markt
+  careers_url: https://www.dm.de/unternehmen/karriere
+  sector: retail
+  country: DE
+  system: 'own JavaScript site: no job links on the careers page or in the sitemap'
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-28'
+  recheck: '2026-11-27: still no supported feed found'
+- name: dormakaba
+  careers_url: https://www.dormakaba.com/us-en
+  sector: industrial
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Douglas
+  careers_url: https://careers.douglas.group/en/
+  sector: retail
+  country: DE
+  system: SuccessFactors classic (career55.sapsf.eu, login flow); careers.douglas.group has no sitemap
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-28'
+  recheck: '2026-11-27: still SuccessFactors'
+- name: dsm-firmenich
+  careers_url: https://careers.dsm-firmenich.com/en/careers.html
+  sector: consumer
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: DSV
+  careers_url: https://www.dsv.com/en/careers
+  sector: logistics
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Duvel Moortgat
+  careers_url: https://www.duvel.com/en/careers
+  sector: consumer
+  country: BE
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+- name: E.ON
+  careers_url: https://www.eon.com/en/about-us/careers.html
+  sector: energy
+  country: DE
+  system: 'unknown: site blocks automated requests (HTTP 403)'
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-28'
+  recheck: '2026-11-27: still no supported feed found'
+- name: Edmond de Rothschild
+  careers_url: https://www.edmond-de-rothschild.com/en/careers
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: EFG International
+  careers_url: https://www.efginternational.com/careers.html
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Emirates Group
+  careers_url: https://www.emiratesgroupcareers.com/
+  sector: travel
+  country: AE
+  system: Avature (only portals listed in robots.txt are allowed)
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''Avature'''
+- name: Emmi
+  careers_url: https://group.emmi.com/che/en/working-at-emmi/why-emmi
+  sector: consumer
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Endress+Hauser
+  careers_url: https://www.endress.com/en/careers
+  sector: industrial
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Ergon Informatik
+  careers_url: https://www.ergon.ch/en/careers/jobs
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Erste Group
+  careers_url: https://www.erstegroup.com/en/career
+  sector: banking
+  country: AT
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+- name: Estée Lauder Companies
+  careers_url: https://careers.elcompanies.com/careers
+  sector: consumer
+  system: Eightfold (job API answers 403 to automated requests)
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: still Eightfold'
+- name: Etex
+  careers_url: https://www.etexgroup.com/en/careers/
+  sector: industrial
+  country: BE
+  system: 'unknown: careers URL answers 404; no feed found'
+  checked_at: '2026-11-27'
+  recheck: '2026-11-27: still no supported feed found'
+- name: Ethereum Foundation
+  careers_url: https://ethereum.foundation/
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'careers page not found automatically: start from homepage'
+  url_checked_at: '2026-10-23'
+- name: Exoscale
+  careers_url: https://www.exoscale.com/jobs/
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Farmy
+  careers_url: https://www.farmy.ch/en/jobs
+  sector: consumer
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: domain no longer resolves (company may have closed or moved)
+  url_checked_at: '2026-10-23'
+- name: Ferrero
+  careers_url: https://www.ferrerocareers.com/us/en/
+  sector: consumer
+  country: DE
+  system: SuccessFactors classic (career5.successfactors.eu, robots.txt disallows)
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-28'
+  recheck: '2026-11-27: still SuccessFactors'
+- name: Fexco
+  careers_url: https://www.fexco.com/careers/
+  sector: banking
+  country: IE
+  system: 'unknown: no ATS link or structured job data on fexco.com'
+  checked_at: '2026-11-27'
+  recheck: '2026-11-27: still no supported feed found'
+- name: FIFA
+  careers_url: https://jobs.fifa.com/
+  sector: international
+  system: Pinpoint (robots.txt disallows the job feed)
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''unknown / not detected'''
+- name: FIND
+  careers_url: https://www.finddx.org/about-us/careers/
+  sector: international
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Flughafen Zürich
+  careers_url: https://www.flughafen-zuerich.ch/en/company/jobs/careers/job-vacancies
+  sector: travel
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Flyability
+  careers_url: https://www.flyability.com/career
+  sector: industrial
+  system: Workable (job API answers HTTP 429 with a 13-hour Retry-After to automated requests)
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''unknown / not detected'''
+- name: Franklin Templeton
+  careers_url: https://www.franklintempleton.com/careers
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Freitag
+  careers_url: https://freitag.ch/en_US/service/jobs
+  sector: consumer
+  system: onlyfy (no feed or structured job data)
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''unknown / not detected'''
+- name: FrieslandCampina
+  careers_url: https://careers.frieslandcampina.com/
+  sector: consumer
+  country: NL
+  system: SuccessFactors
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: G-Star RAW
+  careers_url: https://www.g-star.com/en_nl/careers
+  sector: retail
+  country: NL
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'HTTP 404: URL may be outdated'
+  url_checked_at: '2026-10-23'
+- name: Galenica
+  careers_url: https://jobs.galenica.com/de/
+  sector: pharma
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: GAM
+  careers_url: https://www.gam.com/en/careers
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Garrett Motion
+  careers_url: https://www.garrettmotion.com/careers/
+  sector: industrial
+  system: Oracle Recruiting Cloud (readable; all 98 postings outside the target countries on 2026-10-28)
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: still Oracle Cloud / Taleo'
+- name: Gavi
+  careers_url: https://www.gavi.org/about-us/work-us
+  sector: international
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Geberit
+  careers_url: https://www.geberit.com/careers/
+  sector: industrial
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Generali Switzerland
+  careers_url: https://www.generali.ch/de/ueber-uns
+  sector: insurance
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Georg Fischer
+  careers_url: https://www.georgfischer.com/en/about-gf/career.html
+  sector: industrial
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Ginkgo Management Consulting
+  careers_url: https://ginkgo.ch/karriere/
+  sector: consulting
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: not checked (robots.txt disallows)
+  url_checked_at: '2026-10-23'
+- name: Glencore
+  careers_url: https://www.glencore.com/en/careers
+  sector: commodities
+  system: Workday (board has no Swiss postings)
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: still no supported feed found'
+- name: Google
+  careers_url: https://www.google.com/about/careers/applications/jobs/results/
+  sector: tech
+  country: IE
+  system: 'own site: no ATS link, page marker or schema.org job data found (careers page + sitemap check, 2026-11-24)'
+  checked_at: '2026-11-27'
+  recheck: '2026-11-27: still no supported feed found'
+- name: Google DeepMind
+  careers_url: https://deepmind.google/careers/
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Groupe Mutuel
+  careers_url: https://job.groupemutuel.ch/fr/
+  sector: insurance
+  system: Cornerstone (job API needs a session token; no public feed)
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''unknown / not detected'''
+- name: Haleon
+  careers_url: https://www.haleon.com/careers
+  sector: consumer
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Hamilton
+  careers_url: https://www.hamiltoncompany.com/careers
+  sector: pharma
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Haribo
+  careers_url: https://www.haribo.com/de-de/karriere/jobboerse
+  sector: consumer
+  country: DE
+  system: 'own job board (haribo.com/jobboerse): job pages have no structured data'
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-28'
+  recheck: '2026-11-27: still no supported feed found'
+- name: Hartree Partners
+  careers_url: https://www.hartreepartners.com/careers/
+  sector: commodities
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Heineken
+  careers_url: https://careers.theheinekencompany.com/
+  sector: consumer
+  system: SuccessFactors
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Heineken (NL)
+  careers_url: https://careers.theheinekencompany.com/
+  sector: consumer
+  country: NL
+  system: SuccessFactors
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Helsana
+  careers_url: https://www.helsana.ch/de/helsana-gruppe/jobs.html
+  sector: insurance
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Helsinn
+  careers_url: https://helsinn.com/careers/
+  sector: pharma
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Helvetia
+  careers_url: https://www.helvetia.com/ch/web/en/about-us/jobs-and-careers.html
+  sector: insurance
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  priority: 13
+  url_status: not checked (robots.txt disallows)
+  url_checked_at: '2026-10-23'
+- name: Henkel
+  careers_url: https://www.henkel.com/careers
+  sector: consumer
+  country: DE
+  system: 'own site (henkel.com/careers/find-your-job-apply): job pages are not in the (gzipped) sitemaps, and the job list loads from /ajax/collection, which robots.txt disallows; no SuccessFactors or
+    schema.org feed'
+  checked_at: '2026-11-27'
+  recheck: '2026-11-27: still no supported feed found'
+- name: Henkel (AE)
+  careers_url: https://www.henkel.com/careers
+  sector: consumer
+  country: AE
+  system: 'own site (henkel.com/careers/find-your-job-apply): job pages are not in the (gzipped) sitemaps, and the job list loads from /ajax/collection, which robots.txt disallows; no SuccessFactors or
+    schema.org feed'
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: still no supported feed found'
+- name: Henkel (NL)
+  careers_url: https://www.henkel.com/careers
+  sector: consumer
+  country: NL
+  system: 'own site (henkel.com/careers/find-your-job-apply): job pages are not in the (gzipped) sitemaps, and the job list loads from /ajax/collection, which robots.txt disallows; no SuccessFactors or
+    schema.org feed'
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: still no supported feed found'
+- name: Hero Group
+  careers_url: https://www.hero-group.com/de/karriere.html
+  sector: consumer
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Holcim
+  careers_url: https://www.holcim.com/careers
+  sector: industrial
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Horváth
+  careers_url: https://www.horvath-partners.com/en/careers
+  sector: consulting
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Hotelplan
+  careers_url: https://jobs.dertour-suisse.com/
+  sector: travel
+  system: SuccessFactors
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''unknown / not detected'''
+- name: HSBC
+  careers_url: https://www.hsbc.com/careers
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Hublot
+  careers_url: https://www.hublot.com/en-ch/careers
+  sector: luxury
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: HubSpot
+  careers_url: https://www.hubspot.com/careers/jobs
+  sector: tech
+  country: IE
+  system: 'own site: no ATS link, page marker or schema.org job data found (careers page + sitemap check, 2026-11-24)'
+  checked_at: '2026-11-27'
+  recheck: '2026-11-27: still no supported feed found'
+- name: Hugging Face
+  careers_url: https://apply.workable.com/huggingface/
+  sector: tech
+  system: Workable (job API answers HTTP 429 with a 13-hour Retry-After to automated requests)
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''unknown / not detected'''
+- name: Hunkemöller
+  careers_url: https://careers.hunkemoller.com/
+  sector: retail
+  country: NL
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: not checked (robots.txt disallows)
+  url_checked_at: '2026-10-23'
+- name: idealo
+  careers_url: https://jobs.idealo.de/
+  sector: tech
+  country: DE
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+- name: Idorsia
+  careers_url: https://www.idorsia.com/careers
+  sector: pharma
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: IG Group
+  careers_url: https://www.iggroup.com/about-us/careers
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Incyte
+  careers_url: https://incyte.com/careers
+  sector: pharma
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Indeed
+  careers_url: https://www.indeed.jobs/
+  sector: tech
+  country: IE
+  system: 'own site: no ATS link, page marker or schema.org job data found (careers page + sitemap check, 2026-11-24)'
+  checked_at: '2026-11-27'
+  recheck: '2026-11-27: still no supported feed found'
+- name: Infomaniak
+  careers_url: https://www.infomaniak.com/fr/a-propos/carriere
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Intel
+  careers_url: https://jobs.intel.com/
+  sector: tech
+  system: Workday (board has no Swiss postings)
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: still no supported feed found'
+- name: Interactive Brokers
+  careers_url: https://www.interactivebrokers.com/en/general/about/careers-splash.php?menu=B
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: IOC
+  careers_url: https://www.olympics.com/ioc/careers
+  sector: international
+  system: SuccessFactors
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''unknown / not detected'''
+- name: JDE Peet's
+  careers_url: https://www.jdepeets.com/careers/exploreopportunities/
+  sector: consumer
+  country: NL
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Jumbo
+  careers_url: https://www.werkenbijjumbo.nl/
+  sector: retail
+  country: NL
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: not checked (robots.txt disallows)
+  url_checked_at: '2026-10-23'
+- name: Jungfraubahnen
+  careers_url: https://www.jungfrau.ch/de-ch/karriere/
+  sector: travel
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Kambly
+  careers_url: https://kambly.com/en/company/careers/jobs/
+  sector: consumer
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Kearney
+  careers_url: https://www.kearney.com/careers
+  sector: consulting
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Kitchen Republic
+  careers_url: https://www.fwg.ch/de/jobs
+  sector: consumer
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Kraft Heinz
+  careers_url: https://careers.kraftheinzcompany.com
+  sector: consumer
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Kraft Heinz (AE)
+  careers_url: https://careers.kraftheinzcompany.com
+  sector: consumer
+  country: AE
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Kraft Heinz (NL)
+  careers_url: https://careers.kraftheinzcompany.com
+  sector: consumer
+  country: NL
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Kudelski Group
+  careers_url: https://careers.nagra.com/
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: L.E.K. Consulting
+  careers_url: https://www.lek.com/careers
+  sector: consulting
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Lakera
+  careers_url: https://www.lakera.ai/careers
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Landis+Gyr
+  careers_url: https://www.landisgyr.com/us/en/home/careers
+  sector: industrial
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: LatticeFlow AI
+  careers_url: https://latticeflow.ai/company/careers
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Leonteq
+  careers_url: https://www.leonteq.com/about-us/careers
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: LGT
+  careers_url: https://www.lgt.com/global-en/career
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  priority: 8
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Lidl
+  careers_url: https://jobs.lidl.de/
+  sector: retail
+  country: DE
+  system: SuccessFactors classic (career5.successfactors.eu, robots.txt disallows); jobs.lidl.de disallows its content sitemap. Lidl HQ roles are partly covered by Schwarz Group
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-28'
+  recheck: '2026-11-27: still SuccessFactors'
+- name: LinkedIn
+  careers_url: https://careers.linkedin.com/
+  sector: tech
+  country: IE
+  system: 'own site: no ATS link, page marker or schema.org job data found (careers page + sitemap check, 2026-11-24)'
+  checked_at: '2026-11-27'
+  recheck: '2026-11-27: still no supported feed found'
+- name: Lotus Bakeries
+  careers_url: https://www.lotusbakeries.com/careers
+  sector: consumer
+  country: BE
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+- name: Louis Dreyfus Company
+  careers_url: https://www.ldc.com/careers/
+  sector: commodities
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Lufthansa Group
+  careers_url: https://www.lufthansagroup.careers/en/
+  sector: travel
+  country: DE
+  system: own JavaScript site (lufthansagroup.careers), no sitemap or job links; old host www.be-lufthansa.com no longer connects
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-28'
+  recheck: '2026-11-27: still no supported feed found'
+- name: Lykke
+  careers_url: https://lykke.com/
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'careers page not found automatically: start from homepage'
+  url_checked_at: '2026-10-23'
+- name: Läderach
+  careers_url: https://laderach.com/us-en/your-career
+  sector: consumer
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Magic Leap
+  careers_url: https://www.magicleap.com/
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'careers page not found automatically: start from homepage'
+  url_checked_at: '2026-10-23'
+- name: Majid Al Futtaim
+  careers_url: https://www.majidalfuttaim.com/en/people-and-careers
+  sector: retail
+  country: AE
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Mammut
+  careers_url: https://www.mammut.com/ch/en/careers
+  sector: consumer
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Manner
+  careers_url: https://www.manner.com/en/karriere
+  sector: consumer
+  country: AT
+  system: Cornerstone (job API needs a session token; no public feed)
+  checked_at: '2026-11-27'
+  recheck: '2026-11-27: was ''Cornerstone'''
+- name: McKinsey & Company
+  careers_url: https://www.mckinsey.com/careers
+  sector: consulting
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  priority: 14
+  url_status: not checked (robots.txt disallows)
+  url_checked_at: '2026-10-23'
+- name: Medela
+  careers_url: https://www.medela.com/en/working-at-medela
+  sector: pharma
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Mercuria
+  careers_url: https://mercuria.com/careers/
+  sector: commodities
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  priority: 28
+  url_status: not checked (robots.txt disallows)
+  url_checked_at: '2026-10-23'
+- name: MET Group
+  careers_url: https://met.com/en/people-and-career/
+  sector: commodities
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Meta
+  careers_url: https://www.metacareers.com/jobs
+  sector: tech
+  country: IE
+  system: Cornerstone marker on the careers page (unsupported); no public feed found
+  checked_at: '2026-11-27'
+  recheck: '2026-11-27: still Cornerstone (job API needs a session token; no public feed)'
+- name: Metro
+  careers_url: https://careers.metroag.de/
+  sector: retail
+  country: DE
+  system: 'unknown: site blocks automated requests (HTTP 403)'
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-28'
+  recheck: '2026-11-27: still no supported feed found'
+- name: Microsoft
+  careers_url: https://jobs.careers.microsoft.com/global/en/search
+  sector: tech
+  country: IE
+  system: Eightfold marker on the careers page; no readable Eightfold tenant found from it
+  checked_at: '2026-11-27'
+  recheck: '2026-11-27: still Eightfold'
+- name: Mindmaze
+  careers_url: https://mindmazetherapeutics.com/about/careers/
+  sector: pharma
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Mobiliar
+  careers_url: https://www.mobiliar.ch/ueber-uns/karriere
+  sector: insurance
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: MoneyPark
+  careers_url: https://moneypark.ch/en/jobs/
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: not checked (robots.txt disallows)
+  url_checked_at: '2026-10-23'
+- name: Morgan Stanley
+  careers_url: https://www.morganstanley.com/people
+  sector: banking
+  system: Eightfold (job API answers 403 to automated requests)
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: still Eightfold'
+- name: MSC Mediterranean Shipping
+  careers_url: https://www.msc.com/en/careers
+  sector: logistics
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Mytheresa
+  careers_url: https://www.mytheresa.com/careers
+  sector: luxury
+  country: DE
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+- name: Neon
+  careers_url: https://www.neon-free.ch/en/jobs/
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Nespresso
+  careers_url: https://www.nespresso.com/careers
+  sector: consumer
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  priority: 23
+  url_status: 'unreachable: HTTP 428 (official URL from web search)'
+  url_checked_at: '2026-10-23'
+- name: Nestlé (AE)
+  careers_url: https://www.nestle-mena.com/en/jobs
+  sector: consumer
+  country: AE
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Nestlé (NL)
+  careers_url: https://www.nestle.nl/werken-bij
+  sector: consumer
+  country: NL
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Netcetera
+  careers_url: https://www.netcetera.com/careers
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Netflix (NL)
+  careers_url: https://jobs.netflix.com/
+  sector: tech
+  country: NL
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Neustark
+  careers_url: https://www.neustark.com/careers/
+  sector: industrial
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Nexthink
+  careers_url: https://nexthink.com/en/company/careers
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Nothing
+  careers_url: https://careers.nothing.tech/
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Nym Technologies
+  careers_url: https://nymtech.net/
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'careers page not found automatically: start from homepage'
+  url_checked_at: '2026-10-23'
+- name: OC&C Strategy Consultants
+  careers_url: https://www.occstrategy.com/en/careers/careers-at-occ/
+  sector: consulting
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Octapharma
+  careers_url: https://www.octapharma.com/career
+  sector: pharma
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Oliver Wyman
+  careers_url: https://www.oliverwyman.com/careers.html
+  sector: consulting
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: OMV
+  careers_url: https://www.omv.com/en/careers
+  sector: industrial
+  country: AT
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+- name: Otrium
+  careers_url: https://careers.otrium.com/
+  sector: retail
+  country: NL
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: not checked (robots.txt disallows)
+  url_checked_at: '2026-10-23'
+- name: Otto Group
+  careers_url: https://www.ottogroup.com/en/careers/jobs/
+  sector: retail
+  country: DE
+  system: 'no group feed: each company (otto.de, bonprix, Baur, EOS ...) runs its own job site'
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-28'
+  recheck: '2026-11-27: still no supported feed found'
+- name: Parity Technologies
+  careers_url: https://www.parity.io/careers
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Patek Philippe
+  careers_url: https://www.patek.com/en/careers
+  sector: luxury
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: PayPal
+  careers_url: https://careers.pypl.com/
+  sector: tech
+  country: IE
+  system: 'Eightfold (paypal.eightfold.ai): job API answers 403 to automated requests'
+  checked_at: '2026-11-27'
+  recheck: '2026-11-27: still Eightfold'
+- name: PepsiCo (AE)
+  careers_url: https://www.pepsicojobs.com/main/
+  sector: consumer
+  country: AE
+  system: iCIMS (robots.txt disallows all bots), Avature (only portals listed in robots.txt are allowed)
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''iCIMS, Avature'''
+- name: PepsiCo (NL)
+  careers_url: https://www.pepsicojobs.com/main/
+  sector: consumer
+  country: NL
+  system: iCIMS (robots.txt disallows all bots), Avature (only portals listed in robots.txt are allowed)
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''iCIMS, Avature'''
+- name: Personio
+  careers_url: https://www.personio.com/about-personio/careers/
+  sector: tech
+  country: DE
+  system: 'unknown: the Personio XML board ''personio'' is a test sandbox (titles like ''Test Job''), not the company''s real job board'
+  checked_at: '2026-11-27'
+- name: Pexapark
+  careers_url: https://pexapark.com/solutions-ppa-academies/
+  sector: commodities
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Picnic
+  careers_url: https://jobs.picnic.app/en/
+  sector: retail
+  country: NL
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Pictet
+  careers_url: https://www.pictet.com/us/en/careers
+  sector: banking
+  system: SuccessFactors
+  checked_at: '2026-11-27'
+  priority: 5
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Planted
+  careers_url: https://eatplanted.com/
+  sector: consumer
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'careers page not found automatically: start from homepage'
+  url_checked_at: '2026-10-23'
+- name: Porsche
+  careers_url: https://jobs.porsche.com/index.php?ac=start
+  sector: automotive
+  country: DE
+  system: 'own job board (jobs.porsche.com): job pages have no structured data'
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-28'
+  recheck: '2026-11-27: still no supported feed found'
+- name: PostFinance
+  careers_url: https://www.postfinance.ch/de/ueber-uns.html
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: QWSTION
+  careers_url: https://qwstion.com/pages/career
+  sector: consumer
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Radicant
+  careers_url: https://www.radicant.com/
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'careers page not found automatically: start from homepage'
+  url_checked_at: '2026-10-23'
+- name: Raiffeisen
+  careers_url: https://www.raiffeisen.ch/rch/de/ueber-uns/karriere.html
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  priority: 30
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Red Hat
+  careers_url: https://www.redhat.com/en/jobs
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Relai
+  careers_url: https://relai.app/career/
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Revolut
+  careers_url: https://www.revolut.com/careers/
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Ricola
+  careers_url: https://www.ricola.com/en-ch/about-ricola/jobs
+  sector: consumer
+  system: umantis board has no postings in the target countries
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''unknown / not detected'''
+- name: Ringier
+  careers_url: https://www.ringier.com/
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'careers page not found automatically: start from homepage'
+  url_checked_at: '2026-10-23'
+- name: Rivella
+  careers_url: https://rivella-group.com/karriere/
+  sector: consumer
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Roland Berger
+  careers_url: https://www.rolandberger.com/en/Join/Join-Us/Overview/
+  sector: consulting
+  system: SmartRecruiters (robots.txt disallows API)
+  checked_at: '2026-11-27'
+  priority: 21
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''unknown / not detected'''
+- name: Rolex
+  careers_url: https://www.rolex.org/careers
+  sector: luxury
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: RWE
+  careers_url: https://www.rwe.com/en/rwe-careers-portal/
+  sector: energy
+  country: DE
+  system: SuccessFactors (marker on careers page); robots.txt disallows www.rwe.com for crawlers
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-28'
+  recheck: '2026-11-27: still SuccessFactors'
+- name: Ryanair
+  careers_url: https://careers.ryanair.com/
+  sector: travel
+  country: IE
+  system: SuccessFactors marker on the careers page, but no readable RMK sitemap with job data
+  checked_at: '2026-11-27'
+  recheck: '2026-11-27: still SuccessFactors'
+- name: Sandoz
+  careers_url: https://www.sandoz.com/careers/
+  sector: pharma
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Sanitas
+  careers_url: https://www.sanitas.com/
+  sector: insurance
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'careers page not found automatically: start from homepage'
+  url_checked_at: '2026-10-23'
+- name: SBB
+  careers_url: https://company.sbb.ch/en/jobs-careers.html
+  sector: logistics
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Scalable Capital
+  careers_url: https://de.scalable.capital/en/careers
+  sector: tech
+  country: DE
+  system: SmartRecruiters (robots.txt disallows API)
+  checked_at: '2026-11-27'
+- name: Schindler
+  careers_url: https://group.schindler.com/en/careers.html
+  sector: industrial
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Scotch & Soda
+  careers_url: https://www.scotch-soda.com/careers
+  sector: retail
+  country: NL
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'HTTP 404: URL may be outdated'
+  url_checked_at: '2026-10-23'
+- name: Selma Finance
+  careers_url: https://www.selma.com/
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'careers page not found automatically: start from homepage'
+  url_checked_at: '2026-10-23'
+- name: sennder
+  careers_url: https://www.sennder.com/careers
+  sector: tech
+  country: DE
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+- name: Sensirion
+  careers_url: https://sensirion.com/career/people-culture-contact
+  sector: industrial
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: SGS
+  careers_url: https://www.sgs.com/en/our-company/careers-at-sgs
+  sector: industrial
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Shift Crypto
+  careers_url: https://shiftcrypto.ch/careers/
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Siemens
+  careers_url: https://jobs.siemens.com/en_US/externaljobs/redirect
+  sector: industrial
+  country: DE
+  system: 'Avature (jobs.siemens.com): no public feed'
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-28'
+  recheck: '2026-11-27: still no supported feed found'
+- name: SIG Group
+  careers_url: https://www.sig.biz/en/careers
+  sector: industrial
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Sika
+  careers_url: https://www.sika.com/en/career.html
+  sector: industrial
+  system: jsonld board has no postings in the target countries
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''unknown / not detected'''
+- name: Simon-Kucher
+  careers_url: https://www.simon-kucher.com/en/careers
+  sector: consulting
+  system: Cornerstone (job API needs a session token; no public feed)
+  checked_at: '2026-11-27'
+  priority: 20
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''Cornerstone'''
+- name: Smallpdf
+  careers_url: https://smallpdf.com/jobs
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Snap
+  careers_url: https://careers.snap.com/
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: SoftwareOne
+  careers_url: https://www.softwareone.com/en/careers
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Solana Foundation
+  careers_url: https://jobs.solana.com/jobs
+  sector: tech
+  system: ashby board has no postings in the target countries
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''unknown / not detected'''
+- name: Solon
+  careers_url: https://www.solon.com/careers
+  sector: consulting
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: not checked (robots.txt disallows)
+  url_checked_at: '2026-10-23'
+- name: Sonova
+  careers_url: https://www.sonova.com/careers/
+  sector: pharma
+  system: SuccessFactors
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Splint Invest
+  careers_url: https://splintinvest.com/
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'careers page not found automatically: start from homepage'
+  url_checked_at: '2026-10-23'
+- name: Starmind
+  careers_url: https://www.starmind.ai/careers
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: domain no longer resolves (company may have closed or moved)
+  url_checked_at: '2026-10-23'
+- name: Straumann
+  careers_url: https://www.straumann.com/group/en/home/careers.html
+  sector: pharma
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Sulzer
+  careers_url: https://www.sulzer.com/en/about-us/careers
+  sector: industrial
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Swapfiets
+  careers_url: https://swapfiets.com/careers
+  sector: consumer
+  country: NL
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'HTTP 404: URL may be outdated'
+  url_checked_at: '2026-10-23'
+- name: Swatch Group
+  careers_url: https://www.swatchgroup.com/en/careers
+  sector: luxury
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  priority: 26
+  url_status: not checked (robots.txt disallows)
+  url_checked_at: '2026-10-23'
+- name: SWICA
+  careers_url: https://www.swica.ch/de/ueber-swica/jobs/freie-stellen/job-finder
+  sector: insurance
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Swiss International Air Lines
+  careers_url: https://www.swiss.com/ch/en/discover/careers
+  sector: travel
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Swiss Life
+  careers_url: https://www.swisslife.com/en/home/careers.html
+  sector: insurance
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  priority: 10
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Swiss Marketplace Group
+  careers_url: https://swissmarketplace.group/career/
+  sector: tech
+  system: SmartRecruiters (robots.txt disallows API)
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''unknown / not detected'''
+- name: Swiss Post
+  careers_url: https://www.post.ch/en/jobs/jobs-and-careers
+  sector: logistics
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser (official URL from web search)'
+  url_checked_at: '2026-10-23'
+- name: Swiss Prime Site
+  careers_url: https://sps.swiss/de/karriere/wachsen-mit-gebaeuden
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Swissport
+  careers_url: https://www.swissport.com/en/careers
+  sector: travel
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Swissquote
+  careers_url: https://www.swissquote.com/en/careers
+  sector: banking
+  system: SmartRecruiters (robots.txt disallows API)
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''unknown / not detected'''
+- name: Switzerland Tourism
+  careers_url: https://www.stnet.ch/de/
+  sector: travel
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Sygnum
+  careers_url: https://www.sygnum.com/careers/
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Syngenta
+  careers_url: https://www.syngenta.com/careers
+  sector: industrial
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Synhelion
+  careers_url: https://synhelion.com/careers
+  sector: industrial
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: TAG Heuer
+  careers_url: https://www.tagheuer.com/ch/en/careers.html
+  sector: luxury
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Takeda
+  careers_url: https://jobs.takeda.com/
+  sector: pharma
+  system: Avature (only portals listed in robots.txt are allowed), Radancy / TalentBrew (no public feed)
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''Avature'''
+- name: Teads
+  careers_url: https://www.teads.com/teads-careers/
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Tecan
+  careers_url: https://www.tecan.com/hr/stay-unique-and-make-it-count
+  sector: pharma
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Tesla (NL)
+  careers_url: https://www.tesla.com/careers
+  sector: consumer
+  country: NL
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Tezos Foundation
+  careers_url: https://tezos.foundation/careers
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: TikTok
+  careers_url: https://lifeattiktok.com/
+  sector: tech
+  country: IE
+  system: 'own site: no ATS link, page marker or schema.org job data found (careers page + sitemap check, 2026-11-24)'
+  checked_at: '2026-11-27'
+  recheck: '2026-11-27: still no supported feed found'
+- name: Too Good To Go
+  careers_url: https://www.toogoodtogo.com/en/careers
+  sector: consumer
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Trade Republic
+  careers_url: https://traderepublic.com/en-de/about#career
+  sector: banking
+  country: DE
+  system: 'own JavaScript site: no job links on the careers page or in the sitemap'
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-28'
+  recheck: '2026-11-27: still no supported feed found'
+- name: TX Group
+  careers_url: https://www.tx.group/en/jobs
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: u-blox
+  careers_url: https://www.u-blox.com/en/working-u-blox
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Uber (NL)
+  careers_url: https://www.uber.com/careers/
+  sector: tech
+  country: NL
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'unreachable: HTTP 406'
+  url_checked_at: '2026-10-23'
+- name: UBS
+  careers_url: https://www.ubs.com/global/en/careers.html
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  priority: 1
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: UEFA
+  careers_url: https://www.uefa.com/
+  sector: international
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'careers page not found automatically: start from homepage'
+  url_checked_at: '2026-10-23'
+- name: Umicore
+  careers_url: https://www.umicore.com/en/careers/
+  sector: industrial
+  country: BE
+  system: 'own job finder on umicore.com: job pages are not in the sitemap and there is no public feed'
+  checked_at: '2026-11-27'
+  recheck: '2026-11-27: still no supported feed found'
+- name: Unblu
+  careers_url: https://www.unblu.com/en/company/careers
+  sector: tech
+  system: Workable (job API answers HTTP 429 with a 13-hour Retry-After to automated requests)
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''unknown / not detected'''
+- name: Unic
+  careers_url: https://www.unic.com/en/jobs
+  sector: consulting
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Union Bancaire Privée
+  careers_url: https://www.ubp.com/en/about-us/careers/experienced-professionals
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Unique AI
+  careers_url: https://www.unique.ai/careers
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Unity
+  careers_url: https://unity.com/careers
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Vaudoise Assurances
+  careers_url: https://www.vaudoise.ch/fr/carrieres/pourquoi-nous-rejoindre/ce-que-nous-vous-offrons
+  sector: insurance
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Veeam
+  careers_url: https://careers.veeam.com/
+  sector: tech
+  system: Radancy / TalentBrew (no public feed)
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''unknown / not detected'''
+- name: Victorinox
+  careers_url: https://www.victorinox.com/en-CH/Careers/cms/careers/
+  sector: consumer
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Viseca
+  careers_url: https://jobs.viseca.ch/
+  sector: banking
+  system: rexx
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''unknown / not detected'''
+- name: Visium
+  careers_url: https://www.visium.com/join-us
+  sector: consulting
+  system: Workable (job API answers HTTP 429 with a 13-hour Retry-After to automated requests)
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''unknown / not detected'''
+- name: Vitol
+  careers_url: https://www.vitol.com/careers/
+  sector: commodities
+  system: SmartRecruiters (robots.txt disallows API)
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''unknown / not detected'''
+- name: VZ VermögensZentrum
+  careers_url: https://www.vermoegenszentrum.ch/karriere/offene-stellen?utm_source=shortcut&utm_medium=referral
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Wavestone
+  careers_url: https://www.wavestone.com/en/careers/
+  sector: consulting
+  system: SmartRecruiters (robots.txt disallows API)
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+  recheck: '2026-11-27: was ''Softgarden'''
+- name: Web3 Foundation
+  careers_url: https://web3.foundation/
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'careers page not found automatically: start from homepage'
+  url_checked_at: '2026-10-23'
+- name: Wefox
+  careers_url: https://www.wefox.com/
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'careers page not found automatically: start from homepage'
+  url_checked_at: '2026-10-23'
+- name: Wingtra
+  careers_url: https://wingtra.com/case_studies/wingtra-helps-us-civil-contractor-tackle-more-jobs-faster-case-study/
+  sector: industrial
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: WWF International
+  careers_url: https://wwf.panda.org/careers/
+  sector: international
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'site blocks automated requests: open in a browser'
+  url_checked_at: '2026-10-23'
+- name: Yapeal
+  careers_url: https://www.yapeal.ch/en/company/about-yapeal/careers/
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok (found via homepage link)
+  url_checked_at: '2026-10-23'
+- name: Yokoy
+  careers_url: https://www.yokoy.io/careers
+  sector: tech
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: not checked (robots.txt disallows)
+  url_checked_at: '2026-10-23'
+- name: Ypsomed
+  careers_url: https://www.ypsomed.com/en/careers
+  sector: pharma
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Yuh
+  careers_url: https://www.yuh.com/
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: 'careers page not found automatically: start from homepage'
+  url_checked_at: '2026-10-23'
+- name: Zalando
+  careers_url: https://jobs.zalando.com/en/jobs
+  sector: retail
+  country: DE
+  system: 'own site (jobs.zalando.com): job pages have no structured data'
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-28'
+  recheck: '2026-11-27: still no supported feed found'
+- name: Zalando (NL)
+  careers_url: https://jobs.zalando.com/en
+  sector: retail
+  country: NL
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  url_status: ok
+  url_checked_at: '2026-10-23'
+- name: Zendesk
+  careers_url: https://jobs.zendesk.com/
+  sector: tech
+  country: IE
+  system: 'unknown: no ATS link or structured job data on jobs.zendesk.com'
+  checked_at: '2026-11-27'
+  recheck: '2026-11-27: still no supported feed found'
+- name: Zürcher Kantonalbank
+  careers_url: https://www.zkb.ch/de/ueber-uns/jobs-karriere.html
+  sector: banking
+  system: unknown / not detected
+  checked_at: '2026-11-27'
+  priority: 9
+  url_status: ok
+  url_checked_at: '2026-10-23'

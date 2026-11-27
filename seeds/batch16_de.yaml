@@ -1,0 +1,27 @@
+# Germany, round 9: consumer/tech employers known for English-language business internships.
+# Careers pages only; the feed is detected from the page and verified live.
+seeds:
+  - {name: "Personio", country: DE, sector: tech, careers_url: "https://www.personio.com/about-personio/careers/"}
+  - {name: "Flix", country: DE, sector: travel, careers_url: "https://www.flix.careers/"}
+  - {name: "SumUp", country: DE, sector: tech, careers_url: "https://www.sumup.com/careers/"}
+  - {name: "Contentful", country: DE, sector: tech, careers_url: "https://www.contentful.com/careers/"}
+  - {name: "Scalable Capital", country: DE, sector: tech, careers_url: "https://de.scalable.capital/en/careers"}
+  - {name: "Raisin", country: DE, sector: tech, careers_url: "https://www.raisin.com/en-de/careers/"}
+  - {name: "AUTO1 Group", country: DE, sector: tech, careers_url: "https://www.auto1-group.com/jobs/"}
+  - {name: "Babbel", country: DE, sector: tech, careers_url: "https://jobs.babbel.com/"}
+  - {name: "Blinkist", country: DE, sector: tech, careers_url: "https://www.blinkist.com/en/careers"}
+  - {name: "idealo", country: DE, sector: tech, careers_url: "https://jobs.idealo.de/"}
+  - {name: "Westwing", country: DE, sector: retail, careers_url: "https://www.westwing.com/careers/"}
+  - {name: "ABOUT YOU", country: DE, sector: retail, careers_url: "https://corporate.aboutyou.de/en/career"}
+  - {name: "sennder", country: DE, sector: tech, careers_url: "https://www.sennder.com/careers"}
+  - {name: "Forto", country: DE, sector: tech, careers_url: "https://forto.com/en/careers/"}
+  - {name: "Taxfix", country: DE, sector: tech, careers_url: "https://taxfix.de/en/careers/"}
+  - {name: "Enpal", country: DE, sector: tech, careers_url: "https://www.enpal.de/karriere"}
+  - {name: "1KOMMA5°", country: DE, sector: tech, careers_url: "https://1komma5.com/de/karriere/"}
+  - {name: "Mytheresa", country: DE, sector: luxury, careers_url: "https://www.mytheresa.com/careers"}
+  - {name: "Flaconi", country: DE, sector: retail, careers_url: "https://www.flaconi.de/karriere/"}
+  - {name: "Axel Springer", country: DE, sector: tech, careers_url: "https://www.axelspringer.com/en/career"}
+  - {name: "Bertelsmann", country: DE, sector: tech, careers_url: "https://jobs.bertelsmann.com/"}
+  - {name: "Henkel", country: DE, sector: consumer, careers_url: "https://www.henkel.com/careers"}
+  - {name: "Grover", country: DE, sector: tech, careers_url: "https://www.grover.com/careers"}
+  - {name: "Moonfare", country: DE, sector: tech, careers_url: "https://www.moonfare.com/careers"}

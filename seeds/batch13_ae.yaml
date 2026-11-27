@@ -1,0 +1,14 @@
+# UAE: consumer/FMCG and retail regional HQs in Dubai. Small batch; no Workday URLs from memory.
+seeds:
+  - {name: Nestlé (AE), careers_url: "https://www.nestle-mena.com/en/jobs", sector: consumer, country: AE}
+  - {name: L'Oréal (AE), careers_url: "https://careers.loreal.com/", sector: consumer, country: AE, tokens: [loreal]}
+  - {name: Henkel (AE), careers_url: "https://www.henkel.com/careers", sector: consumer, country: AE}
+  - {name: PepsiCo (AE), careers_url: "https://www.pepsicojobs.com/", sector: consumer, country: AE}
+  - {name: Mars (AE), careers_url: "https://careers.mars.com/", sector: consumer, country: AE}
+  - {name: Reckitt (AE), careers_url: "https://careers.reckitt.com/", sector: consumer, country: AE}
+  - {name: Kraft Heinz (AE), careers_url: "https://careers.kraftheinz.com/", sector: consumer, country: AE}
+  - {name: Al-Futtaim, careers_url: "https://www.alfuttaim.com/careers/", sector: retail, country: AE, tokens: [alfuttaim]}
+  - {name: Majid Al Futtaim, careers_url: "https://www.majidalfuttaim.com/en/careers", sector: retail, country: AE, tokens: [majidalfuttaim, maf]}
+  - {name: Chalhoub Group, careers_url: "https://www.chalhoubgroup.com/careers", sector: luxury, country: AE, tokens: [chalhoub, chalhoubgroup]}
+  - {name: Alshaya Group, careers_url: "https://careers.alshaya.com/", sector: retail, country: AE, tokens: [alshaya]}
+  - {name: Emirates Group, careers_url: "https://www.emiratesgroupcareers.com/", sector: travel, country: AE, tokens: [emirates, emiratesgroup]}

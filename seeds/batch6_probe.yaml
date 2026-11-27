@@ -1,0 +1,177 @@
+# Slug-probed candidates (no careers URL needed): accepted only with Swiss postings
+# or an exact Greenhouse board-name match plus Swiss postings rule in cmd_discover.
+seeds:
+  - {name: Wolt, sector: consumer}
+  - {name: HelloFresh, sector: consumer}
+  - {name: Moonfare, sector: banking}
+  - {name: Bitpanda, sector: banking}
+  - {name: Ledger, sector: tech}
+  - {name: Bitstamp, sector: banking}
+  - {name: CoinShares, sector: banking}
+  - {name: Auterion, sector: industrial}
+  - {name: Daedalean, sector: industrial}
+  - {name: Verity, sector: industrial}
+  - {name: Voliro, sector: industrial}
+  - {name: Sevensense, sector: industrial}
+  - {name: DeepJudge, sector: tech}
+  - {name: PriceHubble, sector: tech}
+  - {name: Aktiia, sector: pharma}
+  - {name: Twint, sector: banking}
+  - {name: Wallee, sector: banking}
+  - {name: Inyova, sector: banking}
+  - {name: True Wealth, sector: banking}
+  - {name: Frankly, sector: banking}
+  - {name: Descartes Underwriting, sector: insurance}
+  - {name: Simpego, sector: insurance}
+  - {name: Flatfox, sector: tech}
+  - {name: Allthings, sector: tech}
+  - {name: Advertima, sector: tech}
+  - {name: Fixposition, sector: industrial}
+  - {name: Astrocast, sector: industrial}
+  - {name: Kandou, sector: tech}
+  - {name: Exeon, sector: tech}
+  - {name: Cutiss, sector: pharma}
+  - {name: Gamaya, sector: industrial}
+  - {name: Bcomp, sector: industrial}
+  - {name: Xsensio, sector: pharma}
+  - {name: Nanolive, sector: pharma}
+  - {name: Lunaphore, sector: pharma}
+  - {name: Molecular Partners, sector: pharma}
+  - {name: AC Immune, sector: pharma}
+  - {name: Alentis, sector: pharma}
+  - {name: Basilea, sector: pharma}
+  - {name: Medartis, sector: pharma}
+  - {name: Art Basel, sector: other, tokens: [artbasel, mchgroup]}
+  - {name: Smood, sector: consumer}
+  - {name: Kitchen Republic, sector: consumer}
+  - {name: Yfood, sector: consumer}
+  - {name: Oatly, sector: consumer}
+  - {name: Holy, sector: consumer, tokens: [holy, weareholy]}
+  - {name: Scott Sports, sector: consumer, tokens: [scottsports]}
+  - {name: BMC Switzerland, sector: consumer, tokens: [bmc, bmcswitzerland]}
+  - {name: Triumph International, sector: consumer, tokens: [triumph]}
+  - {name: Calida Group, sector: consumer, tokens: [calida]}
+  - {name: Zimmerli, sector: consumer}
+  - {name: Akris, sector: luxury}
+  - {name: Bally, sector: luxury}
+  - {name: La Prairie, sector: luxury, tokens: [laprairie]}
+  - {name: Valmont, sector: luxury}
+  - {name: Jura Elektroapparate, sector: consumer, tokens: [jura]}
+  - {name: V-ZUG, sector: consumer, tokens: [vzug]}
+  - {name: Kuhn Rikon, sector: consumer, tokens: [kuhnrikon]}
+  - {name: Ochsner Sport, sector: consumer, tokens: [ochsnersport]}
+  - {name: Transa, sector: consumer}
+  - {name: Decathlon Switzerland, sector: consumer, tokens: [decathlon]}
+  - {name: Zalando, sector: consumer}
+  - {name: Lululemon, sector: consumer}
+  - {name: Polestar, sector: consumer}
+  - {name: Tesla, sector: consumer}
+  - {name: Kempinski, sector: travel}
+  - {name: Bürgenstock Hotels, sector: travel, tokens: [burgenstock, buergenstock]}
+  - {name: The Dolder Grand, sector: travel, tokens: [doldergrand, dolder]}
+  - {name: Mandarin Oriental, sector: travel, tokens: [mandarinoriental]}
+  - {name: Airbnb, sector: travel}
+  - {name: Booking.com, sector: travel, tokens: [bookingcom, booking]}
+  - {name: Skyscanner, sector: travel}
+  - {name: HomeToGo, sector: travel, tokens: [hometogo]}
+  - {name: Holidu, sector: travel}
+  - {name: Hostelworld, sector: travel}
+  - {name: Klook, sector: travel}
+  - {name: Uber, sector: tech}
+  - {name: Bolt, sector: tech}
+  - {name: Glovo, sector: tech}
+  - {name: Just Eat Takeaway, sector: tech, tokens: [justeattakeaway]}
+  - {name: Personio, sector: tech}
+  - {name: Celonis, sector: tech}
+  - {name: Contentful, sector: tech}
+  - {name: Mambu, sector: tech}
+  - {name: Taxfix, sector: tech}
+  - {name: Pipedrive, sector: tech}
+  - {name: Typeform, sector: tech}
+  - {name: Miro, sector: tech}
+  - {name: Notion, sector: tech}
+  - {name: Figma, sector: tech}
+  - {name: Canva, sector: tech}
+  - {name: Atlassian, sector: tech}
+  - {name: HubSpot, sector: tech}
+  - {name: Okta, sector: tech}
+  - {name: Twilio, sector: tech}
+  - {name: Zendesk, sector: tech}
+  - {name: Dropbox, sector: tech}
+  - {name: Pinterest, sector: tech}
+  - {name: Reddit, sector: tech}
+  - {name: Discord, sector: tech}
+  - {name: Roblox, sector: tech}
+  - {name: Epic Games, sector: tech, tokens: [epicgames]}
+  - {name: Riot Games, sector: tech, tokens: [riotgames]}
+  - {name: Doctolib, sector: tech}
+  - {name: Alan, sector: tech}
+  - {name: Qonto, sector: banking}
+  - {name: N26, sector: banking}
+  - {name: Klarna, sector: banking}
+  - {name: Adyen, sector: banking}
+  - {name: Checkout.com, sector: banking, tokens: [checkoutcom, checkout]}
+  - {name: SumUp, sector: banking}
+  - {name: Trade Republic, sector: banking, tokens: [traderepublic]}
+  - {name: Scalable Capital, sector: banking, tokens: [scalablecapital]}
+  - {name: Raisin, sector: banking}
+  - {name: Plaid, sector: banking}
+  - {name: Ramp, sector: banking}
+  - {name: Brex, sector: banking}
+  - {name: Rippling, sector: tech}
+  - {name: Deel, sector: tech}
+  - {name: Remote, sector: tech, tokens: [remotecom]}
+  - {name: Mistral AI, sector: tech, tokens: [mistral]}
+  - {name: Hugging Face, sector: tech, tokens: [huggingface]}
+  - {name: Scale AI, sector: tech, tokens: [scaleai]}
+  - {name: ElevenLabs, sector: tech}
+  - {name: Synthesia, sector: tech}
+  - {name: DeepL, sector: tech}
+  - {name: Black Forest Labs, sector: tech, tokens: [blackforestlabs]}
+  - {name: Perplexity, sector: tech, tokens: [perplexity, perplexityai]}
+  - {name: Glean, sector: tech, tokens: [gleanwork]}
+  - {name: Harvey, sector: tech}
+  - {name: Vercel, sector: tech}
+  - {name: Supabase, sector: tech}
+  - {name: Grafana Labs, sector: tech, tokens: [grafanalabs]}
+  - {name: Confluent, sector: tech}
+  - {name: HashiCorp, sector: tech}
+  - {name: Elastic, sector: tech}
+  - {name: Monday.com, sector: tech, tokens: [mondaycom]}
+  - {name: Wix, sector: tech}
+  - {name: Fiverr, sector: tech}
+  - {name: Payward, sector: tech}
+  - {name: Gemini, sector: banking}
+  - {name: Circle, sector: banking}
+  - {name: Consensys, sector: tech}
+  - {name: Polygon Labs, sector: tech, tokens: [polygon, polygonlabs]}
+  - {name: Near Foundation, sector: tech, tokens: [nearfoundation, near]}
+  - {name: Avalanche, sector: tech, tokens: [avalabs]}
+  - {name: Sui Foundation, sector: tech, tokens: [mystenlabs, suifoundation]}
+  - {name: Aptos, sector: tech, tokens: [aptoslabs, aptosfoundation]}
+  - {name: Fireblocks, sector: tech}
+  - {name: Chainalysis, sector: tech}
+  - {name: Nansen, sector: tech}
+  - {name: Kaiko, sector: tech}
+  - {name: Bitwise, sector: banking, tokens: [bitwiseinvestments]}
+  - {name: Galaxy Digital, sector: banking, tokens: [galaxydigitalservices, galaxy]}
+  - {name: Wintermute, sector: banking}
+  - {name: Flow Traders, sector: banking, tokens: [flowtraders]}
+  - {name: Optiver, sector: banking}
+  - {name: IMC Trading, sector: banking, tokens: [imc]}
+  - {name: Jane Street, sector: banking, tokens: [janestreet]}
+  - {name: Citadel, sector: banking}
+  - {name: Jump Trading, sector: banking, tokens: [jumptrading]}
+  - {name: Hudson River Trading, sector: banking, tokens: [wehrtyou]}
+  - {name: G-Research, sector: banking, tokens: [gresearch]}
+  - {name: Man Group, sector: banking, tokens: [mangroup]}
+  - {name: Marshall Wace, sector: banking, tokens: [marshallwace]}
+  - {name: Capital Group, sector: banking, tokens: [capitalgroup]}
+  - {name: Bridgewater, sector: banking, tokens: [bridgewater89]}
+  - {name: Tikehau Capital, sector: banking, tokens: [tikehaucapital]}
+  - {name: Index Ventures, sector: banking, tokens: [indexventures]}
+  - {name: Redalpine, sector: banking}
+  - {name: Lightspeed, sector: banking}
+  - {name: General Atlantic, sector: banking, tokens: [generalatlantic]}
+  - {name: EQT, sector: banking}
+  - {name: Kudu, sector: other}

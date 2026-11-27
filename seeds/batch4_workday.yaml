@@ -1,0 +1,112 @@
+seeds:
+  - {name: Disney, careers_url: "https://jobs.disneycareers.com/", sector: tech, urls: ["https://disney.wd5.myworkdayjobs.com/disneycareer"]}
+  - {name: Haleon, careers_url: "https://www.haleon.com/careers", sector: consumer, urls: ["https://haleon.wd3.myworkdayjobs.com/Haleon_Careers"]}
+  - {name: GSK, careers_url: "https://www.gsk.com/en-gb/careers/", sector: pharma, urls: ["https://gsk.wd5.myworkdayjobs.com/GSKCareers"]}
+  - {name: AstraZeneca, careers_url: "https://careers.astrazeneca.com/", sector: pharma, urls: ["https://astrazeneca.wd3.myworkdayjobs.com/Careers"]}
+  - {name: Pfizer, careers_url: "https://www.pfizer.com/about/careers", sector: pharma, urls: ["https://pfizer.wd1.myworkdayjobs.com/PfizerCareers"]}
+  - {name: MSD, careers_url: "https://jobs.msd.com/", sector: pharma, urls: ["https://msd.wd5.myworkdayjobs.com/SearchJobs"]}
+  - {name: Stryker, careers_url: "https://careers.stryker.com/", sector: pharma, urls: ["https://stryker.wd1.myworkdayjobs.com/StrykerCareers"]}
+  - {name: Zimmer Biomet, careers_url: "https://careers.zimmerbiomet.com/", sector: pharma, urls: ["https://zimmerbiomet.wd5.myworkdayjobs.com/External"]}
+  - {name: Edwards Lifesciences, careers_url: "https://www.edwards.com/careers", sector: pharma, urls: ["https://edwards.wd5.myworkdayjobs.com/edwardscareers"]}
+  - {name: Thermo Fisher Scientific, careers_url: "https://jobs.thermofisher.com/", sector: pharma, urls: ["https://thermofisher.wd5.myworkdayjobs.com/ThermoFisherCareers"]}
+  - {name: Abbott, careers_url: "https://www.jobs.abbott/", sector: pharma, urls: ["https://abbott.wd5.myworkdayjobs.com/abbottcareers"]}
+  - {name: Philips, careers_url: "https://www.careers.philips.com/", sector: pharma, urls: ["https://philips.wd3.myworkdayjobs.com/jobs-and-careers"]}
+  - {name: Boston Scientific, careers_url: "https://jobs.bostonscientific.com/", sector: pharma, urls: ["https://bostonscientific.wd1.myworkdayjobs.com/BSCI"]}
+  - {name: IQVIA, careers_url: "https://jobs.iqvia.com/", sector: pharma, urls: ["https://iqvia.wd1.myworkdayjobs.com/IQVIA"]}
+  - {name: Ferring Pharmaceuticals, careers_url: "https://www.ferring.com/careers/", sector: pharma, urls: ["https://ferring.wd3.myworkdayjobs.com/Ferring"]}
+  - {name: Bayer, careers_url: "https://career.bayer.com/", sector: pharma, urls: ["https://bayer.wd3.myworkdayjobs.com/Bayer"]}
+  - {name: Diageo, careers_url: "https://www.diageo.com/en/careers", sector: consumer, urls: ["https://diageo.wd3.myworkdayjobs.com/Diageo_Careers"]}
+  - {name: Heineken, careers_url: "https://careers.theheinekencompany.com/", sector: consumer, urls: ["https://heineken.wd3.myworkdayjobs.com/HEINEKEN"]}
+  - {name: Mars, careers_url: "https://careers.mars.com/", sector: consumer, urls: ["https://mars.wd3.myworkdayjobs.com/External"]}
+  - {name: Nike, careers_url: "https://careers.nike.com/", sector: consumer, urls: ["https://nike.wd1.myworkdayjobs.com/nke"]}
+  - {name: Kering, careers_url: "https://www.kering.com/en/talent/", sector: luxury, urls: ["https://kering.wd3.myworkdayjobs.com/Kering"]}
+  - {name: Chanel, careers_url: "https://careers.chanel.com/", sector: luxury, urls: ["https://chanel.wd3.myworkdayjobs.com/Chanel"]}
+  - {name: Coca-Cola HBC, careers_url: "https://www.coca-colahellenic.com/en/careers", sector: consumer, urls: ["https://cchellenic.wd3.myworkdayjobs.com/CCHBC"]}
+  - {name: Barclays, careers_url: "https://search.jobs.barclays/", sector: banking, urls: ["https://barclays.wd3.myworkdayjobs.com/External_Career_Site_Barclays"]}
+  - {name: Marsh McLennan, careers_url: "https://careers.marshmclennan.com/", sector: consulting, urls: ["https://mmc.wd1.myworkdayjobs.com/MMC"]}
+  - {name: Franklin Templeton, careers_url: "https://www.franklintempleton.com/careers", sector: banking, urls: ["https://franklintempleton.wd5.myworkdayjobs.com/Primary-External-1"]}
+  - {name: MSCI, careers_url: "https://careers.msci.com/", sector: banking, urls: ["https://msci.wd1.myworkdayjobs.com/MSCI"]}
+  - {name: S&P Global, careers_url: "https://careers.spglobal.com/", sector: banking, urls: ["https://spgi.wd5.myworkdayjobs.com/SPGI_Careers"]}
+  - {name: LSEG, careers_url: "https://www.lseg.com/en/careers", sector: banking, urls: ["https://lseg.wd3.myworkdayjobs.com/Careers"]}
+  - {name: Schroders, careers_url: "https://www.schroders.com/en/global/individual/careers/", sector: banking, urls: ["https://schroders.wd3.myworkdayjobs.com/Schroders_Careers"]}
+  - {name: Aon, careers_url: "https://jobs.aon.com/", sector: insurance, urls: ["https://aon.wd1.myworkdayjobs.com/AON_Careers"]}
+  - {name: Gartner, careers_url: "https://jobs.gartner.com/", sector: consulting, urls: ["https://gartner.wd5.myworkdayjobs.com/EXT"]}
+  - {name: Workday, careers_url: "https://www.workday.com/en-us/company/careers/overview.html", sector: tech, urls: ["https://workday.wd5.myworkdayjobs.com/Workday"]}
+  - {name: Broadcom, careers_url: "https://www.broadcom.com/company/careers", sector: tech, urls: ["https://broadcom.wd1.myworkdayjobs.com/External_Career"]}
+  - {name: Dell Technologies, careers_url: "https://jobs.dell.com/", sector: tech, urls: ["https://dell.wd1.myworkdayjobs.com/External"]}
+  - {name: HP, careers_url: "https://jobs.hp.com/", sector: tech, urls: ["https://hp.wd5.myworkdayjobs.com/ExternalCareerSite"]}
+  - {name: Autodesk, careers_url: "https://www.autodesk.com/careers", sector: tech, urls: ["https://autodesk.wd1.myworkdayjobs.com/Ext"]}
+  - {name: PayPal, careers_url: "https://careers.pypl.com/", sector: banking, urls: ["https://paypal.wd1.myworkdayjobs.com/jobs"]}
+  - {name: Equinix, careers_url: "https://careers.equinix.com/", sector: tech, urls: ["https://equinix.wd1.myworkdayjobs.com/External"]}
+  - {name: Red Hat, careers_url: "https://www.redhat.com/en/jobs", sector: tech, urls: ["https://redhat.wd5.myworkdayjobs.com/jobs"]}
+  - {name: Kyndryl, careers_url: "https://www.kyndryl.com/us/en/careers", sector: tech, urls: ["https://kyndryl.wd5.myworkdayjobs.com/KyndrylProfessionalCareers"]}
+  - {name: easyJet, careers_url: "https://careers.easyjet.com/", sector: travel, urls: ["https://easyjet.wd3.myworkdayjobs.com/easyJet"]}
+  - {name: DHL Group, careers_url: "https://careers.dhl.com/", sector: logistics, urls: ["https://dpdhl.wd3.myworkdayjobs.com/DPDHL_Careers"]}
+  - {name: Landis+Gyr, careers_url: "https://www.landisgyr.com/careers/", sector: industrial, urls: ["https://landisgyr.wd3.myworkdayjobs.com/LandisGyr"]}
+  - {name: Louis Dreyfus Company, careers_url: "https://www.ldc.com/careers/", sector: commodities, urls: ["https://ldc.wd3.myworkdayjobs.com/LDC"]}
+  - {name: UNHCR, careers_url: "https://www.unhcr.org/careers", sector: international, urls: ["https://unhcr.wd3.myworkdayjobs.com/External"]}
+  - {name: Honeywell, careers_url: "https://careers.honeywell.com/", sector: industrial, urls: ["https://honeywell.wd5.myworkdayjobs.com/Honeywell"]}
+  - {name: Siemens Healthineers, careers_url: "https://www.siemens-healthineers.com/careers", sector: pharma}
+  - {name: Vontobel, careers_url: "https://www.vontobel.com/en-ch/about-vontobel/careers/", sector: banking}
+  - {name: Lombard Odier, careers_url: "https://www.lombardodier.com/careers", sector: banking}
+  - {name: Pictet, careers_url: "https://www.group.pictet/careers", sector: banking}
+  - {name: LGT, careers_url: "https://www.lgt.com/en/careers", sector: banking}
+  - {name: EFG International, careers_url: "https://www.efginternational.com/careers.html", sector: banking}
+  - {name: Union Bancaire Privée, careers_url: "https://www.ubp.com/en/careers", sector: banking}
+  - {name: SIX Group, careers_url: "https://www.six-group.com/en/company/careers.html", sector: banking}
+  - {name: Swiss Life, careers_url: "https://www.swisslife.com/en/home/careers.html", sector: insurance}
+  - {name: Helvetia, careers_url: "https://www.helvetia.com/ch/web/en/about-us/jobs-and-careers.html", sector: insurance}
+  - {name: Baloise, careers_url: "https://www.baloise.com/en/home/careers.html", sector: insurance}
+  - {name: Zurich Insurance, careers_url: "https://www.zurich.com/careers", sector: insurance}
+  - {name: Generali Switzerland, careers_url: "https://www.generali.ch/en/about-us/jobs", sector: insurance}
+  - {name: Clariant, careers_url: "https://www.clariant.com/en/Careers", sector: industrial}
+  - {name: Bachem, careers_url: "https://www.bachem.com/careers/", sector: pharma}
+  - {name: Siegfried, careers_url: "https://www.siegfried.ch/careers/", sector: pharma}
+  - {name: Idorsia, careers_url: "https://www.idorsia.com/careers", sector: pharma}
+  - {name: Debiopharm, careers_url: "https://www.debiopharm.com/careers/", sector: pharma}
+  - {name: Ypsomed, careers_url: "https://www.ypsomed.com/en/careers", sector: pharma}
+  - {name: Tecan, careers_url: "https://www.tecan.com/careers", sector: pharma}
+  - {name: Hamilton, careers_url: "https://www.hamiltoncompany.com/careers", sector: pharma}
+  - {name: Barry Callebaut, careers_url: "https://www.barry-callebaut.com/en/group/careers", sector: consumer}
+  - {name: Emmi, careers_url: "https://group.emmi.com/careers", sector: consumer}
+  - {name: Swatch Group, careers_url: "https://www.swatchgroup.com/en/careers", sector: luxury}
+  - {name: Audemars Piguet, careers_url: "https://www.audemarspiguet.com/com/en/careers.html", sector: luxury}
+  - {name: Rolex, careers_url: "https://www.rolex.org/careers", sector: luxury}
+  - {name: Patek Philippe, careers_url: "https://www.patek.com/en/company/careers", sector: luxury}
+  - {name: Chopard, careers_url: "https://www.chopard.com/en-ch/careers.html", sector: luxury}
+  - {name: Bucherer, careers_url: "https://www.bucherer.com/careers", sector: luxury}
+  - {name: TAG Heuer, careers_url: "https://www.tagheuer.com/ch/en/careers.html", sector: luxury}
+  - {name: Hublot, careers_url: "https://www.hublot.com/en-ch/careers", sector: luxury}
+  - {name: Schindler, careers_url: "https://www.schindler.com/com/internet/en/careers.html", sector: industrial}
+  - {name: Sika, careers_url: "https://www.sika.com/en/careers.html", sector: industrial}
+  - {name: Geberit, careers_url: "https://www.geberit.com/careers/", sector: industrial}
+  - {name: Bühler, careers_url: "https://www.buhlergroup.com/global/en/careers.html", sector: industrial}
+  - {name: Georg Fischer, careers_url: "https://www.georgfischer.com/en/careers.html", sector: industrial}
+  - {name: Sulzer, careers_url: "https://www.sulzer.com/en/shared/careers", sector: industrial}
+  - {name: Stadler Rail, careers_url: "https://www.stadlerrail.com/en/careers/", sector: industrial}
+  - {name: Swisscom, careers_url: "https://www.swisscom.ch/en/about/jobs.html", sector: tech}
+  - {name: Sunrise, careers_url: "https://www.sunrise.ch/en/corporate-communications/jobs", sector: tech}
+  - {name: Swiss Post, careers_url: "https://www.post.ch/en/about-us/jobs", sector: logistics}
+  - {name: SBB, careers_url: "https://company.sbb.ch/en/jobs-careers.html", sector: logistics}
+  - {name: Migros, careers_url: "https://jobs.migros.ch/", sector: consumer}
+  - {name: Coop, careers_url: "https://www.coop.ch/en/company/jobs-careers.html", sector: consumer}
+  - {name: Ringier, careers_url: "https://www.ringier.com/careers/", sector: tech}
+  - {name: TX Group, careers_url: "https://www.tx.group/en/jobs", sector: tech}
+  - {name: MSC Mediterranean Shipping, careers_url: "https://www.msc.com/en/careers", sector: logistics}
+  - {name: Kudelski Group, careers_url: "https://www.nagra.com/careers", sector: tech}
+  - {name: Temenos, careers_url: "https://www.temenos.com/careers/", sector: tech}
+  - {name: Avaloq, careers_url: "https://www.avaloq.com/careers", sector: tech}
+  - {name: IOC, careers_url: "https://www.olympics.com/ioc/jobs", sector: international}
+  - {name: FIFA, careers_url: "https://inside.fifa.com/careers", sector: international}
+  - {name: UEFA, careers_url: "https://www.uefa.com/insideuefa/about-uefa/careers/", sector: international}
+  - {name: ICRC, careers_url: "https://careers.icrc.org/", sector: international}
+  - {name: WWF International, careers_url: "https://wwf.panda.org/careers/", sector: international}
+  - {name: Deloitte Switzerland, careers_url: "https://www.deloitte.com/ch/en/careers.html", sector: consulting}
+  - {name: EY Switzerland, careers_url: "https://www.ey.com/en_ch/careers", sector: consulting}
+  - {name: KPMG Switzerland, careers_url: "https://kpmg.com/ch/en/careers.html", sector: consulting}
+  - {name: McKinsey & Company, careers_url: "https://www.mckinsey.com/careers", sector: consulting}
+  - {name: Boston Consulting Group, careers_url: "https://careers.bcg.com/", sector: consulting}
+  - {name: Bain & Company, careers_url: "https://www.bain.com/careers/", sector: consulting}
+  - {name: Oliver Wyman, careers_url: "https://www.oliverwyman.com/careers.html", sector: consulting}
+  - {name: Capgemini Invent, careers_url: "https://www.capgemini.com/ch-en/careers/", sector: consulting}
+  - {name: Nestlé, careers_url: "https://www.nestle.com/jobs", sector: consumer}

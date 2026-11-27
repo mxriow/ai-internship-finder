@@ -1,0 +1,51 @@
+name: Monthly feed check
+
+# Once a month, check every feed in companies.yaml (same robots.txt rules and rate limit as the daily run;
+# sitemap feeds are sampled lightly). Feeds that error or return 0 jobs are reported in the issue
+# "Internship finder needs attention"; the label is removed again when a later check finds them all working.
+on:
+  # schedule disabled in the showcase copy (it would use the owner's Actions minutes).
+  # To run daily, restore e.g.:
+  # schedule:
+  #   - cron: "0 9 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v6
+
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Check every feed
+        id: verify
+        run: python -m finder verify --no-save --report "$RUNNER_TEMP/verify.md"
+
+      - name: Report in the attention issue
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+        run: |
+          report="$RUNNER_TEMP/verify.md"
+          if [ "${{ steps.verify.outcome }}" != "success" ]; then
+            printf 'The monthly feed check itself failed (%s).\n\nRun log: %s\n' "${{ steps.verify.outcome }}" "$RUN_URL" > "$report"
+          fi
+          if [ -s "$report" ]; then
+            printf '\nRun log: %s\n' "$RUN_URL" >> "$report"
+            bash .github/scripts/attention.sh open verify "$report"
+          else
+            bash .github/scripts/attention.sh resolve verify
+          fi

@@ -1,0 +1,73 @@
+seeds:
+  - {name: Google DeepMind, careers_url: "https://deepmind.google/about/careers/", sector: tech, tokens: [deepmind]}
+  - {name: Lakera, careers_url: "https://www.lakera.ai/careers", sector: tech}
+  - {name: LatticeFlow AI, careers_url: "https://latticeflow.ai/careers", sector: tech, tokens: [latticeflow]}
+  - {name: Unique AI, careers_url: "https://www.unique.ai/careers", sector: tech, tokens: [unique, uniqueai, unique-ag]}
+  - {name: Neural Concept, careers_url: "https://www.neuralconcept.com/careers", sector: tech, tokens: [neuralconcept]}
+  - {name: Jua, careers_url: "https://www.jua.ai/careers", sector: tech, tokens: [jua, juaai]}
+  - {name: Calvin Risk, careers_url: "https://www.calvin-risk.com/careers", sector: tech, tokens: [calvinrisk]}
+  - {name: Visium, careers_url: "https://www.visium.ch/careers", sector: consulting}
+  - {name: Distalmotion, careers_url: "https://www.distalmotion.com/careers/", sector: pharma}
+  - {name: Flyability, careers_url: "https://www.flyability.com/careers", sector: industrial}
+  - {name: Swissto12, careers_url: "https://swissto12.com/careers/", sector: industrial}
+  - {name: ClearSpace, careers_url: "https://clearspace.today/careers/", sector: industrial}
+  - {name: Synhelion, careers_url: "https://synhelion.com/careers", sector: industrial}
+  - {name: Neustark, careers_url: "https://www.neustark.com/careers/", sector: industrial}
+  - {name: Energy Vault, careers_url: "https://www.energyvault.com/careers", sector: industrial, tokens: [energyvault]}
+  - {name: Mindmaze, careers_url: "https://mindmaze.com/careers/", sector: pharma}
+  - {name: Biognosys, careers_url: "https://biognosys.com/careers/", sector: pharma}
+  - {name: Unblu, careers_url: "https://www.unblu.com/en/careers/", sector: tech}
+  - {name: Shift Crypto, careers_url: "https://shiftcrypto.ch/careers/", sector: tech, tokens: [shiftcrypto, bitbox]}
+  - {name: Nym Technologies, careers_url: "https://nymtech.net/careers", sector: tech, tokens: [nym, nymtech]}
+  - {name: Concordium, careers_url: "https://www.concordium.com/careers", sector: tech}
+  - {name: Cardano Foundation, careers_url: "https://cardanofoundation.org/careers", sector: tech, tokens: [cardanofoundation]}
+  - {name: Ethereum Foundation, careers_url: "https://ethereum.foundation/jobs", sector: tech, tokens: [ethereumfoundation, ethereum]}
+  - {name: Solana Foundation, careers_url: "https://solana.org/careers", sector: tech, tokens: [solanafoundation, solana]}
+  - {name: Tezos Foundation, careers_url: "https://tezos.foundation/careers", sector: tech}
+  - {name: Parity Technologies, careers_url: "https://www.parity.io/careers", sector: tech, tokens: [parity]}
+  - {name: Aleph Zero, careers_url: "https://alephzero.org/careers", sector: tech, tokens: [alephzero, aleph-zero-foundation]}
+  - {name: Lykke, careers_url: "https://lykke.com/careers", sector: banking}
+  - {name: Bitcoin Suisse, careers_url: "https://www.bitcoinsuisse.com/careers", sector: banking, tokens: [bitcoinsuisse, bitcoin-suisse-ag]}
+  - {name: Chainlink Labs, careers_url: "https://chainlinklabs.com/careers", sector: tech, tokens: [chainlink, chainlinklabs, chainlink-labs]}
+  - {name: Kpler, careers_url: "https://www.kpler.com/careers", sector: commodities}
+  - {name: Hartree Partners, careers_url: "https://www.hartreepartners.com/careers/", sector: commodities, tokens: [hartree, hartreepartners]}
+  - {name: Squarepoint Capital, careers_url: "https://www.squarepoint-capital.com/careers", sector: banking, tokens: [squarepointcapital]}
+  - {name: Millennium Management, careers_url: "https://www.mlp.com/careers/", sector: banking, tokens: [millennium, mlp]}
+  - {name: Lakestar, careers_url: "https://www.lakestar.com/careers", sector: banking}
+  - {name: Teylor, careers_url: "https://teylor.com/careers", sector: banking}
+  - {name: Radicant, careers_url: "https://www.radicant.com/en/jobs", sector: banking}
+  - {name: Yapeal, careers_url: "https://www.yapeal.ch/en/jobs", sector: banking}
+  - {name: MoneyPark, careers_url: "https://moneypark.ch/en/jobs/", sector: banking}
+  - {name: Splint Invest, careers_url: "https://splintinvest.com/careers", sector: banking, tokens: [splint, splintinvest]}
+  - {name: Freitag, careers_url: "https://www.freitag.ch/en/jobs", sector: consumer}
+  - {name: Nikin, careers_url: "https://www.nikin.ch/pages/jobs", sector: consumer}
+  - {name: Läderach, careers_url: "https://laderach.com/ch-en/careers", sector: consumer, tokens: [laderach, laederach]}
+  - {name: Weleda, careers_url: "https://www.weleda.com/careers", sector: consumer}
+  - {name: QWSTION, careers_url: "https://www.qwstion.com/pages/jobs", sector: consumer}
+  - {name: Kitchen Republic, careers_url: "https://www.kitchenrepublic.ch/jobs", sector: consumer}
+  - {name: Farmy, careers_url: "https://www.farmy.ch/en/jobs", sector: consumer}
+  - {name: Brack.ch, careers_url: "https://www.brack.ch/jobs", sector: consumer, tokens: [competec, brack]}
+  - {name: Comparis, careers_url: "https://www.comparis.ch/comparis/jobs", sector: tech}
+  - {name: Unic, careers_url: "https://www.unic.com/en/jobs", sector: consulting}
+  - {name: Ergon Informatik, careers_url: "https://ergon.ch/en/jobs", sector: tech, tokens: [ergon]}
+  - {name: Netcetera, careers_url: "https://www.netcetera.com/careers", sector: tech}
+  - {name: Adnovum, careers_url: "https://www.adnovum.com/careers", sector: tech}
+  - {name: Elca, careers_url: "https://www.elca.ch/en/careers", sector: consulting}
+  - {name: Magic Leap, careers_url: "https://www.magicleap.com/careers", sector: tech, tokens: [magicleap]}
+  - {name: Snap, careers_url: "https://careers.snap.com/", sector: tech}
+  - {name: Sony AI, careers_url: "https://ai.sony/joinus/", sector: tech, tokens: [sonyai]}
+  - {name: Disney Research, careers_url: "https://studios.disneyresearch.com/careers/", sector: tech}
+  - {name: Cohere, careers_url: "https://cohere.com/careers", sector: tech}
+  - {name: Hugging Face, careers_url: "https://apply.workable.com/huggingface/", sector: tech}
+  - {name: GitLab, careers_url: "https://about.gitlab.com/jobs/", sector: tech}
+  - {name: Elastic, careers_url: "https://www.elastic.co/careers", sector: tech}
+  - {name: Veeam, careers_url: "https://careers.veeam.com/", sector: tech}
+  - {name: SoftwareOne, careers_url: "https://www.softwareone.com/en/careers", sector: tech}
+  - {name: Wefox, careers_url: "https://www.wefox.com/en-ch/careers", sector: banking}
+  - {name: Hotelplan, careers_url: "https://www.hotelplan.com/en/jobs", sector: travel}
+  - {name: Switzerland Tourism, careers_url: "https://www.stnet.ch/en/jobs/", sector: travel}
+  - {name: Yokoy, careers_url: "https://www.yokoy.io/careers", sector: tech, tokens: [yokoy, emburse]}
+  - {name: Pexapark, careers_url: "https://pexapark.com/careers/", sector: commodities}
+  - {name: Smallpdf, careers_url: "https://smallpdf.com/jobs", sector: tech}
+  - {name: Beekeeper, careers_url: "https://www.beekeeper.io/careers/", sector: tech, tokens: [beekeeperag, beekeeper-ag]}
+  - {name: Wingtra, careers_url: "https://wingtra.com/careers/", sector: industrial, tokens: [wingtraag]}

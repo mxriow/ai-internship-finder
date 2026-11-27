@@ -1,0 +1,30 @@
+# Ireland (Dublin) employers with business/sales/marketing internships, round 11.
+# Careers pages only; the feed is detected from the page (or a name-matched Greenhouse/Lever/Ashby board) and verified live.
+seeds:
+  - {name: "Stripe", country: IE, sector: tech, careers_url: "https://stripe.com/jobs/search"}
+  - {name: "HubSpot", country: IE, sector: tech, careers_url: "https://www.hubspot.com/careers/jobs"}
+  - {name: "Intercom", country: IE, sector: tech, careers_url: "https://www.intercom.com/careers"}
+  - {name: "Airbnb", country: IE, sector: tech, careers_url: "https://careers.airbnb.com/positions/"}
+  - {name: "Dropbox", country: IE, sector: tech, careers_url: "https://jobs.dropbox.com/all-jobs"}
+  - {name: "Squarespace", country: IE, sector: tech, careers_url: "https://www.squarespace.com/careers"}
+  - {name: "Zendesk", country: IE, sector: tech, careers_url: "https://jobs.zendesk.com/"}
+  - {name: "DocuSign", country: IE, sector: tech, careers_url: "https://careers.docusign.com/"}
+  - {name: "PayPal", country: IE, sector: tech, careers_url: "https://careers.pypl.com/"}
+  - {name: "Coinbase", country: IE, sector: tech, careers_url: "https://www.coinbase.com/careers/positions"}
+  - {name: "Okta", country: IE, sector: tech, careers_url: "https://www.okta.com/company/careers/"}
+  - {name: "Etsy", country: IE, sector: tech, careers_url: "https://careers.etsy.com/"}
+  - {name: "Indeed", country: IE, sector: tech, careers_url: "https://www.indeed.jobs/"}
+  - {name: "TikTok", country: IE, sector: tech, careers_url: "https://lifeattiktok.com/"}
+  - {name: "Meta", country: IE, sector: tech, careers_url: "https://www.metacareers.com/jobs"}
+  - {name: "Google", country: IE, sector: tech, careers_url: "https://www.google.com/about/careers/applications/jobs/results/"}
+  - {name: "LinkedIn", country: IE, sector: tech, careers_url: "https://careers.linkedin.com/"}
+  - {name: "Microsoft", country: IE, sector: tech, careers_url: "https://jobs.careers.microsoft.com/global/en/search"}
+  - {name: "Amazon", country: IE, sector: tech, careers_url: "https://www.amazon.jobs/en/"}
+  - {name: "Diageo", country: IE, sector: consumer, careers_url: "https://www.diageo.com/en/careers"}
+  - {name: "Kerry Group", country: IE, sector: consumer, careers_url: "https://www.kerry.com/careers"}
+  - {name: "Glanbia", country: IE, sector: consumer, careers_url: "https://www.glanbia.com/careers"}
+  - {name: "Ryanair", country: IE, sector: travel, careers_url: "https://careers.ryanair.com/"}
+  - {name: "Aer Lingus", country: IE, sector: travel, careers_url: "https://careers.aerlingus.com/"}
+  - {name: "Bank of Ireland", country: IE, sector: banking, careers_url: "https://careers.bankofireland.com/"}
+  - {name: "AIB", country: IE, sector: banking, careers_url: "https://aib.ie/our-story/careers"}
+  - {name: "Fexco", country: IE, sector: banking, careers_url: "https://www.fexco.com/careers/"}
